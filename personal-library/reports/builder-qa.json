@@ -1,0 +1,41 @@
+{
+  "status": "STATIC_GO",
+  "scope": "First-party offline validator and self-contained synthetic fixtures only",
+  "red_evidence": "reports/validator-red.txt",
+  "red_tests": 33,
+  "red_result": "33 failures: First-party validator feature is unavailable",
+  "green_command": "python3 -m unittest discover -s tests -p 'test_*.py' -v",
+  "green_tests": 37,
+  "green_failures": 0,
+  "green_errors": 0,
+  "actual_bundle_validation": {
+    "status": "STATIC_GO",
+    "errors": [],
+    "skills_checked": 2,
+    "files_checked": 8
+  },
+  "checks": [
+    "CLI JSON output and exit codes 0/1",
+    "SHA256 and Git blob SHA1 integrity",
+    "Public-only sources and inventory, immutable pins",
+    "Unique source ids, catalog names and locked paths",
+    "Symlink preflight, safe paths and local Markdown dependency closure",
+    "Locked LICENSE.txt and MIT notice presence",
+    "Documentation-only bundle and non-executable file permissions",
+    "Frontmatter name and single-line description including 1024-character boundary",
+    "Malformed JSON, malformed link and schema type failures",
+    "Python compile check"
+  ],
+  "limitations": [
+    "Not full YAML or CommonMark validation",
+    "License presence checks do not establish provenance or legal clearance",
+    "Hash validity does not establish source authenticity; independent source review remains required",
+    "No prompt-injection detection or semantic behavior assurance",
+    "No third-party code executed and no dependencies installed"
+  ],
+  "final_gate_tests": 53,
+  "captured_assertions": 11,
+  "final_suite_tests": 64,
+  "final_suite_failures": 0,
+  "fix_evidence": "reports/validator-fix-qa.json"
+}

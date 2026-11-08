@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "version": "0.1.0",
+  "skills": [
+    {
+      "name": "scientific-thinking-literature-review",
+      "path": "skills/scientific-thinking-literature-review",
+      "status": "staged",
+      "source_id": "ecc-literature",
+      "use_when": "Tìm, sàng lọc, tổng hợp nhiều nghiên cứu theo protocol có log nguồn",
+      "exclude_when": "KPI, quyết định tín dụng, hay chỉ tóm tắt một tài liệu sẵn có",
+      "runtime": "Host must load personal-library/AGENTS.md first; no global activation",
+      "verified_level": "STATIC_GO"
+    },
+    {
+      "name": "grammar-checker-vi",
+      "path": "skills/grammar-checker-vi",
+      "status": "staged",
+      "source_id": "vietnamese-grammar",
+      "use_when": "Soát lỗi văn bản tiếng Việt, giữ nguyên dữ kiện và protected spans",
+      "exclude_when": "Code, URL, trích dẫn nguyên văn, đánh giá tác giả AI hoặc viết lại phong cách",
+      "runtime": "Host must load personal-library/AGENTS.md first; no global activation",
+      "verified_level": "STATIC_GO"
+    }
+  ],
+  "reuse": [
+    {
+      "name": "code-review",
+      "path": "../skills/engineering/code-review",
+      "commit_sha": "f3fc5632f401156837ee3872f14fe33ccf1024ea",
+      "status": "existing; requires target diff/spec and independent agents"
+    },
+    {
+      "name": "verification-before-completion",
+      "repository": "vannhan091289-ux/superpowers",
+      "commit_sha": "5bf4e78011075bcfc0dc295f0724994cd123ee71",
+      "path": "skills/verification-before-completion",
+      "status": "reuse existing host capability; do not install duplicate"
+    }
+  ],
+  "domain_blueprints": [
+    {
+      "name": "audit-branch-kpi",
+      "path": "prompts/audit-branch-kpi.md",
+      "status": "blueprint; no approved bank formulas"
+    },
+    {
+      "name": "review-academic-thesis",
+      "path": "prompts/review-academic-thesis.md",
+      "status": "blueprint; requires thesis and institution rubric"
+    }
+  ]
+}

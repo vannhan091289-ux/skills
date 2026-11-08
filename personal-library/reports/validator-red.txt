@@ -1,0 +1,335 @@
+test_accepts_complete_pinned_document_bundle (test_validate_library.LibraryValidationTests.test_accepts_complete_pinned_document_bundle) ... FAIL
+test_accepts_description_at_1024_character_limit (test_validate_library.LibraryValidationTests.test_accepts_description_at_1024_character_limit) ... FAIL
+test_accepts_remote_and_fragment_links_without_network (test_validate_library.LibraryValidationTests.test_accepts_remote_and_fragment_links_without_network) ... FAIL
+test_cli_json_and_exit_status (test_validate_library.LibraryValidationTests.test_cli_json_and_exit_status) ... FAIL
+test_rejects_absolute_path (test_validate_library.LibraryValidationTests.test_rejects_absolute_path) ... FAIL
+test_rejects_code_under_docs_only_skills (test_validate_library.LibraryValidationTests.test_rejects_code_under_docs_only_skills) ... FAIL
+test_rejects_dependency_escaping_skill (test_validate_library.LibraryValidationTests.test_rejects_dependency_escaping_skill) ... FAIL
+test_rejects_description_above_limit (test_validate_library.LibraryValidationTests.test_rejects_description_above_limit) ... FAIL
+test_rejects_duplicate_catalog_name (test_validate_library.LibraryValidationTests.test_rejects_duplicate_catalog_name) ... FAIL
+test_rejects_duplicate_frontmatter_keys (test_validate_library.LibraryValidationTests.test_rejects_duplicate_frontmatter_keys) ... FAIL
+test_rejects_duplicate_locked_paths (test_validate_library.LibraryValidationTests.test_rejects_duplicate_locked_paths) ... FAIL
+test_rejects_duplicate_source_id (test_validate_library.LibraryValidationTests.test_rejects_duplicate_source_id) ... FAIL
+test_rejects_empty_description (test_validate_library.LibraryValidationTests.test_rejects_empty_description) ... FAIL
+test_rejects_executable_permission_on_document (test_validate_library.LibraryValidationTests.test_rejects_executable_permission_on_document) ... FAIL
+test_rejects_inventory_snapshot_mismatch (test_validate_library.LibraryValidationTests.test_rejects_inventory_snapshot_mismatch) ... FAIL
+test_rejects_license_without_notice (test_validate_library.LibraryValidationTests.test_rejects_license_without_notice) ... FAIL
+test_rejects_missing_dependency (test_validate_library.LibraryValidationTests.test_rejects_missing_dependency) ... FAIL
+test_rejects_missing_license (test_validate_library.LibraryValidationTests.test_rejects_missing_license) ... FAIL
+test_rejects_mutable_commit_ref (test_validate_library.LibraryValidationTests.test_rejects_mutable_commit_ref) ... FAIL
+test_rejects_name_folder_mismatch (test_validate_library.LibraryValidationTests.test_rejects_name_folder_mismatch) ... FAIL
+test_rejects_path_traversal (test_validate_library.LibraryValidationTests.test_rejects_path_traversal) ... FAIL
+test_rejects_private_inventory_repository (test_validate_library.LibraryValidationTests.test_rejects_private_inventory_repository) ... FAIL
+test_rejects_private_source (test_validate_library.LibraryValidationTests.test_rejects_private_source) ... FAIL
+test_rejects_short_hash (test_validate_library.LibraryValidationTests.test_rejects_short_hash) ... FAIL
+test_rejects_symlink_in_skill_bundle (test_validate_library.LibraryValidationTests.test_rejects_symlink_in_skill_bundle) ... FAIL
+test_rejects_tampered_file_bytes (test_validate_library.LibraryValidationTests.test_rejects_tampered_file_bytes) ... FAIL
+test_rejects_undeclared_inventory_artifact (test_validate_library.LibraryValidationTests.test_rejects_undeclared_inventory_artifact) ... FAIL
+test_rejects_unknown_source_id (test_validate_library.LibraryValidationTests.test_rejects_unknown_source_id) ... FAIL
+test_rejects_unlocked_extra_file (test_validate_library.LibraryValidationTests.test_rejects_unlocked_extra_file) ... FAIL
+test_rejects_windows_path (test_validate_library.LibraryValidationTests.test_rejects_windows_path) ... FAIL
+test_rejects_wrong_git_blob_with_matching_sha256 (test_validate_library.LibraryValidationTests.test_rejects_wrong_git_blob_with_matching_sha256) ... FAIL
+test_reports_malformed_json_without_exception (test_validate_library.LibraryValidationTests.test_reports_malformed_json_without_exception) ... FAIL
+test_reports_wrong_schema_types_without_exception (test_validate_library.LibraryValidationTests.test_reports_wrong_schema_types_without_exception) ... FAIL
+
+======================================================================
+FAIL: test_accepts_complete_pinned_document_bundle (test_validate_library.LibraryValidationTests.test_accepts_complete_pinned_document_bundle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_accepts_description_at_1024_character_limit (test_validate_library.LibraryValidationTests.test_accepts_description_at_1024_character_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_accepts_remote_and_fragment_links_without_network (test_validate_library.LibraryValidationTests.test_accepts_remote_and_fragment_links_without_network)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_cli_json_and_exit_status (test_validate_library.LibraryValidationTests.test_cli_json_and_exit_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_absolute_path (test_validate_library.LibraryValidationTests.test_rejects_absolute_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_code_under_docs_only_skills (test_validate_library.LibraryValidationTests.test_rejects_code_under_docs_only_skills)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_dependency_escaping_skill (test_validate_library.LibraryValidationTests.test_rejects_dependency_escaping_skill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_description_above_limit (test_validate_library.LibraryValidationTests.test_rejects_description_above_limit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_duplicate_catalog_name (test_validate_library.LibraryValidationTests.test_rejects_duplicate_catalog_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_duplicate_frontmatter_keys (test_validate_library.LibraryValidationTests.test_rejects_duplicate_frontmatter_keys)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_duplicate_locked_paths (test_validate_library.LibraryValidationTests.test_rejects_duplicate_locked_paths)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_duplicate_source_id (test_validate_library.LibraryValidationTests.test_rejects_duplicate_source_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_empty_description (test_validate_library.LibraryValidationTests.test_rejects_empty_description)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_executable_permission_on_document (test_validate_library.LibraryValidationTests.test_rejects_executable_permission_on_document)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_inventory_snapshot_mismatch (test_validate_library.LibraryValidationTests.test_rejects_inventory_snapshot_mismatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_license_without_notice (test_validate_library.LibraryValidationTests.test_rejects_license_without_notice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_missing_dependency (test_validate_library.LibraryValidationTests.test_rejects_missing_dependency)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_missing_license (test_validate_library.LibraryValidationTests.test_rejects_missing_license)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_mutable_commit_ref (test_validate_library.LibraryValidationTests.test_rejects_mutable_commit_ref)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_name_folder_mismatch (test_validate_library.LibraryValidationTests.test_rejects_name_folder_mismatch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_path_traversal (test_validate_library.LibraryValidationTests.test_rejects_path_traversal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_private_inventory_repository (test_validate_library.LibraryValidationTests.test_rejects_private_inventory_repository)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_private_source (test_validate_library.LibraryValidationTests.test_rejects_private_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_short_hash (test_validate_library.LibraryValidationTests.test_rejects_short_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_symlink_in_skill_bundle (test_validate_library.LibraryValidationTests.test_rejects_symlink_in_skill_bundle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_tampered_file_bytes (test_validate_library.LibraryValidationTests.test_rejects_tampered_file_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_undeclared_inventory_artifact (test_validate_library.LibraryValidationTests.test_rejects_undeclared_inventory_artifact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_unknown_source_id (test_validate_library.LibraryValidationTests.test_rejects_unknown_source_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_unlocked_extra_file (test_validate_library.LibraryValidationTests.test_rejects_unlocked_extra_file)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_windows_path (test_validate_library.LibraryValidationTests.test_rejects_windows_path)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_rejects_wrong_git_blob_with_matching_sha256 (test_validate_library.LibraryValidationTests.test_rejects_wrong_git_blob_with_matching_sha256)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_reports_malformed_json_without_exception (test_validate_library.LibraryValidationTests.test_reports_malformed_json_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+======================================================================
+FAIL: test_reports_wrong_schema_types_without_exception (test_validate_library.LibraryValidationTests.test_reports_wrong_schema_types_without_exception)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/outputs/personal-library/tests/test_validate_library.py", line 20, in setUp
+    self.assertTrue(SCRIPT.is_file(), "First-party validator feature is unavailable")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : First-party validator feature is unavailable
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.004s
+
+FAILED (failures=33)

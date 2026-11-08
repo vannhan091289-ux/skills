@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "ecc-literature",
+      "repository": "vannhan091289-ux/ECC",
+      "upstream_repository": "affaan-m/ECC",
+      "commit_sha": "ef648e01899ba3e8dc6371642deaaf64b4477775",
+      "visibility": "public",
+      "license": "MIT",
+      "review_status": "accepted-with-guards",
+      "files": [
+        {
+          "path": "skills/scientific-thinking-literature-review/SKILL.md",
+          "upstream_path": "skills/scientific-thinking-literature-review/SKILL.md",
+          "git_blob_sha": "dd240c89bcabf71bbe1d181fbb7ba3c0d7935729",
+          "sha256": "380918f545c7e9b297b23bee4a0432deba977acbdb217232bf1ab9d5aa3c562e"
+        },
+        {
+          "path": "skills/scientific-thinking-literature-review/LICENSE.txt",
+          "upstream_path": "LICENSE",
+          "git_blob_sha": "b832b6f642312312367c07688dc7426db40a82ed",
+          "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+        }
+      ]
+    },
+    {
+      "id": "vietnamese-grammar",
+      "repository": "vannhan091289-ux/vietnamese-humanizer",
+      "upstream_repository": "longhang2004/vietnamese-humanizer",
+      "commit_sha": "7a749e75386303fee0fc592aa76a44036aecced2",
+      "visibility": "public",
+      "license": "MIT",
+      "review_status": "accepted-with-guards",
+      "files": [
+        {
+          "path": "skills/grammar-checker-vi/SKILL.md",
+          "upstream_path": "skills/grammar-checker-vi/SKILL.md",
+          "git_blob_sha": "5d541ae96cb3c611b75cc34c37d8828ad0dfb4aa",
+          "sha256": "77731bd437850bc0c8e732f12cdaacb560f1a512c897a2554c21a0ec2bd0dc52"
+        },
+        {
+          "path": "skills/grammar-checker-vi/references/checks.md",
+          "upstream_path": "skills/grammar-checker-vi/references/checks.md",
+          "git_blob_sha": "bd27d50ef6b3fa4a074d4db1fa210b9bd7c36ab0",
+          "sha256": "f9144d6d16283448d5ebaa4621dc000e1854c90c51e0e0bf9c012d8628e0bc28"
+        },
+        {
+          "path": "skills/grammar-checker-vi/references/common-errors.md",
+          "upstream_path": "skills/grammar-checker-vi/references/common-errors.md",
+          "git_blob_sha": "4c42a91f8504291fc87c80d06ea149b23332fbcf",
+          "sha256": "5f0ee04e2d66bc83d7c522e67983897a21f084f78718df619696b69c55c51f8c"
+        },
+        {
+          "path": "skills/grammar-checker-vi/references/examples.md",
+          "upstream_path": "skills/grammar-checker-vi/references/examples.md",
+          "git_blob_sha": "b19c469a94145de653cb4b9ca5eb7fc3109d5ce0",
+          "sha256": "99432fa4df13086fcdc70fd4ad1c9b6d8300288a6abf02bc2b8b42c530f73e9c"
+        },
+        {
+          "path": "skills/grammar-checker-vi/references/punctuation.md",
+          "upstream_path": "skills/grammar-checker-vi/references/punctuation.md",
+          "git_blob_sha": "e249c69a081df4b60eccc27fd9ea7148efe9921e",
+          "sha256": "bf255092948f57c12aa372fa94b83e459334c791de7371a594d7c760754003ed"
+        },
+        {
+          "path": "skills/grammar-checker-vi/LICENSE.txt",
+          "upstream_path": "LICENSE",
+          "git_blob_sha": "3f8499479e7dd51286dd63e4e5daba6837de8c70",
+          "sha256": "60c683ff858e8db4d0831b280fb0746e4625962230f3c61aaae8a4cbfcc02fdc"
+        }
+      ]
+    }
+  ]
+}
