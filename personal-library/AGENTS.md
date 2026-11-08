@@ -1,4 +1,6 @@
-# Quy tắc của personal-library
+# personal-library — hướng dẫn snapshot lưu trữ
+
+Nguồn chuẩn hiện hành: [personal-ai-skills](../personal-ai-skills/README.md), registry.yaml và governance ở đó. Quy tắc dưới đây ghi lại phạm vi snapshot lịch sử, không tạo registry hiện hành thứ hai.
 
 Thư viện này là phần mở rộng cá nhân trong fork public. Áp dụng trong thư mục này, sau platform và yêu cầu hiện tại của người dùng.
 
@@ -16,7 +18,7 @@ Thư viện này là phần mở rộng cá nhân trong fork public. Áp dụng 
 
 ## Vòng đời
 - Tuân theo quy trình của repository đích. Khi Spec Kit hoặc hệ khác đã là chủ quy trình, chỉ dùng utility hẹp, không khởi tạo workflow engine cạnh tranh.
-- Catalog và sources.lock.json là nguồn chuẩn cho phần vendor. Skill authored dùng domain-skills/manifest.json và kiểm tra riêng; không nới gate vendor để nhận code mới.
+- Catalog, sources.lock.json và domain-skills/manifest.json chỉ là khóa nguồn/metadata lịch sử. Không nới gate cũ để nhận code mới; bổ sung mới theo registry.yaml của personal-ai-skills.
 - Trạng thái nguồn staged không tự cấp quyền cài đặt. Cài cá nhân chỉ theo yêu cầu người dùng, giữ guard standalone và xác minh manifest; không tự cài trên máy khác.
 - Nếu host đã có skill tương đương, dùng một bản và kiểm tra phiên bản, tránh nạp hai quy trình xung đột.
 - Kiểm tra theo rủi ro và thay đổi thực tế. Ghi lệnh, kết quả, giới hạn; không chạy lệnh chưa rà soát chỉ để có bằng chứng.

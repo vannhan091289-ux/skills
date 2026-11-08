@@ -1,0 +1,6 @@
+interface:
+  display_name: "Review thay đổi code"
+  short_description: "Đối chiếu diff với tiêu chuẩn và yêu cầu"
+  default_prompt: "Dùng $review-code-change để review patch hoặc PR tôi cung cấp, ghi rõ bằng chứng và giới hạn."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,14 @@
+schema_version: 1
+name: 'chatgpt'
+mode: 'manual-context'
+runtime_verified: false
+source_registry: '../../registry.yaml'
+instructions: 'README.md'
+official_sources:
+  - 'https://learn.chatgpt.com/docs/build-skills'
+required_steps:
+  - 'Chọn skill và phiên bản từ canonical registry; đọc governance và đối chiếu hash.'
+  - 'Export đúng resource closure rồi cung cấp thủ công ngữ cảnh PUBLIC trong chat đích.'
+  - 'Xác nhận tài nguyên host đọc được và giới hạn công cụ trước áp dụng workflow.'
+  - 'Thử synthetic fixture và ghi bằng chứng riêng; không tuyên bố native runtime đã kiểm chứng.'
+  - 'Cập nhật tại canonical skills rồi export lại; không chỉnh một bản sao adapter.'

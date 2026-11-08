@@ -1,0 +1,184 @@
+schema_version: 1
+library:
+  name: personal-ai-skills
+  version: 1.0.0
+governance:
+  security_policy: governance/security-policy.md
+  quality_gates: governance/quality-gates.md
+  data_classification: governance/data-classification.md
+skills:
+- name: review-academic-thesis
+  path: skills/review-academic-thesis
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+    not verified
+  installed_name: review-academic-thesis
+  files:
+  - path: skills/review-academic-thesis/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/review-academic-thesis/SKILL.md
+    sha256: d9c2457265fd4ea1ef848c05fa729ba14cc6303b1f8e0b5aa6d2627392776ffc
+  - path: skills/review-academic-thesis/agents/openai.yaml
+    sha256: b982a92c738c1140a12b9a7ef2ff9be065b76262ba298d852911a2288e75ae00
+  - path: skills/review-academic-thesis/assets/review-template.md
+    sha256: 5622bf8e37f1760a5585ff8c1aa9e12790b5f6a2eea191cd7d08a7272225a2b5
+  - path: skills/review-academic-thesis/references/citation-ledger.md
+    sha256: 72849eff019d56095e193f457c72a3134d7349581707f4af1b0385ae0fd8116f
+  - path: skills/review-academic-thesis/references/method-lenses.md
+    sha256: 5a82d57bab2194d9a133eb099b97dbd34c3bec33e22a885d22e9758d15b8e22c
+  - path: skills/review-academic-thesis/references/review-contract.md
+    sha256: 68572049521acd8184299d1469ce32f49191aaac360f2b5f9c49ed55c774ef8f
+  - path: skills/review-academic-thesis/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/review-academic-thesis/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/review-academic-thesis/tests/fixtures/review-cases.json
+    sha256: 8edf0c0f48aae8a371782733e75d8216571ad1af75cbf8962d4096d07b1d64de
+  - path: skills/review-academic-thesis/tests/test_review_contract.py
+    sha256: 5b441acd45c97b8baf875831c4245c0286e99b136cfc50bb7c4f47789d673139
+- name: audit-branch-kpi
+  path: skills/audit-branch-kpi
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+    not verified
+  installed_name: audit-branch-kpi
+  files:
+  - path: skills/audit-branch-kpi/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/audit-branch-kpi/SKILL.md
+    sha256: 440ae0ea5d7677eaf2d10e20b717690b5d13f60ed90719afbf7a49e8456d826e
+  - path: skills/audit-branch-kpi/agents/openai.yaml
+    sha256: 24ada1b5c9dd452050763b763a7fe8c843a73dfe0c9d2f4c5b1b515342c5e314
+  - path: skills/audit-branch-kpi/assets/demo-ratio.json
+    sha256: b12fe492fddce2d36f4e7c6ad81f49353376c1a4ecfffa675bde488cd11d38b6
+  - path: skills/audit-branch-kpi/references/data-contract.md
+    sha256: cc44f92cb26886ae4c313c691815cb9c35e09750bdce6d910e1d03d9d28302da
+  - path: skills/audit-branch-kpi/references/report-contract.md
+    sha256: 8d88f29824adad569c969ebddaf07d9a2daca77faeecc8da0f4b29f12af9220f
+  - path: skills/audit-branch-kpi/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/audit-branch-kpi/scripts/calculate_ratio.py
+    sha256: 6d8134c4e57003da2b22c548fb3319eb5cd302936ea4f2191cf05bec029623e0
+  - path: skills/audit-branch-kpi/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/audit-branch-kpi/tests/test_calculator.py
+    sha256: 5cfbd4ac0d4bc4c6cfc28e6985881825b56560a010256f813da6480ed392bf2f
+- name: review-code-change
+  path: skills/review-code-change
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+    not verified
+  installed_name: null
+  files:
+  - path: skills/review-code-change/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/review-code-change/SKILL.md
+    sha256: 503aeb67516f07c6ccfb77a6ee579e7930c1c346a8a3bd03104e12abec8fb63f
+  - path: skills/review-code-change/agents/openai.yaml
+    sha256: 7cc9422924637308b9c26edbb63c5773e8fa6479e4bef464c9719b1446f4025b
+  - path: skills/review-code-change/assets/diff-demo.json
+    sha256: b665e4f7cbec535b913205d8c8e5a7733b423bb91d0b2f8aedebd0bede0734ab
+  - path: skills/review-code-change/assets/review-template.md
+    sha256: 210b2583684d6bdb47c47dc0204b1b76fe0f2fb6a23b94444b4b4eba921f6ce0
+  - path: skills/review-code-change/references/finding-contract.md
+    sha256: 0fde044537850950dcaa5edecfc20dfe069d302b91f715e439eb21ef6b6f6b32
+  - path: skills/review-code-change/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/review-code-change/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/review-code-change/tests/fixtures/applications.json
+    sha256: 6b4753a0bb3e0e392f7ca9185cab9bdc0660dd3cfe3159e80d7229d411c5d7cb
+  - path: skills/review-code-change/tests/test_review_evidence.py
+    sha256: dedde63ddf1b351321811ba0dece7286abdd39157c5cfbfce43242748a820875
+- name: grammar-checker-vi
+  path: skills/grammar-checker-vi
+  version: 0.2.1
+  role: support
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+    not verified
+  installed_name: grammar-checker-vi
+  files:
+  - path: skills/grammar-checker-vi/LICENSE.txt
+    sha256: 60c683ff858e8db4d0831b280fb0746e4625962230f3c61aaae8a4cbfcc02fdc
+  - path: skills/grammar-checker-vi/ORIGIN.json
+    sha256: 13f88093f09f0870197f4ce36b2ad02560064cd9a5e5ca9db39d6591151a0a36
+  - path: skills/grammar-checker-vi/SKILL.md
+    sha256: 38aba784b66826e27ea3af5c53d54aeb9e05a53caf7540ca3b97860371650dd7
+  - path: skills/grammar-checker-vi/references/checks.md
+    sha256: f9144d6d16283448d5ebaa4621dc000e1854c90c51e0e0bf9c012d8628e0bc28
+  - path: skills/grammar-checker-vi/references/common-errors.md
+    sha256: 5f0ee04e2d66bc83d7c522e67983897a21f084f78718df619696b69c55c51f8c
+  - path: skills/grammar-checker-vi/references/examples.md
+    sha256: 99432fa4df13086fcdc70fd4ad1c9b6d8300288a6abf02bc2b8b42c530f73e9c
+  - path: skills/grammar-checker-vi/references/punctuation.md
+    sha256: bf255092948f57c12aa372fa94b83e459334c791de7371a594d7c760754003ed
+  - path: skills/grammar-checker-vi/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+- name: scientific-thinking-literature-review
+  path: skills/scientific-thinking-literature-review
+  version: snapshot-ef648e01899b
+  role: support
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+    not verified
+  installed_name: scientific-thinking-literature-review
+  files:
+  - path: skills/scientific-thinking-literature-review/LICENSE.txt
+    sha256: 326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2
+  - path: skills/scientific-thinking-literature-review/ORIGIN.json
+    sha256: 755a3588a9f6dbe709d663d4152fea8a11f0607ef744a3288e6e97876fb9b663
+  - path: skills/scientific-thinking-literature-review/SKILL.md
+    sha256: e3253640f4ed749665499ad0949a1ffd471c9f0df229ead59064b9da302a87d0
+  - path: skills/scientific-thinking-literature-review/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+adapters:
+- name: chatgpt
+  path: adapters/chatgpt
+  mode: manual-context
+  runtime_verified: false
+  files:
+  - path: adapters/chatgpt/README.md
+    sha256: 6407c959430217f8cf568c29829994391087ac5dc89e6b0d973a132f75c5d550
+  - path: adapters/chatgpt/adapter.yaml
+    sha256: 36919128aca5d9b756881c47357e93d698318032a2ff9becf4f422d7bc28108c
+- name: gemini
+  path: adapters/gemini
+  mode: documented-native
+  runtime_verified: false
+  files:
+  - path: adapters/gemini/README.md
+    sha256: f72cb0fe637718b1e3980e6cbf434986738b890a8e280298aa9bd3df03b4dbe3
+  - path: adapters/gemini/adapter.yaml
+    sha256: 61f3bf1eaf94dbfd79e41b1c9afda389829d7578512b718cbe862b87a2a11bc8
+- name: claude
+  path: adapters/claude
+  mode: documented-native
+  runtime_verified: false
+  files:
+  - path: adapters/claude/README.md
+    sha256: 6600d49326a5a4a81b9679484290123932991e808ccbac514e4a7227e25ae661
+  - path: adapters/claude/adapter.yaml
+    sha256: 69d6b04823f47d1bdfd334dc6f6db2b967b30e7ac8cf74e8965af74e3da941ce
+- name: codex
+  path: adapters/codex
+  mode: documented-native
+  runtime_verified: false
+  files:
+  - path: adapters/codex/README.md
+    sha256: 4e7f9e33ee8e9e1f06b1d2cd31bd91f3157ab4b634ae745737e3e040af975602
+  - path: adapters/codex/adapter.yaml
+    sha256: 579c58252b769676fc6c5b40111a8ee9efe82f2de747b9995d4657ef9360c1eb
+governance_files:
+- path: governance/security-policy.md
+  sha256: 57c1a4ff1bf40627128216893e776d09993433039aab03a795fa6ebc5289836c
+- path: governance/quality-gates.md
+  sha256: 454d0e9faed2c389e252828a1dc6629f9fe5f9ccc0060d93f01bbe25d3bbc63e
+- path: governance/data-classification.md
+  sha256: 2f6fecaeeba9aa134032d0be82b9493310a7c20b4c4861c2309facc0fea9e5e8

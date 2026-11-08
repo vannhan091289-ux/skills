@@ -1,0 +1,15 @@
+schema_version: 1
+name: 'codex'
+mode: 'documented-native'
+runtime_verified: false
+source_registry: '../../registry.yaml'
+instructions: 'README.md'
+official_sources:
+  - 'https://developers.openai.com/codex/skills/'
+  - 'https://learn.chatgpt.com/docs/build-skills'
+required_steps:
+  - 'Chọn skill/version theo registry; đọc governance, kiểm tra hash và installed_name.'
+  - 'Chuẩn bị export resource closure từ canonical skills; bảo tồn nguồn installed.'
+  - 'Chỉ cài ở scope repository đã duyệt khi được yêu cầu; xác nhận discovery và invocation trên host.'
+  - 'Chạy synthetic pilot được phép và ghi bằng chứng có runtime/model, kết quả cùng giới hạn.'
+  - 'Giữ runtime_verified false khi chưa kiểm chứng adapter native; cập nhật canonical trước export lại.'

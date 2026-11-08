@@ -1,0 +1,14 @@
+schema_version: 1
+name: 'claude'
+mode: 'documented-native'
+runtime_verified: false
+source_registry: '../../registry.yaml'
+instructions: 'README.md'
+official_sources:
+  - 'https://code.claude.com/docs/en/skills'
+required_steps:
+  - 'Chọn canonical skill trong registry; đọc governance và kiểm tra hashes cùng tên trùng.'
+  - 'Chuẩn bị export trọn resource closure; cung cấp governance canonical làm ngữ cảnh.'
+  - 'Chỉ cài ở scope project Claude Code khi được yêu cầu; không tự đổi global settings.'
+  - 'Quan sát discovery và invocation thực, thử synthetic fixture và ghi runtime/model cùng giới hạn.'
+  - 'Cập nhật canonical trước export lại; gỡ đúng bản export theo phạm vi được duyệt.'

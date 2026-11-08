@@ -1,0 +1,10 @@
+{
+  "baseline": 5,
+  "method": "fresh context per sample; fixed supplied-diff packet",
+  "baseline_observation": "Control strong;2outputs understate unseen-guard uncertainty. No causal quality benefit established.",
+  "application_review": "Builder read all five final answers; each limits whole-function inference, identifies absent formal spec, limits direction to sign domain or magnitude, locates ratio change/test blindspot, and reports no execution/merge. Captured answers preserved bytewise.",
+  "refactor_reason": "Initial treatment sample5 said all actual!=0,target>0 ratios decrease; negativeactual disproves this direction. Source wording updated to require explicit sign domain. Initial answers preserved in initial-code-applications.json. Five new fresh-context applications independently captured after edit; no broad/causal quality benefit claim.",
+  "with_skill_initial": 5,
+  "with_skill_refactored": 5,
+  "regression_scope": "Replay verifies assessment integrity and structured claims; independent Decimal oracle shows negative actual increases from -100 to -90.909..., while magnitude decreases. Human semantic assessment is still required for new prose."
+}

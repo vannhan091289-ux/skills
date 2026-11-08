@@ -1,0 +1,65 @@
+{
+  "status": "PILOT_GO",
+  "scope": "Calculator only; package-wide delivery remains parent-owned",
+  "files": [
+    "outputs/domain-skills/audit-branch-kpi/scripts/calculate_ratio.py",
+    "outputs/domain-skills/tests/test_kpi_calculator.py"
+  ],
+  "sha256": "6d8134c4e57003da2b22c548fb3319eb5cd302936ea4f2191cf05bec029623e0",
+  "tdd": {
+    "red_command": "python3 -m unittest discover -s outputs/domain-skills/tests -p 'test_kpi_calculator.py'",
+    "red_exit_code": 1,
+    "red_tests": 35,
+    "red_assertion_failures_including_subtests": 81,
+    "red_evidence": "Ran 35 tests in 0.059s; FAILED (failures=81); implementation is missing",
+    "additional_red": "36 tests; FAILED (errors=1); inherited caller Inexact trap raised decimal.Inexact",
+    "green_command": "python3 -m unittest discover -s outputs/domain-skills/tests -p 'test_kpi_calculator.py'",
+    "green_exit_code": 0,
+    "green_tests": 36,
+    "green_evidence": "Ran 36 tests in 0.435s; OK"
+  },
+  "cli_evidence": {
+    "command": "python3 outputs/domain-skills/audit-branch-kpi/scripts/calculate_ratio.py -",
+    "stdin_case": "synthetic fixture: 80/100 plus 30/50",
+    "exit_code": 0,
+    "stdout_json": {
+      "status": "CALCULATED",
+      "errors": [],
+      "source_id": "local-export",
+      "period": "2026-10",
+      "unit": "count",
+      "formula_id": "generic-ratio",
+      "formula_version": "1",
+      "total_numerator": "110",
+      "total_denominator": "150",
+      "ratio_pct": "73.3333",
+      "rounding": "ROUND_HALF_EVEN;4dp",
+      "rows_checked": 2,
+      "approval_reference": "caller-reference",
+      "caveat": "Calculation only; approval reference is caller-supplied, not authority verification"
+    },
+    "stderr": ""
+  },
+  "syntax_check": "compile(source, filename, exec) passed; no bytecode output requested",
+  "broader_suite_at_time_of_check": {
+    "command": "python3 -m unittest discover -s outputs/domain-skills/tests -v",
+    "tests": 40,
+    "exit_code": 1,
+    "failures_including_subtests": 7,
+    "reason": "Sibling package tests ran while root was still creating skill entrypoints, shared guards and sample fixture",
+    "failing_tests": [
+      "test_demo_calculator_fixture_has_no_customer_fields",
+      "test_guard_is_loaded_by_each_skill",
+      "test_names_descriptions_and_discovery_metadata (2 subtests)",
+      "test_relative_resource_closure_and_no_symlinks",
+      "test_required_entrypoints_and_notices_exist (2 subtests)"
+    ]
+  },
+  "limitations": [
+    "Root version field is schema_version integer 1; unknown fields rejected at root/formula/row.",
+    "No domain-specific credit, banking, accounting or approval-policy formula is inferred or verified.",
+    "JSON duplicate-key rejection applies to CLI parsing; Python dict input has already lost any duplicate-key history.",
+    "Runtime verification used synthetic local fixtures only; no real records, network or third-party dependencies.",
+    "Independent Challenger QA is not performed by this builder; parent owns that review."
+  ]
+}

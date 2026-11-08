@@ -53,5 +53,7 @@
       "status": "validated synthetic pilot; ready for local installation",
       "manifest": "domain-skills/manifest.json"
     }
-  ]
+  ],
+  "archived": true,
+  "superseded_by": "../personal-ai-skills/registry.yaml"
 }

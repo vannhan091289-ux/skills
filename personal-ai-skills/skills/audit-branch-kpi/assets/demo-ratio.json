@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "source_id": "DEMO-NOT-BANK-POLICY",
+  "formula": {
+    "id": "demo-attainment",
+    "version": "1",
+    "approval_reference": "DEMO fixture only; not an approved bank policy",
+    "operation": "ratio_pct",
+    "additive_across_entities": true
+  },
+  "metric_kind": "flow",
+  "period": "2026-10",
+  "unit": "points",
+  "rows": [
+    {
+      "entity_id": "DEMO-A",
+      "period": "2026-10",
+      "unit": "points",
+      "numerator": "80",
+      "denominator": "100"
+    },
+    {
+      "entity_id": "DEMO-B",
+      "period": "2026-10",
+      "unit": "points",
+      "numerator": "30",
+      "denominator": "50"
+    }
+  ]
+}

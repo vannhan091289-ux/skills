@@ -1,0 +1,14 @@
+schema_version: 1
+name: 'gemini'
+mode: 'documented-native'
+runtime_verified: false
+source_registry: '../../registry.yaml'
+instructions: 'README.md'
+official_sources:
+  - 'https://geminicli.com/docs/cli/skills/'
+required_steps:
+  - 'Đọc registry và governance; kiểm tra hash, resource closure, phân loại và tên trùng.'
+  - 'Chuẩn bị export canonical; chỉ cài vào workspace Gemini CLI khi được cho phép rõ ràng.'
+  - 'Kiểm tra discovery và activation trên host thật; giữ consent và quyền của host.'
+  - 'Áp dụng synthetic fixture và ghi CLI/model, kết quả, giới hạn trước đề xuất thay đổi trạng thái.'
+  - 'Cập nhật canonical rồi export lại; gỡ chỉ bản export được xác định và được phép.'

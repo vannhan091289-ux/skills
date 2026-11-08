@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "classification": "PUBLIC_SYNTHETIC",
+  "fixtures": [
+    {
+      "path": "skills/audit-branch-kpi/assets/demo-ratio.json",
+      "type": "ratio-single-period"
+    },
+    {
+      "path": "skills/review-academic-thesis/tests/fixtures/review-cases.json",
+      "type": "captured-synthetic-review-cases"
+    },
+    {
+      "path": "skills/review-code-change/assets/diff-demo.json",
+      "type": "supplied-diff-not-live-repository"
+    }
+  ]
+}

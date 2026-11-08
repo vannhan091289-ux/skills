@@ -1,0 +1,17 @@
+{
+  "status": "REWORK",
+  "before": "personal-library",
+  "missing": [
+    "personal-ai-skills root",
+    "registry.yaml",
+    "three governance docs",
+    "four adapter manifests",
+    "review-code-change",
+    "per-skill tests and thesis scripts directory"
+  ],
+  "layout_red": {
+    "tests": 4,
+    "expected_failure_reason": "canonical files and packages missing"
+  },
+  "installed_skills_modified": false
+}
