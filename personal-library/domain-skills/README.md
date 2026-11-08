@@ -28,4 +28,4 @@ python3 -B audit-branch-kpi/scripts/calculate_ratio.py audit-branch-kpi/assets/d
 
 Test captured outputs không tự chạy lại model. Helper đọc JSON normalized, không đọc trực tiếp Excel hoặc xác thực công thức ngân hàng.
 Các skill hoạt động độc lập; grammar-checker-vi/literature review là hỗ trợ tùy chọn.
-Không cần PyYAML hay dependency bên thứ ba để chạy helper/tests. Package gate kiểm subset frontmatter author dùng; official quick_validate chưa chạy vì môi trường thiếu PyYAML.
+Helper/tests không cần dependency bên thứ ba. Riêng kiểm tra định dạng đã dùng PyYAML6.0.3 trong môi trường riêng: official quick_validate đạt cho cả hai skill, gồm bản nguồn, payload GitHub và bản đã cài. Xem [bằng chứng](evidence/official-format-validation.json).

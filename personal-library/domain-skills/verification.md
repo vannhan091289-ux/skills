@@ -25,7 +25,10 @@ Không dùng tần suất trên packet cố định này làm tỷ lệ đúng t
 
 ## Giới hạn và phần chưa kiểm
 Chưa dữ liệu ngân hàng/đề án thật, PDF/OCR, citation online/full-text verification, business formula approval, workflow thực tế nhiều file hoặc auto-trigger trên từng host.
-Official creator quick_validate thiếu PyYAML nên không chạy; thay bằng kiểm frontmatter subset, metadata, references, hash và independent source review. Không cài dependency global hoặc bỏ TLS verification.
+Official creator quick_validate đã chạy với PyYAML6.0.3 trong virtual environment riêng. Cả hai skill đạt ở bản authored, payload GitHub và bản đã cài:6/6 lượt pass, không cần sửa nguồn. UI metadata YAML cũng parse đạt6/6; hai negative controls bị từ chối đúng. Hash wheel khớp PyPI, validator gốc không sửa; không cài dependency vào Python global hoặc bỏ TLS verification. [Bằng chứng](evidence/official-format-validation.json).
 Lần trước bộ cài network gặp CA lỗi; đợt này dùng package first-party local được kiểm byte, không network install và không chạy code nguồn bên thứ ba.
 Validator cũ docs-only vẫn chỉ kiểm hai skill vendor, không được nới để chấp nhận code mới; bộ45 test riêng phủ phần authored.
 Rollback cài đặt chỉ liên quan hai thư mục mới có receipt/hash, không tự xóa khi chưa được yêu cầu. GitHub main không thay đổi; cập nhật Draft PR, không merge/deploy.
+
+## Hoàn tất kiểm tra định dạng chính thức
+Bổ sung ngày08/11/2026: PyYAML6.0.3 được tải từ PyPI, đối chiếu SHA256 và cài offline từ wheel đã kiểm trong môi trường riêng. quick_validate.py nguyên bản báo Skill is valid! cho cả hai skill. Chạy lại45 test domain và64 test vendor trong môi trường này đều đạt;16 tệp skill đã cài giữ nguyên hash. Kiểm tra định dạng không thay thế nghiệm thu dữ liệu nghiệp vụ hoặc học thuật thật.
