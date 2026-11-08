@@ -16,8 +16,8 @@ Thư viện này là phần mở rộng cá nhân trong fork public. Áp dụng 
 
 ## Vòng đời
 - Tuân theo quy trình của repository đích. Khi Spec Kit hoặc hệ khác đã là chủ quy trình, chỉ dùng utility hẹp, không khởi tạo workflow engine cạnh tranh.
-- Catalog và sources.lock.json là nguồn chuẩn cho phạm vi, pin và trạng thái.
-- Skill staged chỉ được dùng trong bài tập hoặc khi được gọi có chủ đích sau khi đọc quy tắc này; chưa cài global.
+- Catalog và sources.lock.json là nguồn chuẩn cho phần vendor. Skill authored dùng domain-skills/manifest.json và kiểm tra riêng; không nới gate vendor để nhận code mới.
+- Trạng thái nguồn staged không tự cấp quyền cài đặt. Cài cá nhân chỉ theo yêu cầu người dùng, giữ guard standalone và xác minh manifest; không tự cài trên máy khác.
 - Nếu host đã có skill tương đương, dùng một bản và kiểm tra phiên bản, tránh nạp hai quy trình xung đột.
 - Kiểm tra theo rủi ro và thay đổi thực tế. Ghi lệnh, kết quả, giới hạn; không chạy lệnh chưa rà soát chỉ để có bằng chứng.
 - Phản hồi cải tiến được đề xuất trong PR, có test và version. Không tự cập nhật memory hay tự phát hành.

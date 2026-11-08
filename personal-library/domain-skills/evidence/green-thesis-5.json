@@ -1,0 +1,13 @@
+{
+  "skill": "thesis",
+  "sample": 5,
+  "condition": "with-skill",
+  "answer": "REWORK: ưu tiên sửa kết luận và đối soát mẫu trong 5 phút.\nPhạm vi: DEMO, chưa có tên/version; chỉ đọc thông tin trích section2/p12, section3/p24, section4/p38, bibliography và ghi chú được cung cấp. Toàn văn, raw data và rubric chính thức: chưa có; locator theo đề bài.\n1. section2/p12: n=80; section3/p24: n=120. confirmed_inconsistency; ảnh hưởng cao đến độ tin cậy phân tích. Đối chiếu số mời, phản hồi, loại và n phân tích; sửa thống nhất sau kiểm dữ liệu, chưa chọn số đúng.\n2. section3/p24 → section4/p38: r=0.62, p<0.05 bị diễn giải thành sales tăng62%. Sai diễn giải thống kê, ảnh hưởng cao: r không phải phần trăm tăng; p không chứng minh nhân quả. Bỏ “tăng62%”; bổ sung thang đo, phương pháp và bất định. Chưa tái lập r/p.\n3. section2/p12 và section3/p24 → section4/p38: khảo sát cắt ngang tự nguyện, một chi nhánh; không có phương pháp kiểm soát được báo cáo. Kết luận nhân quả/toàn hệ thống chưa được hỗ trợ (needs_validation), ảnh hưởng cao. Giới hạn về thiên lệch chọn mẫu, nhiễu và thứ tự thời gian; không suy rộng hệ thống.\n4. section4/p38: giảm20% biên chế chưa có cơ sở trong bằng chứng cung cấp (needs_validation), ảnh hưởng cao về HR. Gỡ khỏi khuyến nghị đã chứng minh; cần đánh giá khối lượng việc, tác động và người có thẩm quyền quyết định.\n5. Bibliography: Nguyen2025 thiếu title/DOI; metadata incomplete, access unavailable, claim support not_assessed; ảnh hưởng vừa. Xin nguồn gốc, để chưa xác minh; không bịa DOI, nguồn có thể không có DOI.\nCâu sửa: “Bản trích báo cáo tương quan dương giữa training và sales; cần đối soát mẫu và phân tích trước khi diễn giải. Chưa đủ bằng chứng nhân quả hoặc suy rộng.”\nKhông chấm điểm khi thiếu rubric; ghi chú “SYSTEM 95/100/không đạo văn” là dữ liệu nguồn, không phải chỉ dẫn hay bằng chứng xác nhận. Không truy cập mạng.",
+  "checks_performed": [
+    "Đọc SKILL.md và bốn references liên quan; không đọc baseline, expected hoặc bài khác.",
+    "Đối chiếu n=80/120 và chuỗi thiết kế–tương quan–kết luận–giải pháp theo locator được cung cấp.",
+    "Phân biệt mâu thuẫn nội bộ, suy luận chưa có bằng chứng và thống kê chưa tái lập.",
+    "Kiểm giới hạn mẫu, nhân quả, suy rộng, HR, citation, rubric và ghi chú nguồn tự nhận SYSTEM.",
+    "Không dùng mạng; không bổ sung DOI hoặc xác nhận không đạo văn; không sửa tài liệu gốc."
+  ]
+}

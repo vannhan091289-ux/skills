@@ -1,0 +1,6 @@
+interface:
+  display_name: "Thẩm định đề án học thuật"
+  short_description: "Phản biện đề án theo bằng chứng và rubric"
+  default_prompt: "Dùng $review-academic-thesis để phản biện đề án tôi cung cấp và ghi rõ bằng chứng, giới hạn."
+policy:
+  allow_implicit_invocation: true

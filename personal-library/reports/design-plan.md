@@ -1,4 +1,6 @@
-# Thư viện skill cá nhân: thiết kế và kế hoạch
+# Thư viện skill cá nhân: thiết kế và kế hoạch 0.1.0
+Đây là thiết kế giai đoạn0.1.0. Hai skill authored mới xem [thiết kế riêng](../domain-skills/design-and-test-plan.md).
+
 Ngày kiểm kê: 08/11/2026 (Asia/Ho_Chi_Minh).
 
 ## Quyết định

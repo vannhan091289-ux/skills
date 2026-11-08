@@ -1,4 +1,6 @@
-# Kết quả kiểm chứng
+# Kết quả kiểm chứng phần vendor 0.1.0
+
+Hai skill authored mới dùng [báo cáo riêng](../domain-skills/verification.md). Báo cáo này giữ bằng chứng vendor và bài tập ban đầu.
 
 Ngày chạy: 08/11/2026. Trạng thái package: STATIC_GO. Hai skill giữ staged, chưa kích hoạt global.
 Có bằng chứng bài tập agent giới hạn, không dùng nhãn RELEASE_GO hoặc chứng nhận an toàn tổng thể.

@@ -14,4 +14,4 @@
 
 Chỉ các entry nêu trên được triage/review nội dung theo mức ghi ở scorecard.json. Mọi artifact còn lại trong inventory vẫn là path-only và không được cấp trạng thái an toàn hoặc kích hoạt tự động. Không dùng stars, tên tác giả hoặc chữ ký commit như bằng chứng chất lượng.
 
-KPI và thẩm định đề án có nhu cầu rõ nhưng chưa có công thức ngân hàng/rubric được duyệt. Giữ dưới dạng prompt blueprint thay vì công bố skill chuyên ngành đã đạt chuẩn.
+Ở 0.1.0 KPI/thẩm định đề án là blueprint. Đợt0.2.0 đã đóng gói thành [hai skill authored](../domain-skills/README.md), có synthetic pilot và guard yêu cầu công thức/rubric khi dùng; chưa chứng nhận nghiệp vụ ngân hàng hay điểm học thuật.
