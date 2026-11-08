@@ -1,6 +1,6 @@
 # Adapter Codex
 
-Chế độ `documented-native`; `runtime_verified: false`. Đây là hướng dẫn chuyển từ thư viện canonical tới native skill, không phải công cụ cài đặt và không chứng minh bản export đã chạy.
+Chế độ `documented-native`; `runtime_verified: false` cho toàn adapter. Đã có [pilot ba skill lõi](../../evaluations/reports/codex-native-pilot.json) trong phiên CLI mới, gọi tường minh và đọc bản cài USER. Chưa kiểm toàn lifecycle/export/update/uninstall, routing tự động của host hoặc mọi skill/nền tảng; hướng dẫn này không phải installer.
 
 Tài liệu OpenAI mô tả discovery skill tại `.agents/skills` theo scope repository và invocation bằng `$` hoặc `/skills`. URL [Codex skills](https://developers.openai.com/codex/skills/) đã redirect tới [Build skills](https://learn.chatgpt.com/docs/build-skills) khi kiểm tra ngày 2026-11-08.
 

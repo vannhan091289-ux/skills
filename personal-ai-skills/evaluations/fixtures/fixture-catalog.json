@@ -13,6 +13,10 @@
     {
       "path": "skills/review-code-change/assets/diff-demo.json",
       "type": "supplied-diff-not-live-repository"
+    },
+    {
+      "path": "evaluations/fixtures/routing-cases.json",
+      "type": "synthetic-metadata-routing-positive-negative-mixed"
     }
   ]
 }

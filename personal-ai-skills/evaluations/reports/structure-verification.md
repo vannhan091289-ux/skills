@@ -1,4 +1,6 @@
-# Kiểm chứng cấu trúc personal-ai-skills
+# Kiểm chứng cấu trúc personal-ai-skills — snapshot1.0.0
+
+Trạng thái cài đặt trong báo cáo này thuộc thời điểm trước đợt1.0.1. Xem [nghiệm thu mới](pilot-acceptance.md) và codex-native-pilot.json cho trạng thái hiện hành.
 
 Ngày 2026-11-08. **STATIC_GO** cho cấu trúc, resource closure và định dạng; PILOT_GO chỉ cho các ca synthetic được lưu. Không có RELEASE_GO.
 

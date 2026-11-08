@@ -31,3 +31,14 @@ Builder QA do người/agent thực hiện thay đổi đối chiếu kết qu�
 Mỗi bằng chứng cần có ngày, artifact hoặc hash/commit, runtime/model nếu có, đầu vào synthetic, điều kiện chạy, kết quả thực tế so với mong đợi, exit status nếu chạy kiểm tra, lỗi và kiểm tra đã bỏ qua. Lần chạy lỗi vẫn là bằng chứng và phải được giữ. Không bắt buộc tạo lỗi baseline nhân tạo; ghi kết quả quan sát thật.
 
 Kết quả cuối tối đa 15 dòng: trạng thái có phạm vi, thay đổi, kiểm tra đã chạy, kiểm tra bỏ qua, rủi ro và bước tiếp theo. Bảo vệ dữ liệu theo [data-classification.md](data-classification.md), thực hiện phê duyệt theo [security-policy.md](security-policy.md).
+
+## Learn: tiếp nhận và phát hành cải tiến
+
+1. Ghi phản hồi thành đề xuất với phạm vi, ví dụ công khai/giả lập, bằng chứng và locator; không lưu dữ liệu nhạy cảm vào log public.
+2. Phân biệt sửa một đầu ra với quy tắc dùng lại. Không tự sửa memory hoặc biến mọi phản hồi thành chính sách lâu dài.
+3. Đề xuất thay đổi ở nhánh riêng, nêu tiêu chí nghiệm thu và regression tái hiện vấn đề. Không sửa bản cài để tạo một nguồn chuẩn cạnh tranh.
+4. Chỉnh canonical, kiểm định dạng/resource closure/hash và các test liên quan; thực hiện Challenger theo mức rủi ro.
+5. Cập nhật version, registry và CHANGELOG; giữ bằng chứng cả lỗi ban đầu và kết quả sửa. Review không tự cấp phép merge/release.
+6. Chỉ sau hành động được cho phép mới đồng bộ bản cài; kiểm lại từng file và pilot đúng host. Giữ receipt nguồn/version/hash để hoàn tác có kiểm soát.
+
+Ví dụ đã xử lý nằm trong [improvement log](../evaluations/reports/improvement-log.json). Đây là log cải tiến thư viện, không phải memory người dùng hoặc tự huấn luyện mô hình.

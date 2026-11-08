@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "classification": "PUBLIC_SYNTHETIC",
+  "items": [
+    {
+      "id": "LEARN-001",
+      "source": "initial-code-applications.json response5",
+      "feedback": "Universal ratio decrease is false for negative actual",
+      "classification": "reusable correctness rule, not personal memory",
+      "change": "Require explicit sign domain or no directional claim in review-code-change; initial answers preserved",
+      "verification": "Five refactored applications read independently; Decimal oracle verifies -100 to -90.909... increases",
+      "evidence": [
+        "code-review-application-summary.json",
+        "challenger-qa.json"
+      ],
+      "state": "resolved-in-source-before-v1.0.0-install",
+      "approval_boundary": "Feature branch only; no merge/release. Canonical user install explicitly authorized."
+    }
+  ]
+}

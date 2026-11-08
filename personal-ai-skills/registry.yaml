@@ -1,7 +1,7 @@
 schema_version: 1
 library:
   name: personal-ai-skills
-  version: 1.0.0
+  version: 1.0.1
 governance:
   security_policy: governance/security-policy.md
   quality_gates: governance/quality-gates.md
@@ -12,8 +12,8 @@ skills:
   version: 1.0.0
   role: core
   status: PILOT_GO
-  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
-    not verified
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
   installed_name: review-academic-thesis
   files:
   - path: skills/review-academic-thesis/LICENSE.txt
@@ -43,8 +43,8 @@ skills:
   version: 1.0.0
   role: core
   status: PILOT_GO
-  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
-    not verified
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
   installed_name: audit-branch-kpi
   files:
   - path: skills/audit-branch-kpi/LICENSE.txt
@@ -72,9 +72,9 @@ skills:
   version: 1.0.0
   role: core
   status: PILOT_GO
-  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
-    not verified
-  installed_name: null
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: review-code-change
   files:
   - path: skills/review-code-change/LICENSE.txt
     sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
@@ -101,7 +101,7 @@ skills:
   version: 0.2.1
   role: support
   status: PILOT_GO
-  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+  runtime_scope: Synthetic supplied-packet application only; support native runtime
     not verified
   installed_name: grammar-checker-vi
   files:
@@ -126,7 +126,7 @@ skills:
   version: snapshot-ef648e01899b
   role: support
   status: PILOT_GO
-  runtime_scope: Synthetic supplied-packet application only; adapters/native integration
+  runtime_scope: Synthetic supplied-packet application only; support native runtime
     not verified
   installed_name: scientific-thinking-literature-review
   files:
@@ -172,13 +172,13 @@ adapters:
   runtime_verified: false
   files:
   - path: adapters/codex/README.md
-    sha256: 4e7f9e33ee8e9e1f06b1d2cd31bd91f3157ab4b634ae745737e3e040af975602
+    sha256: 4fb64c7d9feafe42fabbf9e8ff645a12ee78ed264463bc75077fa5c1d290ef02
   - path: adapters/codex/adapter.yaml
     sha256: 579c58252b769676fc6c5b40111a8ee9efe82f2de747b9995d4657ef9360c1eb
 governance_files:
 - path: governance/security-policy.md
   sha256: 57c1a4ff1bf40627128216893e776d09993433039aab03a795fa6ebc5289836c
 - path: governance/quality-gates.md
-  sha256: 454d0e9faed2c389e252828a1dc6629f9fe5f9ccc0060d93f01bbe25d3bbc63e
+  sha256: 15b4659036ab8671cc1c072c39daed285aec797639d6a55c92cf6bf647658b5f
 - path: governance/data-classification.md
   sha256: 2f6fecaeeba9aa134032d0be82b9493310a7c20b4c4861c2309facc0fea9e5e8

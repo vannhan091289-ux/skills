@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-08",
+  "status": "PILOT_GO",
+  "scope": "one fresh-context sample per synthetic routing case; metadata supplied by test harness, not host auto-routing",
+  "cases": 12,
+  "matched": 12,
+  "responses": [
+    {
+      "id": "R01",
+      "selected": "review-academic-thesis",
+      "reason": "Yêu cầu phản biện phương pháp của bản thảo đề án."
+    },
+    {
+      "id": "R02",
+      "selected": "review-academic-thesis",
+      "reason": "Thẩm định các chương được cung cấp và nêu giới hạn phạm vi đã đọc."
+    },
+    {
+      "id": "R03",
+      "selected": "audit-branch-kpi",
+      "reason": "Đối soát actual/target KPI theo snapshot được cung cấp."
+    },
+    {
+      "id": "R04",
+      "selected": "audit-branch-kpi",
+      "reason": "Kiểm tra chênh lệch tổng và chi tiết KPI cùng kỳ dữ liệu."
+    },
+    {
+      "id": "R05",
+      "selected": "review-code-change",
+      "reason": "Review diff PR theo tiêu chuẩn repository; thiếu spec không đổi loại công việc."
+    },
+    {
+      "id": "R06",
+      "selected": "review-code-change",
+      "reason": "Rà soát patch trước tích hợp, xác định lỗi và khoảng trống kiểm thử."
+    },
+    {
+      "id": "R07",
+      "selected": "grammar-checker-vi",
+      "reason": "Soát lỗi tiếng Việt và bảo toàn số cùng URL."
+    },
+    {
+      "id": "R08",
+      "selected": "scientific-thinking-literature-review",
+      "reason": "Lập kế hoạch tìm kiếm, sàng lọc và tổng hợp tài liệu nghiên cứu có nguồn."
+    },
+    {
+      "id": "R09",
+      "selected": "NONE",
+      "reason": "Phân công chỉ đạo theo chức danh không thuộc workflow nào trong năm mô tả."
+    },
+    {
+      "id": "R10",
+      "selected": "NONE",
+      "reason": "Merge và deploy nằm ngoài workflow review code được quảng bá."
+    },
+    {
+      "id": "R11",
+      "selected": "NONE",
+      "reason": "Tự phê duyệt tín dụng nằm ngoài phạm vi đối soát KPI và các workflow còn lại."
+    },
+    {
+      "id": "R12",
+      "selected": [
+        "audit-branch-kpi",
+        "grammar-checker-vi"
+      ],
+      "reason": "Kết hợp đối soát KPI và soát lỗi tiếng Việt trong nhận xét."
+    }
+  ],
+  "expected": {
+    "R01": "review-academic-thesis",
+    "R02": "review-academic-thesis",
+    "R03": "audit-branch-kpi",
+    "R04": "audit-branch-kpi",
+    "R05": "review-code-change",
+    "R06": "review-code-change",
+    "R07": "grammar-checker-vi",
+    "R08": "scientific-thinking-literature-review",
+    "R09": "NONE",
+    "R10": "NONE",
+    "R11": "NONE",
+    "R12": [
+      "audit-branch-kpi",
+      "grammar-checker-vi"
+    ]
+  },
+  "no_broad_accuracy_or_host_discovery_claim": true
+}

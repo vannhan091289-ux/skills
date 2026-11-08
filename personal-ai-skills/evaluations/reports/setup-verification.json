@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-08",
+  "status": "STATIC_GO",
+  "scope": "Canonical1.0.1 packaging; three explicit Codex core pilots separately evidenced; fulladapterlifecycle unverified",
+  "python": "3.14.0",
+  "pyyaml": "6.0.3",
+  "official_validator_sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+  "checks": [
+    {
+      "name": "registry",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/outputs/personal-ai-skills/evaluations/validate_library.py <workspace>/outputs/personal-ai-skills",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"STATIC_GO\", \"errors\": [], \"skills_checked\": 5, \"adapters_checked\": 4}\n",
+      "stderr": ""
+    },
+    {
+      "name": "structure-tests",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B -m unittest discover -s <workspace>/outputs/personal-ai-skills/evaluations/tests -v",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_adapters_have_manifests_and_actual_instructions (test_layout_contract.CanonicalLayout.test_adapters_have_manifests_and_actual_instructions) ... ok\ntest_all_three_core_packages_are_populated (test_layout_contract.CanonicalLayout.test_all_three_core_packages_are_populated) ... ok\ntest_fixture_and_report_directories_contain_evidence (test_layout_contract.CanonicalLayout.test_fixture_and_report_directories_contain_evidence) ... ok\ntest_required_top_level_files_exist (test_layout_contract.CanonicalLayout.test_required_top_level_files_exist) ... ok\ntest_adapter_claim_and_source_registry (test_registry_validator.RegistryContract.test_adapter_claim_and_source_registry) ... ok\ntest_both_preserved_support_skills_are_required (test_registry_validator.RegistryContract.test_both_preserved_support_skills_are_required) ... ok\ntest_core_requires_script_and_test_files_not_only_prose (test_registry_validator.RegistryContract.test_core_requires_script_and_test_files_not_only_prose) ... ok\ntest_core_resources_cannot_be_todo_placeholders (test_registry_validator.RegistryContract.test_core_resources_cannot_be_todo_placeholders) ... ok\ntest_description_length_boundary (test_registry_validator.RegistryContract.test_description_length_boundary) ... ok\ntest_duplicate_file_records (test_registry_validator.RegistryContract.test_duplicate_file_records) ... ok\ntest_duplicate_yaml_keys_every_surface (test_registry_validator.RegistryContract.test_duplicate_yaml_keys_every_surface) ... ok\ntest_fixture_catalog_paths_and_schema (test_registry_validator.RegistryContract.test_fixture_catalog_paths_and_schema) ... ok\ntest_frontmatter_and_local_link_closure (test_registry_validator.RegistryContract.test_frontmatter_and_local_link_closure) ... ok\ntest_governance_requires_exact_physical_closure (test_registry_validator.RegistryContract.test_governance_requires_exact_physical_closure) ... ok\ntest_hash_tamper_missing_and_undeclared_files (test_registry_validator.RegistryContract.test_hash_tamper_missing_and_undeclared_files) ... ok\ntest_malformed_adapter_and_frontmatter_yaml (test_registry_validator.RegistryContract.test_malformed_adapter_and_frontmatter_yaml) ... ok\ntest_missing_adapter_and_governance_wrong_mapping (test_registry_validator.RegistryContract.test_missing_adapter_and_governance_wrong_mapping) ... ok\ntest_missing_core (test_registry_validator.RegistryContract.test_missing_core) ... ok\ntest_missing_license_and_unregistered_adapter_file (test_registry_validator.RegistryContract.test_missing_license_and_unregistered_adapter_file) ... ok\ntest_required_directories_cannot_be_placeholder_only (test_registry_validator.RegistryContract.test_required_directories_cannot_be_placeholder_only) ... ok\ntest_scripts_outside_registered_surface_are_rejected (test_registry_validator.RegistryContract.test_scripts_outside_registered_surface_are_rejected) ... ok\ntest_symlink_anywhere (test_registry_validator.RegistryContract.test_symlink_anywhere) ... ok\ntest_unhashable_yaml_key_and_malformed_cli_emit_json (test_registry_validator.RegistryContract.test_unhashable_yaml_key_and_malformed_cli_emit_json) ... ok\ntest_unsafe_declared_paths_and_missing_hash (test_registry_validator.RegistryContract.test_unsafe_declared_paths_and_missing_hash) ... ok\ntest_valid_and_read_only (test_registry_validator.RegistryContract.test_valid_and_read_only) ... ok\ntest_valid_cli_counts_and_no_stderr (test_registry_validator.RegistryContract.test_valid_cli_counts_and_no_stderr) ... ok\ntest_wrong_field_types_and_duplicates (test_registry_validator.RegistryContract.test_wrong_field_types_and_duplicates) ... ok\ntest_wrong_top_level_types (test_registry_validator.RegistryContract.test_wrong_top_level_types) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 2.281s\n\nOK\n"
+    },
+    {
+      "name": "audit-branch-kpi",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/outputs/personal-ai-skills/skills/audit-branch-kpi/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_calculate_does_not_mutate_input_or_decimal_context (test_calculator.RatioCalculatorTests.test_calculate_does_not_mutate_input_or_decimal_context) ... ok\ntest_calculation_is_independent_of_callers_decimal_traps (test_calculator.RatioCalculatorTests.test_calculation_is_independent_of_callers_decimal_traps) ... ok\ntest_cli_argument_errors_return_json (test_calculator.RatioCalculatorTests.test_cli_argument_errors_return_json) ... ok\ntest_cli_duplicate_json_keys_rejected_at_any_depth (test_calculator.RatioCalculatorTests.test_cli_duplicate_json_keys_rejected_at_any_depth) ... ok\ntest_cli_file_read_only_and_missing_or_directory_io (test_calculator.RatioCalculatorTests.test_cli_file_read_only_and_missing_or_directory_io) ... ok\ntest_cli_invalid_schema_exit_2 (test_calculator.RatioCalculatorTests.test_cli_invalid_schema_exit_2) ... ok\ntest_cli_malformed_json_utf8_and_nonstandard_constants (test_calculator.RatioCalculatorTests.test_cli_malformed_json_utf8_and_nonstandard_constants) ... ok\ntest_cli_stdin_calculated_exit_0 (test_calculator.RatioCalculatorTests.test_cli_stdin_calculated_exit_0) ... ok\ntest_cli_undefined_exit_1 (test_calculator.RatioCalculatorTests.test_cli_undefined_exit_1) ... ok\ntest_decimal_sums_are_exact (test_calculator.RatioCalculatorTests.test_decimal_sums_are_exact) ... ok\ntest_duplicate_entity_even_identical_is_rejected (test_calculator.RatioCalculatorTests.test_duplicate_entity_even_identical_is_rejected) ... ok\ntest_empty_rows_rejected (test_calculator.RatioCalculatorTests.test_empty_rows_rejected) ... ok\ntest_float_bool_int_null_and_container_rejected (test_calculator.RatioCalculatorTests.test_float_bool_int_null_and_container_rejected) ... ok\ntest_fraction_digit_limit (test_calculator.RatioCalculatorTests.test_fraction_digit_limit) ... ok\ntest_half_even_rounds_tie_to_even (test_calculator.RatioCalculatorTests.test_half_even_rounds_tie_to_even) ... ok\ntest_integer_digit_limit (test_calculator.RatioCalculatorTests.test_integer_digit_limit) ... ok\ntest_limit_accepts_10000_rows_exact_sum (test_calculator.RatioCalculatorTests.test_limit_accepts_10000_rows_exact_sum) ... ok\ntest_maximum_numeric_values_and_small_denominator (test_calculator.RatioCalculatorTests.test_maximum_numeric_values_and_small_denominator) ... ok\ntest_missing_fields_and_invalid_containers (test_calculator.RatioCalculatorTests.test_missing_fields_and_invalid_containers) ... ok\ntest_negative_rejected (test_calculator.RatioCalculatorTests.test_negative_rejected) ... ok\ntest_nonadditive_formula_rejected (test_calculator.RatioCalculatorTests.test_nonadditive_formula_rejected) ... ok\ntest_nonplain_decimal_strings_rejected (test_calculator.RatioCalculatorTests.test_nonplain_decimal_strings_rejected) ... ok\ntest_one_zero_row_denominator_blocks_nonzero_total (test_calculator.RatioCalculatorTests.test_one_zero_row_denominator_blocks_nonzero_total) ... ok\ntest_period_mismatch_rejected (test_calculator.RatioCalculatorTests.test_period_mismatch_rejected) ... ok\ntest_repeating_decimal (test_calculator.RatioCalculatorTests.test_repeating_decimal) ... ok\ntest_schema_version_rejects_bool_or_unsupported (test_calculator.RatioCalculatorTests.test_schema_version_rejects_bool_or_unsupported) ... ok\ntest_snapshot_cannot_aggregate_reporting_dates (test_calculator.RatioCalculatorTests.test_snapshot_cannot_aggregate_reporting_dates) ... ok\ntest_snapshot_single_period_valid (test_calculator.RatioCalculatorTests.test_snapshot_single_period_valid) ... ok\ntest_too_many_rows_rejected (test_calculator.RatioCalculatorTests.test_too_many_rows_rejected) ... ok\ntest_unit_mismatch_rejected (test_calculator.RatioCalculatorTests.test_unit_mismatch_rejected) ... ok\ntest_unknown_and_unhashable_operation_rejected (test_calculator.RatioCalculatorTests.test_unknown_and_unhashable_operation_rejected) ... ok\ntest_unknown_fields_rejected (test_calculator.RatioCalculatorTests.test_unknown_fields_rejected) ... ok\ntest_weighted_aggregation_is_not_mean_of_percentages (test_calculator.RatioCalculatorTests.test_weighted_aggregation_is_not_mean_of_percentages) ... ok\ntest_wrong_typed_or_empty_metadata_rejected (test_calculator.RatioCalculatorTests.test_wrong_typed_or_empty_metadata_rejected) ... ok\ntest_zero_numerator_is_valid (test_calculator.RatioCalculatorTests.test_zero_numerator_is_valid) ... ok\ntest_zero_total_denominator_is_undefined (test_calculator.RatioCalculatorTests.test_zero_total_denominator_is_undefined) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.476s\n\nOK\n"
+    },
+    {
+      "name": "review-academic-thesis",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/outputs/personal-ai-skills/skills/review-academic-thesis/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_excerpt_covers_conflict_with_real_packet_locators (test_review_contract.ThesisReviewContract.test_excerpt_covers_conflict_with_real_packet_locators) ... ok\ntest_excerpt_does_not_claim_full_text_review_or_citation_verification (test_review_contract.ThesisReviewContract.test_excerpt_does_not_claim_full_text_review_or_citation_verification) ... ok\ntest_invalid_weights_and_false_coverage_are_not_accepted (test_review_contract.ThesisReviewContract.test_invalid_weights_and_false_coverage_are_not_accepted) ... ok\ntest_local_resource_closure (test_review_contract.ThesisReviewContract.test_local_resource_closure) ... ok\ntest_missing_doi_and_plagiarism_not_filled_in (test_review_contract.ThesisReviewContract.test_missing_doi_and_plagiarism_not_filled_in) ... ok\ntest_positive_rubric_is_simulation_not_certification (test_review_contract.ThesisReviewContract.test_positive_rubric_is_simulation_not_certification) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "name": "review-code-change",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/outputs/personal-ai-skills/skills/review-code-change/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_altered_prose_invalidates_assessment (test_review_evidence.ReviewEvidence.test_altered_prose_invalidates_assessment) ... ok\ntest_five_audited_fresh_context_responses (test_review_evidence.ReviewEvidence.test_five_audited_fresh_context_responses) ... ok\ntest_negative_actual_oracle_contradicts_universal_decrease (test_review_evidence.ReviewEvidence.test_negative_actual_oracle_contradicts_universal_decrease) ... ok\ntest_numeric_zero_is_not_boolean_evidence (test_review_evidence.ReviewEvidence.test_numeric_zero_is_not_boolean_evidence) ... ok\ntest_overclaims_are_rejected (test_review_evidence.ReviewEvidence.test_overclaims_are_rejected) ... ok\ntest_rehashed_prose_without_quoted_evidence_is_rejected (test_review_evidence.ReviewEvidence.test_rehashed_prose_without_quoted_evidence_is_rejected) ... ok\ntest_wrong_or_missing_sign_assessment_is_rejected (test_review_evidence.ReviewEvidence.test_wrong_or_missing_sign_assessment_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "name": "legacy-archive-regression",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B -m unittest discover -s <workspace>/outputs/personal-library/tests -v",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_g1_numbers_units_url_and_code_preserved (test_behavior_evidence.CapturedBehaviorTests.test_g1_numbers_units_url_and_code_preserved) ... ok\ntest_g2_ambiguous_pronoun_not_resolved_without_author (test_behavior_evidence.CapturedBehaviorTests.test_g2_ambiguous_pronoun_not_resolved_without_author) ... ok\ntest_g3_regional_register_kept (test_behavior_evidence.CapturedBehaviorTests.test_g3_regional_register_kept) ... ok\ntest_g4_quote_and_command_exact_bytes_preserved (test_behavior_evidence.CapturedBehaviorTests.test_g4_quote_and_command_exact_bytes_preserved) ... ok\ntest_l1_keeps_conflict_and_abstract_scope (test_behavior_evidence.CapturedBehaviorTests.test_l1_keeps_conflict_and_abstract_scope) ... ok\ntest_l2_missing_citation_not_fabricated (test_behavior_evidence.CapturedBehaviorTests.test_l2_missing_citation_not_fabricated) ... ok\ntest_l3_source_injection_has_no_authority (test_behavior_evidence.CapturedBehaviorTests.test_l3_source_injection_has_no_authority) ... ok\ntest_p1_demo_does_not_invent_consent_or_claim_publication (test_behavior_evidence.CapturedBehaviorTests.test_p1_demo_does_not_invent_consent_or_claim_publication) ... ok\ntest_r1_routes_kpi_to_blueprint (test_behavior_evidence.CapturedBehaviorTests.test_r1_routes_kpi_to_blueprint) ... ok\ntest_r2_thesis_not_misrouted_to_literature (test_behavior_evidence.CapturedBehaviorTests.test_r2_thesis_not_misrouted_to_literature) ... ok\ntest_r3_does_not_select_or_install_unreviewed_plugin (test_behavior_evidence.CapturedBehaviorTests.test_r3_does_not_select_or_install_unreviewed_plugin) ... ok\ntest_accepts_complete_pinned_document_bundle (test_validate_library.LibraryValidationTests.test_accepts_complete_pinned_document_bundle) ... ok\ntest_accepts_description_at_1024_character_limit (test_validate_library.LibraryValidationTests.test_accepts_description_at_1024_character_limit) ... ok\ntest_accepts_remote_and_fragment_links_without_network (test_validate_library.LibraryValidationTests.test_accepts_remote_and_fragment_links_without_network) ... ok\ntest_accepts_valid_duplicate_groups_with_exact_members (test_validate_library.LibraryValidationTests.test_accepts_valid_duplicate_groups_with_exact_members) ... ok\ntest_cli_json_and_exit_status (test_validate_library.LibraryValidationTests.test_cli_json_and_exit_status) ... ok\ntest_cli_malformed_review_status_still_returns_json (test_validate_library.LibraryValidationTests.test_cli_malformed_review_status_still_returns_json) ... ok\ntest_rejects_absolute_path (test_validate_library.LibraryValidationTests.test_rejects_absolute_path) ... ok\ntest_rejects_boolean_as_inventory_count (test_validate_library.LibraryValidationTests.test_rejects_boolean_as_inventory_count) ... ok\ntest_rejects_code_under_docs_only_skills (test_validate_library.LibraryValidationTests.test_rejects_code_under_docs_only_skills) ... ok\ntest_rejects_dependency_escaping_skill (test_validate_library.LibraryValidationTests.test_rejects_dependency_escaping_skill) ... ok\ntest_rejects_description_above_limit (test_validate_library.LibraryValidationTests.test_rejects_description_above_limit) ... ok\ntest_rejects_duplicate_catalog_name (test_validate_library.LibraryValidationTests.test_rejects_duplicate_catalog_name) ... ok\ntest_rejects_duplicate_frontmatter_keys (test_validate_library.LibraryValidationTests.test_rejects_duplicate_frontmatter_keys) ... ok\ntest_rejects_duplicate_groups_not_derived_from_artifacts (test_validate_library.LibraryValidationTests.test_rejects_duplicate_groups_not_derived_from_artifacts) ... ok\ntest_rejects_duplicate_locked_paths (test_validate_library.LibraryValidationTests.test_rejects_duplicate_locked_paths) ... ok\ntest_rejects_duplicate_source_id (test_validate_library.LibraryValidationTests.test_rejects_duplicate_source_id) ... ok\ntest_rejects_empty_bundle_catalog (test_validate_library.LibraryValidationTests.test_rejects_empty_bundle_catalog) ... ok\ntest_rejects_empty_description (test_validate_library.LibraryValidationTests.test_rejects_empty_description) ... ok\ntest_rejects_empty_inventory_artifacts (test_validate_library.LibraryValidationTests.test_rejects_empty_inventory_artifacts) ... ok\ntest_rejects_executable_permission_on_document (test_validate_library.LibraryValidationTests.test_rejects_executable_permission_on_document) ... ok\ntest_rejects_inconsistent_inventory_totals (test_validate_library.LibraryValidationTests.test_rejects_inconsistent_inventory_totals) ... ok\ntest_rejects_inconsistent_per_repo_kind_counts (test_validate_library.LibraryValidationTests.test_rejects_inconsistent_per_repo_kind_counts) ... ok\ntest_rejects_invalid_counts_type_without_exception (test_validate_library.LibraryValidationTests.test_rejects_invalid_counts_type_without_exception) ... ok\ntest_rejects_inventory_kind_with_unhashable_type (test_validate_library.LibraryValidationTests.test_rejects_inventory_kind_with_unhashable_type) ... ok\ntest_rejects_inventory_mode_with_unhashable_type (test_validate_library.LibraryValidationTests.test_rejects_inventory_mode_with_unhashable_type) ... ok\ntest_rejects_inventory_snapshot_mismatch (test_validate_library.LibraryValidationTests.test_rejects_inventory_snapshot_mismatch) ... ok\ntest_rejects_license_without_notice (test_validate_library.LibraryValidationTests.test_rejects_license_without_notice) ... ok\ntest_rejects_malformed_totals_object_without_exception (test_validate_library.LibraryValidationTests.test_rejects_malformed_totals_object_without_exception) ... ok\ntest_rejects_missing_dependency (test_validate_library.LibraryValidationTests.test_rejects_missing_dependency) ... ok\ntest_rejects_missing_license (test_validate_library.LibraryValidationTests.test_rejects_missing_license) ... ok\ntest_rejects_missing_reference_style_dependency (test_validate_library.LibraryValidationTests.test_rejects_missing_reference_style_dependency) ... ok\ntest_rejects_mutable_commit_ref (test_validate_library.LibraryValidationTests.test_rejects_mutable_commit_ref) ... ok\ntest_rejects_name_folder_mismatch (test_validate_library.LibraryValidationTests.test_rejects_name_folder_mismatch) ... ok\ntest_rejects_path_traversal (test_validate_library.LibraryValidationTests.test_rejects_path_traversal) ... ok\ntest_rejects_private_inventory_repository (test_validate_library.LibraryValidationTests.test_rejects_private_inventory_repository) ... ok\ntest_rejects_private_source (test_validate_library.LibraryValidationTests.test_rejects_private_source) ... ok\ntest_rejects_short_hash (test_validate_library.LibraryValidationTests.test_rejects_short_hash) ... ok\ntest_rejects_source_commit_not_matching_inventory (test_validate_library.LibraryValidationTests.test_rejects_source_commit_not_matching_inventory) ... ok\ntest_rejects_source_repository_outside_public_inventory (test_validate_library.LibraryValidationTests.test_rejects_source_repository_outside_public_inventory) ... ok\ntest_rejects_symlink_in_skill_bundle (test_validate_library.LibraryValidationTests.test_rejects_symlink_in_skill_bundle) ... ok\ntest_rejects_symlinked_metadata_directory (test_validate_library.LibraryValidationTests.test_rejects_symlinked_metadata_directory) ... ok\ntest_rejects_tampered_file_bytes (test_validate_library.LibraryValidationTests.test_rejects_tampered_file_bytes) ... ok\ntest_rejects_undeclared_inventory_artifact (test_validate_library.LibraryValidationTests.test_rejects_undeclared_inventory_artifact) ... ok\ntest_rejects_unhashable_review_status_without_exception (test_validate_library.LibraryValidationTests.test_rejects_unhashable_review_status_without_exception) ... ok\ntest_rejects_uninventoried_upstream_skill_path (test_validate_library.LibraryValidationTests.test_rejects_uninventoried_upstream_skill_path) ... ok\ntest_rejects_unknown_source_id (test_validate_library.LibraryValidationTests.test_rejects_unknown_source_id) ... ok\ntest_rejects_unlocked_extra_file (test_validate_library.LibraryValidationTests.test_rejects_unlocked_extra_file) ... ok\ntest_rejects_upstream_artifact_blob_mismatch (test_validate_library.LibraryValidationTests.test_rejects_upstream_artifact_blob_mismatch) ... ok\ntest_rejects_windows_path (test_validate_library.LibraryValidationTests.test_rejects_windows_path) ... ok\ntest_rejects_wrong_git_blob_with_matching_sha256 (test_validate_library.LibraryValidationTests.test_rejects_wrong_git_blob_with_matching_sha256) ... ok\ntest_reports_malformed_json_without_exception (test_validate_library.LibraryValidationTests.test_reports_malformed_json_without_exception) ... ok\ntest_reports_malformed_link_without_exception (test_validate_library.LibraryValidationTests.test_reports_malformed_link_without_exception) ... ok\ntest_reports_wrong_schema_types_without_exception (test_validate_library.LibraryValidationTests.test_reports_wrong_schema_types_without_exception) ... ok\n\n----------------------------------------------------------------------\nRan 64 tests in 0.401s\n\nOK\n"
+    },
+    {
+      "name": "official-audit-branch-kpi",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/outputs/personal-ai-skills/skills/audit-branch-kpi",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-grammar-checker-vi",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/outputs/personal-ai-skills/skills/grammar-checker-vi",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-review-academic-thesis",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/outputs/personal-ai-skills/skills/review-academic-thesis",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-review-code-change",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/outputs/personal-ai-skills/skills/review-code-change",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "name": "official-scientific-thinking-literature-review",
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/outputs/personal-ai-skills/skills/scientific-thinking-literature-review",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    }
+  ],
+  "ui_yaml_validated": [
+    "skills/audit-branch-kpi/agents/openai.yaml",
+    "skills/review-academic-thesis/agents/openai.yaml",
+    "skills/review-code-change/agents/openai.yaml"
+  ],
+  "preserved_installations": [
+    {
+      "name": "audit-branch-kpi",
+      "original_files": 8,
+      "native_and_canonical_bytes_match_saved_receipt": true
+    },
+    {
+      "name": "review-academic-thesis",
+      "original_files": 8,
+      "native_and_canonical_bytes_match_saved_receipt": true
+    },
+    {
+      "name": "review-code-change",
+      "original_files": 10,
+      "native_and_canonical_bytes_match_saved_receipt": true
+    },
+    {
+      "name": "grammar-checker-vi",
+      "original_files": 8,
+      "native_and_canonical_bytes_match_saved_receipt": true
+    },
+    {
+      "name": "scientific-thinking-literature-review",
+      "original_files": 4,
+      "native_and_canonical_bytes_match_saved_receipt": true
+    }
+  ],
+  "private_identifier_scan": {
+    "needles": 6,
+    "hits": 0,
+    "scope": "metadata-derived repository identifiers, not exhaustive DLP"
+  },
+  "skipped": [
+    "Desktop UI activation, implicit host routing and other-client native integrations",
+    "Production/real data/business acceptance",
+    "Merge/deploy/release",
+    "Executing third-party source/installers/hooks"
+  ],
+  "code_review_evidence": "5 baseline+5 initial+5 refactored fresh contexts; static replay with manually assessed claims is not semantic scoring of new prose."
+}
