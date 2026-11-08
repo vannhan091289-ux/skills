@@ -1,0 +1,75 @@
+{
+  "status": "STATIC_GO",
+  "skill": "track-management-actions",
+  "version": "1.0.1",
+  "initial_review": "../expansion-challenger.json is pre-fix REWORK snapshot",
+  "findings": [
+    "INT-01 malformed offset minute normalized",
+    "INT-02 UTC calendar overflow traceback"
+  ],
+  "root_severity_ruling": "INT-02 raised from minor to important for stableJSONboundary; fixed in same validation pass. Cost if left wrong: machine readers receive traceback rather than REWORK.",
+  "change": "Validate offset hour/minute components before datetime.fromisoformat; catch OverflowError atJSONboundary",
+  "tdd": "9helpertests RED5failures before source correction; GREEN9 after; wholepackage14tests andofficialformatpass",
+  "files_updated": [
+    "SKILL.md metadata.version only; workflow text unchanged",
+    "scripts/deadline_window.py",
+    "tests/test_deadline_window.py"
+  ],
+  "native_direct_regression_checks": [
+    {
+      "case": "invalid-due-offset",
+      "exit_code": 1,
+      "result": {
+        "status": "REWORK",
+        "error": "timezone offset components out of range"
+      }
+    },
+    {
+      "case": "invalid-asof-offset",
+      "exit_code": 1,
+      "result": {
+        "status": "REWORK",
+        "error": "timezone offset components out of range"
+      }
+    },
+    {
+      "case": "utc-lower-bound",
+      "exit_code": 1,
+      "result": {
+        "status": "REWORK",
+        "error": "date value out of range"
+      }
+    },
+    {
+      "case": "utc-upper-bound",
+      "exit_code": 1,
+      "result": {
+        "status": "REWORK",
+        "error": "date value out of range"
+      }
+    },
+    {
+      "case": "ordinary-31hours",
+      "exit_code": 0,
+      "result": {
+        "status": "CALCULATED",
+        "as_of": "2026-11-09T10:00:00+07:00",
+        "hours_method": "Decimal seconds/3600, precision28; null for date-only",
+        "rows": [
+          {
+            "id": "DEMO",
+            "due": "2026-11-10T17:00:00+07:00",
+            "precision": "timestamp",
+            "relation": "future_timestamp",
+            "calendar_days_until_due": 1,
+            "hours_until_due": "31"
+          }
+        ]
+      }
+    }
+  ],
+  "native_cli_pilot_scope": "Captured earlier on1.0.0; no helper execution there, same workflowtext. Updated1.0.1helper verified directly by5installedCLIchecks and14package tests, not a new modelpilot.",
+  "old_receipt_backup": "installation-v1.0.0.json",
+  "after_source_sha256": "ca63cd2a372d3c7bd874d3cf08aa22fc842dc1f602436e730a9bc570d8af71d8",
+  "independent_rereview_claimed": false
+}

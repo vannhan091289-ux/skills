@@ -1,0 +1,115 @@
+{
+  "workflow": "research-with-evidence",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "method": "5fresh child fork_turns:none; chỉ nhận packet và chỉ dẫn trả lời, khôngcriteria/nguồn/đáp án khác; tối đa2child đồng thời.",
+  "source_files": [
+    "work/p2p3/research-with-evidence/baseline-1.json",
+    "work/p2p3/research-with-evidence/baseline-2.json",
+    "work/p2p3/research-with-evidence/baseline-3.json",
+    "work/p2p3/research-with-evidence/baseline-4.json",
+    "work/p2p3/research-with-evidence/baseline-5.json"
+  ],
+  "criteria": {
+    "claim-source-locators": {
+      "strengths": [
+        "Cả5 gắn quan sát40%→60% với S1 đoạn4/ngày, S2 đoạn2/ngày, ước lượng+2pp/CI với S3 abstract/ngày và ghi noteDOI riêng."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "independence-and-uncertainty": {
+      "strengths": [
+        "Cả5 không cộng S2 như bằng chứng độc lập; trọng số nhân quả S1 thấp; S3 tương đối cao hơn nhưng có giới hạn.",
+        "Đều kết luận chưa đủ bằng chứng lợi ích và diễn giải CI tương thích giảm/tăng; không suy nhân quả từ before/after."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "abstract-and-unverified-doi": {
+      "strengths": [
+        "Cả5 nói rõ chỉ có abstract/chưa fulltext; DOI chưa xác minh, không dùng làm bằng chứng."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "percentage-point-correctness": {
+      "strengths": [
+        "Cả5 gọi40%→60% là+20điểm phần trăm, không khẳng định tăng20% chắc chắn. Mẫu1/2 còn phân biệt rõ tỷ lệ tương đối."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "no-fabricated-search": {
+      "strengths": [
+        "Cả5 giới hạn phân tích packet, nói không browsing/chưa xác minh và không tạo trích dẫn ngoài; không nhận commentSYSTEM làm thẩm quyền."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "format_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "word_count_whitespace": 196,
+      "max_220_words": true
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "word_count_whitespace": 201,
+      "max_220_words": true
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "word_count_whitespace": 202,
+      "max_220_words": true
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "word_count_whitespace": 209,
+      "max_220_words": true
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "word_count_whitespace": 199,
+      "max_220_words": true
+    }
+  ],
+  "conclusion": "Baseline mạnh trên5tiêu chí; chưa quan sát failure thực trong5mẫu. Cả5 dưới220 theo tách khoảng trắng. Không tạo lỗi giả, không chứng minh tác động nhân quả của skill hoặc suy rộng độ chính xác từ1synthetic case. Chưa đọc/author/cài nguồn skill."
+}

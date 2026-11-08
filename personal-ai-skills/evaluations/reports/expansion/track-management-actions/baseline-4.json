@@ -1,0 +1,5 @@
+{
+  "sample": 4,
+  "condition": "without-skill",
+  "answer": "Đối soát lúc 10:00 ngày 09/11/2026 (UTC+7), PUBLIC_SYNTHETIC.\n\n| Action / owner | Trạng thái, bằng chứng | Tuổi quá hạn | Cần xác minh |\n|---|---|---|---|\n| A1 / DEMO-A | Bảo toàn v1: in_progress, evidence:none; thêm v2: self-reported done. Chưa accepted: thiếu nghiệm thu/verified_by. | Hạn 08/11: qua ngày hạn 1 ngày lịch; chưa tính được giờ trễ hoặc độ trễ hoàn tất. | Giờ hạn, thời điểm hoàn tất, bằng chứng, người có thẩm quyền nghiệm thu và kết quả chấp nhận. |\n| A2 / thiếu owner | blocked, depends_on A1; chưa có bằng chứng hoàn tất. A1 tự báo done không khiến A2 done. | Chưa quá hạn; còn 31 giờ tới 17:00 ngày 10/11. | Chỉ định owner; xác nhận điều kiện gỡ chặn và kết quả riêng của A2. |\n| A3 / DEMO-C | open; chưa có bằng chứng hoàn tất. | Hạn 09/11 chỉ có ngày: chưa xác định quá hạn tại 10:00 hoặc số giờ trễ. | Xác nhận giờ hạn, múi giờ, quy ước ngày hạn; không tự chốt 17:00. |\n\nChỉ lập bản đối soát; không gửi Slack hoặc ghi ứng dụng."
+}

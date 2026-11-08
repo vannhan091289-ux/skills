@@ -1,6 +1,6 @@
-# Thực hiện tuần tự plan pilot
+# Plan pilot và mở rộng P2/P3
 
-Ngày 2026-11-08, thư viện 1.0.1. Đối chiếu plan 10 ngày do người dùng cung cấp; đây là thứ tự công việc, không phải thời gian chờ bắt buộc. Phạm vi pilot là 3 skill P1, cộng 2 skill hỗ trợ đã duyệt. Không mở rộng mọi đề xuất P2/P3 trước khi có nhu cầu và nghiệm thu riêng.
+Pilot gốc1.0.1 ngày2026-11-08; mở rộng hiện hành1.1.0. Đối chiếu plan 10 ngày do người dùng cung cấp; đây là thứ tự công việc, không phải thời gian chờ bắt buộc. Phạm vi pilot là 3 skill P1, cộng 2 skill hỗ trợ đã duyệt. Người dùng đã yêu cầu xây/kiểm/cài6P2/P3, triển khai lần lượt sau pilot gốc.
 
 | Bước theo plan | Kết quả và bằng chứng | Trạng thái trong phạm vi |
 | --- | --- | --- |
@@ -26,11 +26,18 @@ Ngày 2026-11-08, thư viện 1.0.1. Đối chiếu plan 10 ngày do người d�
 | Guard | governance/security-policy.md, data-classification.md và usage-guard trong mỗi skill; host giữ quyền thật |
 | Learn | Quy trình trong quality-gates.md, improvement-log.json, CHANGELOG và PR có test; không tự ghi memory |
 
-## Backlog chưa xây hoặc cài
+## Sáu P2/P3 đã thực hiện theo thứ tự
 
-P2: plan-branch-execution, track-management-actions, review-business-policy, research-with-evidence.
-P3: prepare-interactive-training, create-visual-learning-assets.
-Đây là sáu workflow đề xuất mở rộng, không đồng nhất với plugin hoặc skill tên gần giống đang có. Trước mỗi workflow: xác định input/output/ràng buộc, tìm capability có sẵn, thử synthetic, rồi mới tạo/thẩm định/cài theo phạm vi được giao. Quy định nghiệp vụ nội bộ phải được cung cấp qua kênh được phê duyệt, không đưa vào repo public.
+| Ưu tiên | Skill | Công việc | Trạng thái |
+| --- | --- | --- | --- |
+| P2 | plan-branch-execution | Lập kế hoạch điều hành chi nhánh | USER; synthetic pilot |
+| P2 | track-management-actions | Theo dõi chỉ đạo và hành động | USER; synthetic pilot |
+| P2 | review-business-policy | Thẩm định chính sách nghiệp vụ | USER; synthetic pilot |
+| P2 | research-with-evidence | Nghiên cứu có bằng chứng | USER; synthetic pilot |
+| P3 | prepare-interactive-training | Thiết kế đào tạo tương tác | USER; synthetic pilot |
+| P3 | create-visual-learning-assets | Tạo học liệu trực quan | USER; synthetic pilot |
+
+Mỗi skill:5controls trước author → nguồn/contract/template →5applications →Challenger độc lập →officialformat/test →càiUSER mới →nativeexplicitheldout. Xem [summary](evaluations/reports/expansion-summary.json). Không trộn proposed với approved, không giả chính sách nghiệp vụ hoặc kết quả render. Các mốc10ngày ở trên là logpilotgốc, không ghi đè bằng bằng chứng mới.
 
 ## Việc ngoài nghiệm thu hiện tại
 

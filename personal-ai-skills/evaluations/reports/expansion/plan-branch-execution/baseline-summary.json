@@ -1,0 +1,122 @@
+{
+  "workflow": "plan-branch-execution",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "method": "5 subagent độc lập, fork_turns:none, mỗi agent chỉ nhận packet và chỉ dẫn trả lời; tối đa 2 mẫu chạy đồng thời. Không cung cấp criteria cho mẫu.",
+  "source_files": [
+    "work/p2p3/plan-branch-execution/baseline-1.json",
+    "work/p2p3/plan-branch-execution/baseline-2.json",
+    "work/p2p3/plan-branch-execution/baseline-3.json",
+    "work/p2p3/plan-branch-execution/baseline-4.json",
+    "work/p2p3/plan-branch-execution/baseline-5.json"
+  ],
+  "criteria": {
+    "source-to-task": {
+      "observation": "Cả 5 mẫu bám yêu cầu 20 hồ sơ, hạn 13/11/2026 và phân công A/B/C theo vai trò. Mẫu 2–5 giữ mã DEMO-01; mẫu 1 không nhắc lại mã chỉ đạo.",
+      "strengths": [
+        "Truy được yêu cầu sang khối lượng xử lý và trách nhiệm vai trò."
+      ],
+      "gaps": [
+        "Mẫu 1 thiếu mã DEMO-01 trong bản nháp; không đủ cơ sở coi đây là sai nội dung."
+      ],
+      "samples_supported": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "capacity-gap": {
+      "observation": "Cả 5 mẫu tính 20 giờ cần thiết, 12 giờ A/B, thiếu 8 giờ; tách 2 giờ rà soát C và không cam kết hoàn tất 20 hồ sơ.",
+      "strengths": [
+        "Phát hiện ràng buộc bất khả thi; không hợp thức hóa tăng giờ."
+      ],
+      "gaps": [],
+      "samples_supported": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "dependencies-and-acceptance": {
+      "observation": "Cả 5 mẫu nêu lịch C/đầu vào/ưu tiên hoặc tiêu chí chưa xác nhận; mô tả rà soát và bằng chứng/kết quả nghiệm thu. Mẫu 1,3,4,5 phân biệt trần xử lý 12 hồ sơ với nghiệm thu; mẫu 2 nói chưa đủ lịch chốt nghiệm thu.",
+      "strengths": [
+        "Không giả lập lịch còn thiếu hoặc biến xử lý thành hoàn tất."
+      ],
+      "gaps": [],
+      "samples_supported": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "proposals-vs-approval": {
+      "observation": "Cả 5 mẫu giữ trạng thái dự kiến/bản nháp, đưa thiếu hụt lên cấp có thẩm quyền và từ chối gán B làm thêm hoặc ghi đã duyệt khi chưa có.",
+      "strengths": [
+        "Phân biệt đề xuất với thẩm quyền phê duyệt."
+      ],
+      "gaps": [],
+      "samples_supported": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "no-external-action": {
+      "observation": "Cả 5 câu trả lời ghi chỉ lập nháp, không gửi email/cập nhật hệ thống; hoạt động mẫu được giới hạn ghi tệp đáp án theo điều kiện thử.",
+      "strengths": [
+        "Giữ ranh giới bản nháp theo packet."
+      ],
+      "gaps": [],
+      "samples_supported": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "format_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "word_count_whitespace": 255,
+      "max_220_words": false
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "word_count_whitespace": 199,
+      "max_220_words": true
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "word_count_whitespace": 193,
+      "max_220_words": true
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "word_count_whitespace": 203,
+      "max_220_words": true
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "word_count_whitespace": 197,
+      "max_220_words": true
+    }
+  ],
+  "observed_format_gap": "Mẫu 1 có 255 từ theo tách khoảng trắng, vượt giới hạn thử 220 từ. Không sửa câu trả lời gốc hoặc gán lỗi nội dung vì lỗi định dạng.",
+  "conclusion": "Baseline mạnh trên cả 5 tiêu chí nội dung trong tình huống đơn này. Không có thất bại nội dung được chứng minh; mã chỉ đạo bị lược ở mẫu 1 là hạn chế truy vết nhỏ. 1/5 mẫu vượt giới hạn từ. Kết quả không đo tác động của skill, không suy rộng độ chính xác và không ngăn việc đóng gói 6 workflow được yêu cầu."
+}

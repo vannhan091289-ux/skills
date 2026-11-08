@@ -1,0 +1,136 @@
+{
+  "workflow": "create-visual-learning-assets",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "response_budget_words": 450,
+  "method": "5freshsubjects fork_turns:none, tốiđa2đồngthời, chỉpacket+chỉdẫnbudget450 trướcbaseline;khôngcriteria/source/network/render. CoordinatorparseJSON/XMLvàđọcsource,khôngrender.",
+  "source_files": [
+    "work/p2p3/create-visual-learning-assets/baseline-1.json",
+    "work/p2p3/create-visual-learning-assets/baseline-2.json",
+    "work/p2p3/create-visual-learning-assets/baseline-3.json",
+    "work/p2p3/create-visual-learning-assets/baseline-4.json",
+    "work/p2p3/create-visual-learning-assets/baseline-5.json"
+  ],
+  "criteria": {
+    "numeric-and-scale-integrity": {
+      "strengths": [
+        "Cả5 giữ80/100=80%,30/50=60%,110/150≈73.33%; giải thích tổng theo mẫu số khác trung bìnhđơn giản70%.",
+        "Cả5thanh chunggốc0/thang100; chiều dài tương ứng80/60/73.33% (mẫu1L410,mẫu2L400,mẫu3/4L500,mẫu5L440). Không trục cắt."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "labels-source-and-alt": {
+      "strengths": [
+        "Cả5 cóalttext, title/descSVG, nhãnDEMO-A/B/tổng, kỳ2026-10,unitpoints,nguồnpacketDEMO vàPUBLIC_SYNTHETIC.",
+        "Chữ được bố trí trongcanvas800x500 theo tọa độ nguồn; chưarender nên chưa chứng minh khôngcắt/khả năng đọc ởfontthực tế."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "not-color-only": {
+      "strengths": [
+        "Cả5 dùngglyphhình học riêng cùngnhãn/số cho3hàng; thông tin không phụthuộc riêngđỏ/xanh."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "license-and-source-boundary": {
+      "strengths": [
+        "Cả5khôngdùnglogoGoogle/assetngoài, khôngexternalhref/citationbịa; chỉnêu packetDEMO vàkhôngbankpolicy. PacketkhôngcấpURL nênkhôngbịa linknguồn."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "honest-render-status": {
+      "strengths": [
+        "Cả5phân biệtSVGsourceđãtạo với hình chưa render/kiểmthịgiác; khôngbịa downloadlink."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "static_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "valid_svg_xml": true,
+      "word_count_whitespace": 404,
+      "max_450_words": true,
+      "canvas_800x500": true,
+      "external_asset_refs": false
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "valid_svg_xml": true,
+      "word_count_whitespace": 400,
+      "max_450_words": true,
+      "canvas_800x500": true,
+      "external_asset_refs": false
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "valid_svg_xml": true,
+      "word_count_whitespace": 330,
+      "max_450_words": true,
+      "canvas_800x500": true,
+      "external_asset_refs": false
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "valid_svg_xml": true,
+      "word_count_whitespace": 357,
+      "max_450_words": true,
+      "canvas_800x500": true,
+      "external_asset_refs": false
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "valid_svg_xml": true,
+      "word_count_whitespace": 351,
+      "max_450_words": true,
+      "canvas_800x500": true,
+      "external_asset_refs": false
+    }
+  ],
+  "limitations": [
+    "Khôngrender/kiểmthịgiác theo phạmvi bài; chưaxácnhậnfontmetrics/overflowthực tế.",
+    "Một syntheticcase/5mẫu; khôngđo tácđộngnhânquả của skill hoặcchấtlượngvisuals nóichung."
+  ],
+  "conclusion": "Baseline mạnhtrên5tiêuchínguồn; chưaquan sátfailurethực. Cả5JSON/XMLhợplệ,và<=450theotáchkhoảngtrắng. Khôngclaimhìnhđãrender hoặcgánlỗivisualchưaquan sát;khôngsourceauthor/install."
+}

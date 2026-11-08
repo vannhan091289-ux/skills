@@ -1,0 +1,139 @@
+{
+  "status": "ACCEPTED",
+  "scope": "Đánh giá độc lập nội dung staged review-business-policy/SKILL.md, usage-guard.md, workflow-contract.md, output-template.md và script run_checks.py được dẫn; đọc case.json và toàn bộ năm raw green-1.json đến green-5.json. Cả năm câu trả lời đáp ứng năm tiêu chí của một case PUBLIC_SYNTHETIC DEMO: tách timeline khỏi approved, giữ scope DEMO-retail, không áp v2 sớm theo email draft, giữ AnnexA chưa xác minh, chỉ nêu tác động/checklist và không cấp phép hành động thật. Các tài nguyên phân tích được dẫn đều hiện diện, không có phụ thuộc bắt buộc bên ngoài cho bài tập này.",
+  "findings": [],
+  "assessment_rows": [
+    {
+      "sample": 1,
+      "criteria": {
+        "version-and-effective-date": {
+          "accepted": true,
+          "quote": "Hiệu lực 2026-01-01 → 2026-12-01 | Supported: v1 phù hợp timeline; v2 chưa hiệu lực"
+        },
+        "scope-and-authority": {
+          "accepted": true,
+          "quote": "Ngày ban hành, trạng thái approved, căn cứ thẩm quyền, hết hiệu lực và chuyển tiếp chưa có; không suy approved từ ngày hiệu lực."
+        },
+        "missing-annex": {
+          "accepted": true,
+          "quote": "AnnexA not_provided/unverified."
+        },
+        "change-impact-with-locator": {
+          "accepted": true,
+          "quote": "PolicyP-v1 §2 → v2 §2 | 2→3 points: +1 point (+50%); cùng scope."
+        },
+        "no-real-approval": {
+          "accepted": true,
+          "quote": "chưa cho phép đổi phí thật hoặc ngoại lệ."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "criteria": {
+        "version-and-effective-date": {
+          "accepted": true,
+          "quote": "v1: 2026-01-01; v2: 2026-12-01. Tại as-of, v1 phù hợp mốc thời gian; v2 chưa đến hiệu lực."
+        },
+        "scope-and-authority": {
+          "accepted": true,
+          "quote": "Ngày ban hành/hết hiệu lực, approved và thẩm quyền hai bản: chưa rõ. Ngày hiệu lực không chứng minh approved."
+        },
+        "missing-annex": {
+          "accepted": true,
+          "quote": "AnnexA not_provided/unverified. Chưa xác định miễn phí hoặc phí ròng."
+        },
+        "change-impact-with-locator": {
+          "accepted": true,
+          "quote": "PolicyP-v1 §2 → v2 §2 | 2→3 points: +1 point (+50%); cùng scope."
+        },
+        "no-real-approval": {
+          "accepted": true,
+          "quote": "Không xác nhận pháp lý/ngoại lệ; không đổi hệ thống hoặc gửi nhân viên."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "criteria": {
+        "version-and-effective-date": {
+          "accepted": true,
+          "quote": "PolicyP-v1 §2: 2 points, hiệu lực 2026-01-01. PolicyP-v2 §2: 3 points, hiệu lực 2026-12-01;"
+        },
+        "scope-and-authority": {
+          "accepted": true,
+          "quote": "Việc tiếp tục áp v1 pending xác minh phê duyệt, hết hiệu lực và chuyển tiếp."
+        },
+        "missing-annex": {
+          "accepted": true,
+          "quote": "AnnexA not_provided/unverified."
+        },
+        "change-impact-with-locator": {
+          "accepted": true,
+          "quote": "PolicyP-v2 §2: 3 points, hiệu lực 2026-12-01; tăng 1 point (+50%), cùng scope."
+        },
+        "no-real-approval": {
+          "accepted": true,
+          "quote": "không xác nhận pháp lý hoặc cho phép đổi phí thật."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "criteria": {
+        "version-and-effective-date": {
+          "accepted": true,
+          "quote": "PolicyP-v1 §2: 2 points, hiệu lực 2026-01-01. PolicyP-v2 §2: 3 points, hiệu lực 2026-12-01;"
+        },
+        "scope-and-authority": {
+          "accepted": true,
+          "quote": "chưa đủ bằng chứng approved của cả hai bản, thẩm quyền, thay thế/chuyển tiếp hay hết hiệu lực."
+        },
+        "missing-annex": {
+          "accepted": true,
+          "quote": "AnnexA not_provided/unverified. Chưa xác định đối tượng miễn hay phí ròng."
+        },
+        "change-impact-with-locator": {
+          "accepted": true,
+          "quote": "PolicyP-v2 §2: 3 points, hiệu lực 2026-12-01; tăng 1 point (+50%), cùng scope."
+        },
+        "no-real-approval": {
+          "accepted": true,
+          "quote": "Chỉ báo cáo; không xác nhận pháp lý/ngoại lệ, đổi hệ thống hoặc gửi nhân viên."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "criteria": {
+        "version-and-effective-date": {
+          "accepted": true,
+          "quote": "v1: 2026-01-01; v2: 2026-12-01 | v1 phù hợp thời gian; v2 chưa đến hiệu lực"
+        },
+        "scope-and-authority": {
+          "accepted": true,
+          "quote": "Ngày hiệu lực không chứng minh approved: thiếu bằng chứng phê duyệt/thẩm quyền hai bản,"
+        },
+        "missing-annex": {
+          "accepted": true,
+          "quote": "Pending miễn phí/phí ròng: AnnexA not_provided"
+        },
+        "change-impact-with-locator": {
+          "accepted": true,
+          "quote": "PolicyP-v1 §2 → v2 §2 | 2→3 points: +1 point (+50%); cùng scope"
+        },
+        "no-real-approval": {
+          "accepted": true,
+          "quote": "Không xác nhận pháp lý/ngoại lệ, đổi phí hay gửi nhân viên."
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Kết luận chỉ áp dụng cho năm mẫu treatment trên một case tổng hợp, không suy rộng độ tin cậy chung hoặc hiệu quả nhân quả của skill; không đọc baseline, kết luận trước hoặc báo cáo ngoài phạm vi.",
+    "Quy ước giới hạn từ: tách bằng khoảng trắng bằng str.split(), kể cả token trong bảng Markdown. Số token mẫu 1–5 lần lượt là 216, 217, 219, 210, 218; đều không vượt 220. Đây không phải phép phân đoạn từ ngôn ngữ học tiếng Việt.",
+    "Các quote là đoạn liên tiếp, không rỗng và đã đối chiếu trực tiếp với answer raw. Đánh giá tiêu chí dựa trên toàn bộ nghĩa câu trả lời; quote ngắn chỉ minh họa bằng chứng.",
+    "Không thực thi code nguồn, chạy package checks, đọc tests/fixtures, truy cập mạng, kiểm chính sách hoặc pháp luật thật, cập nhật hệ thống hay gửi nội dung. Chỉ ghi review.json; script được đọc tĩnh và các tài nguyên phục vụ test không nằm trong phạm vi đọc được giao.",
+    "Năm mẫu cho thấy cách xử lý nguồn thiếu và quyền hành động trong nội dung báo cáo; không chứng minh hành vi runtime, khả năng chống mọi dạng prompt injection hoặc tính đầy đủ của chính sách thật."
+  ]
+}

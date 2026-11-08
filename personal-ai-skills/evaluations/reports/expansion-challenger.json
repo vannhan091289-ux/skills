@@ -1,0 +1,145 @@
+{
+  "status": "REWORK",
+  "scope": {
+    "reviewer": "Fresh-context independent integration reviewer; no implementation ownership",
+    "date": "2026-11-08",
+    "target": "personal-ai-skills 1.1.0 six P2/P3 additions, validator extension, installed-byte preservation and recorded explicit Codex pilots",
+    "reviewed_helper_sha256": "8b9f0f3b12aacd60b0fdf916a7cccedb0386fc5e4c1e27a79ce400492ba92931",
+    "boundary": "Read-only source/evidence inspection, first-party checks with -B, no network, browser, third-party source hooks, installation or publication. Only this report written."
+  },
+  "findings": [
+    {
+      "id": "INT-01",
+      "severity": "important",
+      "locator": "skills/track-management-actions/scripts/deadline_window.py:21-23",
+      "issue": "Invalid UTC offset minutes are silently normalized into a different deadline.",
+      "reproduction": {
+        "command": "python3 -B skills/track-management-actions/scripts/deadline_window.py -",
+        "stdin": {
+          "schema_version": 1,
+          "as_of": "2026-11-09T10:00:00+07:00",
+          "deadlines": [
+            {
+              "id": "D",
+              "due": "2026-11-10T17:00:00+07:99"
+            }
+          ]
+        },
+        "actual": {
+          "exit_code": 0,
+          "status": "CALCULATED",
+          "hours_until_due": "29.35"
+        },
+        "expected": "Reject malformed ISO offset with JSON REWORK; do not infer an intended timezone."
+      },
+      "impact": "A typo such as +07:99 is accepted as +08:39 by datetime.fromisoformat, giving a precise but unsupported deadline interval. The stated interface requires ISO8601 offsets. Same parser is used for as_of.",
+      "recommendation": "Explicitly validate offset component ranges before parsing for both inputs; add positive boundary and negative regression tests, then refresh hashes/receipts through the authorized correction workflow."
+    },
+    {
+      "id": "INT-02",
+      "severity": "minor",
+      "locator": "skills/track-management-actions/scripts/deadline_window.py:53-54,75",
+      "issue": "Calendar-boundary timezone conversion raises an uncaught OverflowError instead of the JSON error result.",
+      "reproduction": {
+        "command": "python3 -B skills/track-management-actions/scripts/deadline_window.py -",
+        "stdin": {
+          "schema_version": 1,
+          "as_of": "2026-11-09T10:00:00+07:00",
+          "deadlines": [
+            {
+              "id": "D",
+              "due": "0001-01-01T00:00:00+01:00"
+            }
+          ]
+        },
+        "actual": "Exit 1, empty stdout, OverflowError: date value out of range traceback on stderr.",
+        "expected": "Document/reject unsupported arithmetic range and return structured REWORK."
+      },
+      "impact": "Extreme calendar inputs break the CLI JSON contract; ordinary business deadlines and heldout pilots are unaffected.",
+      "recommendation": "Catch or translate arithmetic range errors and add lower/upper year-boundary regressions."
+    }
+  ],
+  "checks": [
+    {
+      "name": "registry-current",
+      "result": "PASS",
+      "evidence": "Independent validate_library.py execution returned STATIC_GO, 11 skills and 4 adapters."
+    },
+    {
+      "name": "validator-regressions",
+      "result": "PASS",
+      "evidence": "Independent -B unittest discover evaluations/tests: 33 tests passed. Read implementation requiring exact 9 core + 2 support from 1.1.0 and legacy 5 before 1.1.0; negative resource/hash/inventory tests present."
+    },
+    {
+      "name": "deadline-and-evidence-regressions",
+      "result": "PASS_WITH_NEW_GAPS",
+      "evidence": "Independent run_checks.py: 12 existing tests passed (7 deadline + 5 evidence). Two additional exploratory CLI probes expose INT-01/INT-02."
+    },
+    {
+      "name": "visual-package-checks",
+      "result": "PASS",
+      "evidence": "Independent run_checks.py: 9 tests passed, applications.json materialized; original pending-fixture minor is closed at reviewed state."
+    },
+    {
+      "name": "old-canonical-source-preservation",
+      "result": "PASS",
+      "evidence": "Computed Git blob SHA1 from all 43 files of five original skill packages and compared with local pinned GitHub tree at be9c1134228df7ae971dcfe8d36821fc5a85e811; all matched. No fresh network provenance verification."
+    },
+    {
+      "name": "installed-byte-preservation",
+      "result": "PASS",
+      "evidence": "All 38 pre-expansion native files matched preservation-before.json. Independently compared canonical and native files against all 11 saved installation receipts, including exact installed file-set closure: 101 total (38 old + 63 new)."
+    },
+    {
+      "name": "native-evidence-chain",
+      "result": "PASS",
+      "evidence": "For each of six heldout sessions, recomputed raw-answer SHA256; checked public answer equals path-redacted local answer; matched observed_commands to completed command_execution events; checked turn.completed and process exit0. Reads targeted installed skill/resources. Initial metadata remains agent-reported, not independent catalog proof."
+    },
+    {
+      "name": "native-outcome-semantics",
+      "result": "PASS",
+      "evidence": {
+        "plan-branch-execution": "5h needed versus 3h available, 2h deficit, maximum six processed items; reviewer pool/acceptance separate, no fabricated approval.",
+        "track-management-actions": "B1 accepted according to provided packet, 16h since deadline does not make completed work overdue; B2 date-only pending, B3 blocked; three unique IDs.",
+        "review-business-policy": "SME/retail and November/December applicability kept separate, +1 point/+50% arithmetic, missing annex and authority remain pending.",
+        "research-with-evidence": "50 to55%=+5pp/+10%; blog not independent evidence; CI crosses0, abstract only, DOI unverified, no invented search or causal conclusion.",
+        "prepare-interactive-training": "Continuous 45-minute plan including transitions/feedback; 15 people in three groups; offline large-print options and proposed practice rubric, no HR certification.",
+        "create-visual-learning-assets": "90%,50%,75/110=68.18%, common0-100 scale, labels/units/period/source, title/desc/alt; accurately states native source-only and no render."
+      }
+    },
+    {
+      "name": "fit-preview-inspection",
+      "result": "PASS_SCOPED",
+      "evidence": "Reviewer directly viewed local 1200x1200 PNG: entire 0-100 axis, 90/50/68.18 labels, formulas and caption visible without observed clipping/overlap; labels/patterns supplement color. Report correctly separates outer-dimension fit export from unchanged original900x550 source; no browser attempted."
+    },
+    {
+      "name": "workflow-guards-contracts-templates",
+      "result": "PASS",
+      "evidence": "Six workflow instructions/contracts/templates retain provided versus verified, proposal versus approval, role/capability boundaries and no invented policy/HR decisions. Portable workflow is not contingent on paid service or connector. Guard treats source instructions as untrusted."
+    },
+    {
+      "name": "evaluation-claim-calibration",
+      "result": "PASS",
+      "evidence": "Reports state30 fixed-case controls +30 treatments and150 manually accepted criteria, not causal benefit. Track REWORK and224/220 whitespace-token minor remain visible with root disposition. Routing16/16 is labeled metadata classifier, not implicit host routing. Broad verification report records123 canonical/64 legacy/11 official/9UI; only relevant subset independently rerun here."
+    },
+    {
+      "name": "public-output-path-scan",
+      "result": "PASS_LIMITED",
+      "evidence": "Searched canonical files for /Users/, raw native-events/native-stderr/native-process paths, api_key, PRIVATE KEY and sk-proj-; no matches. Reviewed synthetic cases and redacted public native reports. This is not exhaustive DLP."
+    }
+  ],
+  "limitations": [
+    "Snapshot review precedes correction of INT-01/INT-02; status remains REWORK until builder documents corrections and regressions. No subsequent review implied.",
+    "Rechecked six heldout outcomes, not a fresh regrade of every control/treatment; 150 semantic criteria are supported by the six stored independent grading reports.",
+    "Installed exact-byte matching is a point-in-time observation, not an assertion that desktop discovery, implicit activation or all adapters work.",
+    "Fit PNG inspection is not an unmodified original-size SVG render, measured contrast audit, screen-reader, print or WCAG certification.",
+    "Existing track output length minor is acknowledged and deferred; no semantic failure inferred from its four-token overrun.",
+    "No new real-data exercise, production acceptance, improvement-in-time/cost measurement or permission/config history audit."
+  ],
+  "declined_to_judge": [
+    "ZIP/extracted package and final publication/PR contents: not built or published within this review scope.",
+    "Full lifecycle/native compatibility of ChatGPT, Claude, Gemini or Codex desktop implicit routing.",
+    "Operational, legal, credit or HR correctness beyond the supplied synthetic packets.",
+    "Absence of all secrets/private data, and external origin authenticity beyond local pinned evidence."
+  ]
+}

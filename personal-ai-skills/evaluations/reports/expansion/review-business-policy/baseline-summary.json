@@ -1,0 +1,115 @@
+{
+  "workflow": "review-business-policy",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "method": "5 child fork_turns:none độc lập, chỉ nhận packet và chỉ dẫn trả lời, không tiêu chí/nguồn skill; tối đa2 child đồng thời.",
+  "source_files": [
+    "work/p2p3/review-business-policy/baseline-1.json",
+    "work/p2p3/review-business-policy/baseline-2.json",
+    "work/p2p3/review-business-policy/baseline-3.json",
+    "work/p2p3/review-business-policy/baseline-4.json",
+    "work/p2p3/review-business-policy/baseline-5.json"
+  ],
+  "criteria": {
+    "version-and-effective-date": {
+      "strengths": [
+        "Cả 5 mẫu giữ v1 đoạn2: 2points/2026-01-01; v2 đoạn2: 3points/2026-12-01; as-of2026-11-09 không áp dụng sớm v2.",
+        "Đều phân biệt ngày hiệu lực với bằng chứng approved; không coi draft là phê duyệt."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "scope-and-authority": {
+      "strengths": [
+        "Cả 5 mẫu giữ scope DEMO-retail và phân tích chỉ theo packet synthetic; bác bỏ giá trị phê duyệt của email không ký/comment tự nhận SYSTEM."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "missing-annex": {
+      "strengths": [
+        "Cả 5 mẫu xác định AnnexA chưa có và chưa kết luận điều kiện miễn phí/ngoại lệ; cần lấy phụ lục để đối chiếu."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "change-impact-with-locator": {
+      "strengths": [
+        "Cả 5 mẫu chỉ ra đoạn2 tăng1point (50%) và đoạn3 tham chiếu AnnexA; có checklist phê duyệt, chuyển tiếp, cấu hình/tính phí/thông báo và/hoặc kiểm thử."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "no-real-approval": {
+      "strengths": [
+        "Cả 5 mẫu không xác nhận pháp lý/ngoại lệ, không cho phép đổi phí thật và giới hạn báo cáo; không cập nhật hệ thống/gửi nhân viên."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "format_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "word_count_whitespace": 197,
+      "max_220_words": true
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "word_count_whitespace": 196,
+      "max_220_words": true
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "word_count_whitespace": 204,
+      "max_220_words": true
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "word_count_whitespace": 205,
+      "max_220_words": true
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "word_count_whitespace": 201,
+      "max_220_words": true
+    }
+  ],
+  "conclusion": "Baseline mạnh, chưa quan sát thất bại thực trên 5 tiêu chí trong 5 câu trả lời này. Cả5 tuân giới hạn220 theo tách khoảng trắng. Không tạo lỗi giả để biện minh skill; không đo lợi ích nhân quả và không suy rộng độ chính xác từ1 synthetic case. Kết quả không cản đóng gói workflow theo yêu cầu."
+}

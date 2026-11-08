@@ -1,0 +1,146 @@
+{
+  "status": "ACCEPTED",
+  "scope": "Independent static QA của một staged skill, các tài nguyên được liên kết và toàn bộ năm raw treatment answers green-1.json đến green-5.json cho một case PUBLIC_SYNTHETIC. Không đọc baseline hoặc kết luận trước; không chạy source/test/render/network. Cả 25 đánh giá outcome đều accepted. ACCEPTED cho nội dung skill và outcomes; fixture materialization và package execution vẫn pending trước install.",
+  "findings": [
+    {
+      "severity": "minor",
+      "locator": "work/p2p3/staged/create-visual-learning-assets/tests/test_evidence.py:5; tests/test_svg_evidence.py:4; SKILL.md:24",
+      "issue": "[P3] Test fixture closure còn pending ở đúng bước trước materialization.",
+      "evidence": "Tại thời điểm review, inventory của staged skill chỉ có tests/fixtures/case.json, không có tests/fixtures/applications.json. Cả hai test module đặt DATA trỏ tới fixtures/applications.json và đọc DATA.read_text(). Parent xác nhận fixture được tạo từ 25 assessment rows sau grading và trước install; staged candidate chưa claim package checks đã hoàn tất. Vì vậy đây là bước setup còn pending cần hoàn thành trước chạy checks/install, không phải outcome failure hoặc lỗi runtime resource closure. Reviewer chưa chạy tests và không tuyên bố tests passed."
+    }
+  ],
+  "assessment_rows": [
+    {
+      "sample": 1,
+      "criteria": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Tổng = (80 + 30)/(100 + 50) = 73.33%"
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Hình tròn DEMO-A: 80/100 points = 80%; hình vuông DEMO-B: 30/50 points = 60%; hình thoi tổng: 110/150 points = 73.33%."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Dùng hình tự tạo, không logo hay asset ngoài."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác"
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "criteria": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số: 100/150 và 50/150; không phải (80% + 60%)/2 = 70%."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10, DEMO-A 80/100 points = 80%; DEMO-B 30/50 points = 60%; tổng 110/150 points = 73.33%."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Ba thanh cùng thang 0–100%, có nhãn và ký hiệu riêng."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Hình tự tạo, không dùng logo hoặc asset ngoài; không có link tải hay tuyên bố chứng thực."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "criteria": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số: DEMO-A = 100/150; DEMO-B = 50/150."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Dữ liệu PUBLIC_SYNTHETIC, kỳ 2026-10. DEMO-A: 80/100 points, 80%; DEMO-B: 30/50 points, 60%. Tổng: 110/150 points, 73.33%. Ba thanh cùng thang 0–100%. Nguồn: packet DEMO."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Các thanh dùng chung thang 0–100%, có tên, ký hiệu và nhãn số"
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Đồ họa tự tạo, không logo."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác, độ tương phản và việc cắt chữ."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "criteria": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số A:B = 100:50 = 2:1, theo mẫu số."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "● DEMO-A"
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Asset tự tạo; không dùng logo. Nguồn không cung cấp URL."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "criteria": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Tổng = (80 + 30) / (100 + 50) × 100 = 73.33%"
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Infographic 800×500, dữ liệu giả lập kỳ 2026-10, đơn vị points từ packet DEMO."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "cùng thang 0–100%, có nhãn và glyph."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Không dùng logo, asset ngoài hay liên kết nguồn/tải tự tạo."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline. Chưa render hoặc kiểm thị giác; chưa kiểm accessibility toàn diện."
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Đã parse XML bằng Python stdlib riêng của reviewer; không thực thi target code hoặc render. Cả năm có canvas 800×500, title/desc cùng aria-labelledby hợp lệ, không script/foreignObject/external asset/href/event handler/DOCTYPE/ENTITY/XML stylesheet. Raw answers nằm trong ngân sách 450 từ theo whitespace count: 367, 367, 340, 349, 360.",
+    "Đã đối chiếu bar geometry với trục 0–100: sample 1 dài chuẩn 500 px và bars 400/300/366.67; sample 2 dài 480 và 384/288/352; sample 3 dài 500 và 400/300/366.667; sample 4 dài 420 và 336/252/308; sample 5 dài 500 và 400/300/366.65. Sai khác chỉ do làm tròn hiển thị. Tất cả giữ 80/100, 30/50, 110/150 = 73.33%, và giải thích trọng số mẫu số thay cho 70%.",
+    "Đã xem vị trí chữ, cỡ chữ, nhãn, source, unit, period và glyph từ XML; không thấy lỗi bố cục rõ ràng từ source. Không có pixel/font-render assurance, không chứng nhận chữ chắc chắn không cắt trên mọi renderer, contrast, screen reader hoặc print. Sample 3 có footer baseline y=491, font-size=14 nên ít đệm dưới nhưng chưa có bằng chứng bị cắt để kết luận lỗi.",
+    "Runtime resource closure của SKILL.md và references/template đạt; source phân biệt artifact thật với brief/markup, giữ authority cho hành động ngoài phạm vi, và xem W3C WCAG/Understanding như hướng dẫn có giới hạn, không như chứng nhận accessibility toàn diện. Không truy cập W3C nên không xác minh thời điểm kiểm nguồn được ghi trong tài liệu. MIT license của package không tự cấp quyền dùng brand; các answers chỉ dùng shapes tự tạo, không logo, invented citation hoặc download link.",
+    "Đây là năm samples của một synthetic case; kết quả không chứng minh hiệu quả tổng quát hoặc quan hệ nhân quả của skill. Các statements không render/network trong raw answer là lời khai; không có tool trace để xác minh lịch sử hành động. Closure của fixture đang pending được báo riêng với closure của tài nguyên runtime."
+  ]
+}

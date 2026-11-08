@@ -15,6 +15,8 @@ from urllib.parse import unquote, urlsplit
 import yaml
 
 CORE = {'review-academic-thesis', 'audit-branch-kpi', 'review-code-change'}
+EXPANSION = {'plan-branch-execution', 'track-management-actions', 'review-business-policy',
+             'research-with-evidence', 'prepare-interactive-training', 'create-visual-learning-assets'}
 SUPPORT = {'grammar-checker-vi', 'scientific-thinking-literature-review'}
 SCRIPT_SUFFIXES = {'.py', '.sh', '.bash', '.zsh', '.fish', '.js', '.mjs', '.cjs', '.ts', '.rb', '.pl', '.php', '.ps1', '.bat', '.cmd'}
 EXECUTABLE_SUFFIXES = SCRIPT_SUFFIXES | {'.pyc', '.pyo', '.so', '.dylib', '.dll', '.exe', '.jar', '.wasm', '.ipynb'}
@@ -216,6 +218,9 @@ def _validate(root, result):
     mapping(registry['library'], {'name', 'version'}, 'library')
     require(registry['library']['name'] == 'personal-ai-skills', 'library name mismatch')
     string(registry['library']['version'], 'library.version')
+    version = re.fullmatch(r'(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:[-+][0-9A-Za-z.-]+)?', registry['library']['version'])
+    require(version is not None, 'library.version must be a semantic version')
+    required_core = CORE | EXPANSION if tuple(map(int, version.groups())) >= (1, 1, 0) else CORE
     mapping(registry['governance'], GOVERNANCE, 'governance')
     require(registry['governance'] == GOVERNANCE, 'governance mapping mismatch')
     inventory(root, registry['governance_files'], prefix='governance', expected=GOVERNANCE.values())
@@ -231,7 +236,7 @@ def _validate(root, result):
         require(skill['path'] == 'skills/' + name, f'{name}: path mismatch')
         string(skill['version'], f'{name}.version')
         require(type(skill['role']) is str and skill['role'] in ('core', 'support'), f'{name}: invalid role')
-        require(skill['role'] == ('core' if name in CORE else 'support'), f'{name}: incorrect role')
+        require(skill['role'] == ('core' if name in CORE | EXPANSION else 'support'), f'{name}: incorrect role')
         require(type(skill['status']) is str and skill['status'] in ('PILOT_GO', 'STATIC_GO'), f'{name}: invalid status')
         string(skill['runtime_scope'], f'{name}.runtime_scope')
         require(skill['installed_name'] is None or (type(skill['installed_name']) is str and bool(skill['installed_name'].strip())),
@@ -242,14 +247,15 @@ def _validate(root, result):
         require(any(f"{skill['path']}/{license_name}" in files and (root / skill['path'] / license_name).stat().st_size > 0
                     for license_name in ('LICENSE', 'LICENSE.txt', 'LICENSE.md')), f'{name}: missing license')
         frontmatter(root / skill['path'] / 'SKILL.md', name)
-        if name in CORE:
+        if name in CORE | EXPANSION:
             for sub in ('references', 'assets', 'scripts', 'tests'):
                 require(bool(useful_files(root / skill['path'] / sub)), f'{name}: {sub} must have useful nonempty files')
             require(code_resources(root / skill['path'] / 'scripts'), f'{name}: scripts require substantive script file')
             require(code_resources(root / skill['path'] / 'tests', is_test=True), f'{name}: tests require substantive test file')
         markdown_links(root, skill['path'], files)
         result['skills_checked'] += 1
-    require(names == CORE | SUPPORT, f'exactly five canonical skills required; missing={sorted((CORE | SUPPORT) - names)}; extra={sorted(names - (CORE | SUPPORT))}')
+    required_names = required_core | SUPPORT
+    require(names == required_names, f'canonical inventory for version incomplete; missing={sorted(required_names - names)}; extra={sorted(names - required_names)}')
     actual_skills = {p.name for p in (root / 'skills').iterdir()}
     require(actual_skills == names, 'unregistered skill folder/file')
     require(type(registry['adapters']) is list, 'adapters must be a list')

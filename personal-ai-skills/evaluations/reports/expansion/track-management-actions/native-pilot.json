@@ -1,0 +1,45 @@
+{
+  "name": "track-management-actions",
+  "priority": "P2",
+  "codex_cli_version": "0.167.0",
+  "process_exit_code": 0,
+  "scope": "One new read-only CLI session, explicit invocation on heldout PUBLIC_SYNTHETIC packet; not host implicit routing/fulladapter lifecycle",
+  "input_prompt": "Dùng $track-management-actions từ bản cài USER đã có để thực hiện bài tập giả lập sau. Chỉ đọc và phân tích/tạo nội dung inline; không network, subagent, gửi/ghi ứng dụng, sửa file/config, thực thi script/test/targetcode, merge/deploy. Chỉ đọc SKILL.md/resources cần thiết từ bản cài. Không đọc báo cáo, test fixtures hoặc câu trả lời khác trong workspace.\nTrước khi đọc file, ghi skill có xuất hiện trong metadata host lúc đầu phiên hay không; không suy từ tự tìm thư mục, không biết ghi unknown.\nPUBLIC_SYNTHETIC as-of2026-11-11T09:00:00+07:00. B1v1ownerXdue2026-11-10T17:00+07,statusprogress; B1v2báodone16hngày10,recordDEMO-APP-1nêureviewerYxácnhậnnghiệmthu16h30ngày10. B2ownermissing due2026-11-11dateonly, tựbáodonekhôngbằngchứng; B3ownerZblockeddepends_onB2due2026-11-12dateonly. Đốisoátledgerstatus/history/evidence vàprecisiondeadline; khôngtựghiđèhệthống hoặcnhắcviệc. RecordAPPchỉlàpacketđãcungcấp, khônggiảexternalverification.\nTrả duy nhất một JSON {\"skill_name\":\"track-management-actions\",\"listed_in_initial_metadata\":true|false|\"unknown\",\"metadata_evidence\":\"trích ngắn hoặc unknown\",\"loaded_paths\":[...],\"result\":\"đầu ra tiếng Việt thực tế; không chỉ tóm tắt quy trình; các con số là suy luận packet, không giả tool/runtime/render\"}. Tối đa600từ (SVGsource có thể dài thêm nếu cần để đúng dữ liệu/bố cục).\n",
+  "answer": {
+    "skill_name": "track-management-actions",
+    "listed_in_initial_metadata": true,
+    "metadata_evidence": "track-management-actions: Use when người dùng cần đối soát hoặc theo dõi chỉ đạo đã giao, deadline, owner, phụ thuộc, lịch sử cập nhật và bằng chứng hoàn thành.",
+    "loaded_paths": [
+      "<user-home>/.agents/skills/track-management-actions/SKILL.md",
+      "<user-home>/.agents/skills/track-management-actions/references/usage-guard.md",
+      "<user-home>/.agents/skills/track-management-actions/assets/output-template.md"
+    ],
+    "result": "Snapshot PUBLIC_SYNTHETIC, as-of 2026-11-11T09:00:00+07:00; timezone UTC+07:00. Nguồn duy nhất: packet người dùng cung cấp; locator B1v1, B1v2, DEMO-APP-1, B2, B3. Bằng chứng mang nhãn provided; không có external verification. Các phép tính dưới đây là suy luận trực tiếp từ packet.\n\nLEDGER\nB1 | Owner X | Hạn 2026-11-10T17:00+07:00, precision đến phút. Reported status: done lúc 16:00 ngày 10/11. Bằng chứng: DEMO-APP-1 nêu reviewer Y xác nhận nghiệm thu lúc 16:30 cùng ngày. Acceptance: accepted theo căn cứ nghiệm thu được cung cấp trong packet; không xác minh độc lập thẩm quyền Y hoặc record APP. Trạng thái đối soát: đã được nghiệm thu theo packet. Hoàn thành trước hạn 1 giờ, nghiệm thu trước hạn 30 phút. Tại snapshot, mốc hạn đã qua 16 giờ nhưng B1 không phải việc tồn quá hạn. Blocker/dependency: không được nêu. Bước tiếp theo: giữ record và lịch sử; X/Y là đầu mối nếu cần xác nhận thêm.\nB2 | Owner thiếu | Hạn 2026-11-11, date-only. Reported status: tự báo done, không có thời điểm hoàn thành hoặc bằng chứng. Acceptance: chưa có. Trạng thái đối soát: reported_done/pending_verification. Deadline: đến hạn trong ngày snapshot; chưa đủ cơ sở kết luận quá hạn hoặc hoàn thành đúng hạn. Không tự gán giờ hạn. Dependency/blocker của B2: chưa được cung cấp. Bước tiếp theo: cần xác định owner, bằng chứng, thời điểm hoàn thành và người nghiệm thu; chưa liên hệ ai.\nB3 | Owner Z | Hạn 2026-11-12, date-only. Reported status: blocked. Acceptance: chưa có. Trạng thái đối soát: blocked; depends_on B2. Deadline còn 1 ngày lịch, không quy đổi thành số giờ chính xác. B2 chưa được nghiệm thu nên chưa có căn cứ xác nhận gỡ chặn. Bước tiếp theo: Z xác nhận điều kiện gỡ chặn sau khi B2 được đối soát; B2 được chấp nhận cũng không tự làm B3 done.\n\nHISTORY/CONFLICT\nB1 là một ID với hai version: v1 progress → v2 reported done → nghiệm thu theo DEMO-APP-1. Giữ v1 làm lịch sử, không đếm thành việc riêng hoặc dùng trạng thái cũ ghi đè kết quả mới. Chưa có timestamp cập nhật version; giờ hoàn thành/nghiệm thu không tự trở thành giờ cập nhật. B2/B3 chưa có version hoặc lịch sử cập nhật. Chưa thấy mâu thuẫn trực tiếp hay đường dẫn chứng minh vòng phụ thuộc; graph còn thiếu.\n\nTỔNG: 3 ID unique; 2 việc báo done; 1 accepted theo packet; 1 reported_done chưa accepted; 1 blocked; 1 thiếu owner. Không có việc tồn được chứng minh quá hạn. Chưa có mô tả đầu ra/tiêu chí đạt chi tiết hoặc quy tắc ngày làm việc. Không network, subagent, chạy script/test, ghi ứng dụng/file/config, gửi nhắc việc hay thay đổi hệ thống."
+  },
+  "raw_answer_sha256_before_path_redaction": "a456dba18665dc6842e107701da3af2d0a06ab5cfa1c822e423106d65bd2e370",
+  "observed_commands": [
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/track-management-actions/SKILL.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/track-management-actions/assets/output-template.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/track-management-actions/references/usage-guard.md'",
+      "exit_code": 0
+    }
+  ],
+  "startup_item_warnings": [
+    "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <user-home>/.codex/config.toml."
+  ],
+  "startup_stderr_warning_classes": [
+    "plugin icon path",
+    "state database"
+  ],
+  "model_identifier": null,
+  "limits": "Initial metadata presence is agent-reported; reads and turn.completed observed, no separate catalog instrumentation. No claim of independent real-data verification.",
+  "skill_version_at_capture": "1.0.0",
+  "post_capture_update": "Current1.0.1helper correction separately verified; workflowtext unchanged, no helperexecution in native modelpilot. Seehelper-correction.json."
+}

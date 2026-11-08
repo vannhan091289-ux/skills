@@ -1,0 +1,49 @@
+{
+  "name": "research-with-evidence",
+  "priority": "P2",
+  "codex_cli_version": "0.167.0",
+  "process_exit_code": 0,
+  "scope": "One new read-only CLI session, explicit invocation on heldout PUBLIC_SYNTHETIC packet; not host implicit routing/fulladapter lifecycle",
+  "input_prompt": "Dùng $research-with-evidence từ bản cài USER đã có để thực hiện bài tập giả lập sau. Chỉ đọc và phân tích/tạo nội dung inline; không network, subagent, gửi/ghi ứng dụng, sửa file/config, thực thi script/test/targetcode, merge/deploy. Chỉ đọc SKILL.md/resources cần thiết từ bản cài. Không đọc báo cáo, test fixtures hoặc câu trả lời khác trong workspace.\nTrước khi đọc file, ghi skill có xuất hiện trong metadata host lúc đầu phiên hay không; không suy từ tự tìm thư mục, không biết ghi unknown.\nPUBLIC_SYNTHETIC boundedpacket, khôngweb. S-A§1trước50%,sau55%,n15,khôngđốichứng,hãngtựbáo2026-10-01. S-B§2blog2026-11-01dẫnlạinguyênS-Akhôngdữliệumới. S-Cabstract2026-10-15n30pilotcóđốichứng,estimate1.5điểmphầntrăm,CI[-1,4],chưafulltext. NoteDOI10.0000/DEMO-FAKEchưaxácminh. TrảlờicâuhỏiDEMOinterventioncóbằngchứnglợiíchkhông? Evidenceledger/independence/citationuncertainty; tínhabsolutevsrelativedifference; khônggiảsearch/fulltext/causality.\nTrả duy nhất một JSON {\"skill_name\":\"research-with-evidence\",\"listed_in_initial_metadata\":true|false|\"unknown\",\"metadata_evidence\":\"trích ngắn hoặc unknown\",\"loaded_paths\":[...],\"result\":\"đầu ra tiếng Việt thực tế; không chỉ tóm tắt quy trình; các con số là suy luận packet, không giả tool/runtime/render\"}. Tối đa600từ (SVGsource có thể dài thêm nếu cần để đúng dữ liệu/bố cục).\n",
+  "answer": {
+    "skill_name": "research-with-evidence",
+    "listed_in_initial_metadata": true,
+    "metadata_evidence": "research-with-evidence … (file: r1/research-with-evidence/SKILL.md)",
+    "loaded_paths": [
+      "<user-home>/.agents/skills/research-with-evidence/SKILL.md",
+      "<user-home>/.agents/skills/research-with-evidence/references/usage-guard.md",
+      "<user-home>/.agents/skills/research-with-evidence/references/workflow-contract.md",
+      "<user-home>/.agents/skills/research-with-evidence/assets/output-template.md"
+    ],
+    "result": "DEMO intervention có tín hiệu theo hướng tăng chỉ số, nhưng chưa đủ bằng chứng để kết luận có lợi ích do intervention gây ra. Độ chắc chắn thấp: mẫu nhỏ, nguồn tự báo trước/sau thiếu đối chứng và pilot có CI chứa 0. Packet cũng chưa định nghĩa chỉ số; chỉ có thể gọi tăng là có lợi nếu giá trị cao hơn là kết quả mong muốn.\n\nĐây là bounded-packet review của PUBLIC_SYNTHETIC, mốc phân tích 2026-11-08. Dữ kiện và ngày nguồn đều là provided; chỉ tiếp cận mô tả trong packet, chưa đọc tài liệu nguồn gốc. Không thực hiện search hay truy cập fulltext.\n\nEvidence ledger:\n• Claim: chỉ số tăng sau intervention. S-A§1, ngày 2026-10-01 theo packet; n=15, trước/sau không đối chứng, hãng tự báo. Access: mô tả packet. Hỗ trợ: quan sát 50%→55%; không xác lập nhân quả. Giới hạn: chưa kiểm phương pháp, mẫu số, cách đo, thời gian theo dõi hoặc sai lệch báo cáo. Trạng thái: provided, chưa xác minh độc lập.\n• Claim: có thêm bằng chứng xác nhận. S-B§2, blog ngày 2026-11-01 theo packet; dẫn nguyên S-A, không có dữ liệu mới. Access: mô tả packet. Chuỗi nguồn S-B→S-A; không phải bằng chứng độc lập, ngày mới hơn không làm kết quả đáng tin hơn.\n• Claim: intervention có tác động dương. S-C abstract, ngày 2026-10-15 theo packet; pilot n=30 có đối chứng, estimate +1,5 điểm phần trăm, CI [−1; +4] điểm phần trăm. Access: thông tin abstract được packet cung cấp, chưa fulltext. Estimate hướng dương nhưng CI còn tương thích tác động âm, bằng 0 và dương; chưa chứng minh có lợi, cũng chưa chứng minh không có lợi. Không suy có ngẫu nhiên hóa; mức tin cậy của CI chưa được nêu.\n\nTính toán từ packet: chênh lệch tuyệt đối S-A = 55%−50% = +5 điểm phần trăm; thay đổi tương đối so với baseline = (55%−50%)/50% = +10%. Đây là phép tính mô tả, không phải ước lượng tác động nhân quả [S-A§1].\n\nIndependence: ba tài liệu gồm một chuỗi S-A/S-B và một báo cáo S-C. Chưa xác minh S-C độc lập về mẫu hoặc dữ liệu với S-A; không cộng cỡ mẫu hay gộp hai estimate khác thiết kế.\n\nCitation uncertainty: locator dùng đúng packet. DOI 10.0000/DEMO-FAKE giữ trạng thái unverified, chưa gắn với nguồn nào; không dựng URL hay metadata.\n\nĐiều có thể thay đổi kết luận: fulltext S-C xác nhận thiết kế, outcome, phân tích và CI; dữ liệu gốc S-A; nghiên cứu đối chứng lớn hơn, độc lập. Đây là đề xuất xác minh tiếp, chưa thực hiện."
+  },
+  "raw_answer_sha256_before_path_redaction": "154cacdcf3bb478f8a7bd32807eeb813eb46ab448882d49f587ccf46213a2896",
+  "observed_commands": [
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/research-with-evidence/SKILL.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/research-with-evidence/assets/output-template.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/research-with-evidence/references/usage-guard.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/research-with-evidence/references/workflow-contract.md'",
+      "exit_code": 0
+    }
+  ],
+  "startup_item_warnings": [
+    "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <user-home>/.codex/config.toml."
+  ],
+  "startup_stderr_warning_classes": [
+    "plugin icon path",
+    "state database"
+  ],
+  "model_identifier": null,
+  "limits": "Initial metadata presence is agent-reported; reads and turn.completed observed, no separate catalog instrumentation. No claim of independent real-data verification.",
+  "skill_version_at_capture": "1.0.0"
+}

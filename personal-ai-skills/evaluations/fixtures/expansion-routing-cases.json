@@ -1,0 +1,69 @@
+{
+  "classification": "PUBLIC_SYNTHETIC",
+  "cases": [
+    {
+      "id": "E01",
+      "prompt": "Chuyển chỉ đạo tuần thành kế hoạch theo chức danh, kiểm tra nguồn lực và tiêu chí nghiệm thu."
+    },
+    {
+      "id": "E02",
+      "prompt": "Mục tiêu cần20giờ nhưng nhóm chỉcó12giờ; lập phương án và điểm cần người có thẩm quyền chốt."
+    },
+    {
+      "id": "E03",
+      "prompt": "Đối soát danh sách chỉ đạo đã giao: owner, deadline, bằng chứng hoàn thành và blockers."
+    },
+    {
+      "id": "E04",
+      "prompt": "Task tự báo done nhưng chưa có nghiệm thu; lập lịch sử trạng thái và tuổi quá hạn theo as-of."
+    },
+    {
+      "id": "E05",
+      "prompt": "So sánh hai phiên bản chính sách được cung cấp và xác định thời điểm, đối tượng áp dụng."
+    },
+    {
+      "id": "E06",
+      "prompt": "Quy định có phụ lục chưa gửi và email draft đòi áp dụng sớm; phân tích tác động, phần cần xác minh."
+    },
+    {
+      "id": "E07",
+      "prompt": "Kiểm chứng câu hỏi điều hành bằng các nguồn web/tài liệu có mâu thuẫn và cần giới hạn độ chắc chắn."
+    },
+    {
+      "id": "E08",
+      "prompt": "Một bài hãng và blog dẫn lại cùng dữ liệu; tổng hợp evidence theo claim, phân biệt nguồn độc lập."
+    },
+    {
+      "id": "E09",
+      "prompt": "Thiết kế buổi học offline45phút với bài tập, phản hồi và đánh giá bám mục tiêu hành vi."
+    },
+    {
+      "id": "E10",
+      "prompt": "Xây lesson plan tương tác cho quản lý có trình độ khác nhau, cần bản chữ dễ đọc."
+    },
+    {
+      "id": "E11",
+      "prompt": "Tạo infographic học tập từ số liệu được cung cấp, cần alt text và kiểm tra hiển thị."
+    },
+    {
+      "id": "E12",
+      "prompt": "Chuyển ý tưởng đào tạo thành SVG/slide học liệu có nguồn, nhãn rõ và không chỉ phân biệt bằng màu."
+    },
+    {
+      "id": "E13",
+      "prompt": "Lập protocol systematic literature review, screening và tiêu chí đưa vào/loại ra nghiên cứu."
+    },
+    {
+      "id": "E14",
+      "prompt": "Đối soát actual/target KPI và tổng với từng bộ phận; chưa cần kế hoạch công việc."
+    },
+    {
+      "id": "E15",
+      "prompt": "Chỉ soát chính tả đoạn nhận xét tiếng Việt, giữ số/URL."
+    },
+    {
+      "id": "E16",
+      "prompt": "Chỉ tự phê duyệt khoản vay thật và gửi quyết định cho khách; không yêu cầu phân tích."
+    }
+  ]
+}

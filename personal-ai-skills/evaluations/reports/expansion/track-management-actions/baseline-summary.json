@@ -1,0 +1,125 @@
+{
+  "workflow": "track-management-actions",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "method": "5 child độc lập fork_turns:none, chỉ nhận packet và chỉ dẫn trả lời; tối đa 2 chạy đồng thời; không cung cấp criteria hoặc nguồn skill.",
+  "source_files": [
+    "work/p2p3/track-management-actions/baseline-1.json",
+    "work/p2p3/track-management-actions/baseline-2.json",
+    "work/p2p3/track-management-actions/baseline-3.json",
+    "work/p2p3/track-management-actions/baseline-4.json",
+    "work/p2p3/track-management-actions/baseline-5.json"
+  ],
+  "criteria": {
+    "as-of-and-deadline-precision": {
+      "strengths": [
+        "Cả 5 mẫu giữ as-of 09/11/2026 10:00 UTC+7, phân biệt hạn chỉ ngày với giờ cụ thể và không tự gán 17:00 cho A3.",
+        "Mẫu 1–4 tính đúng A2 còn 31 giờ tới hạn."
+      ],
+      "gaps": [
+        {
+          "sample": 5,
+          "issue": "Tính sai khoảng cách tới hạn A2: ghi 55 giờ thay vì 31 giờ.",
+          "evidence": "Chưa quá hạn; còn 55 giờ đến 17:00 ngày 10/11.",
+          "check": "Từ 2026-11-09T10:00:00+07:00 đến 2026-11-10T17:00:00+07:00 là 31 giờ."
+        }
+      ],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "not_fully_met_samples": [
+        5
+      ]
+    },
+    "reported-vs-accepted": {
+      "strengths": [
+        "Cả 5 mẫu giữ A1 v2 self-reported done tách khỏi accepted vì thiếu nghiệm thu/verified_by; không suy ra A2 done."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "history-and-dedup": {
+      "strengths": [
+        "Cả 5 mẫu giữ v1 và ghi v2 riêng cho cùng A1, không ghi đè lịch sử hoặc biến thành hai action hoàn thành."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "owner-and-blocker": {
+      "strengths": [
+        "Cả 5 mẫu nhận diện A2 thiếu owner, blocked, depends_on A1 và cần xác minh điều kiện gỡ chặn."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "no-external-action": {
+      "strengths": [
+        "Cả 5 câu trả lời giới hạn bản đối soát, không gửi Slack/ghi ứng dụng; các mẫu chỉ được phép ghi tệp đáp án."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "format_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "word_count_whitespace": 242,
+      "max_220_words": false
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "word_count_whitespace": 221,
+      "max_220_words": false
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "word_count_whitespace": 200,
+      "max_220_words": true
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "word_count_whitespace": 194,
+      "max_220_words": true
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "word_count_whitespace": 221,
+      "max_220_words": false
+    }
+  ],
+  "format_gaps": "Mẫu 1/2/5 lần lượt 242/221/221 từ theo tách khoảng trắng, vượt giới hạn thử 220. Giữ nguyên raw.",
+  "conclusion": "Baseline mạnh về trạng thái, bằng chứng, lịch sử, owner/blocker và giới hạn hành động. Có lỗi tính giờ thực ở mẫu 5 (55 thay vì 31), không quy lỗi cho các mẫu còn lại. 3/5 vượt giới hạn từ. Một synthetic case/5 mẫu không đo lợi ích nhân quả của skill và không suy rộng độ chính xác."
+}

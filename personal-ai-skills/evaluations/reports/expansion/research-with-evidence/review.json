@@ -1,0 +1,138 @@
+{
+  "status": "ACCEPTED",
+  "scope": "Đánh giá độc lập 1 staged skill research-with-evidence, các tài nguyên trực tiếp được SKILL.md liên kết và toàn bộ 5 raw treatment answers green-1 đến green-5 trên duy nhất 1 case PUBLIC_SYNTHETIC; đối chiếu đủ 5 tiêu chí trong case.json.",
+  "findings": [],
+  "assessment_rows": [
+    {
+      "sample": 1,
+      "criteria": {
+        "claim-source-locators": {
+          "accepted": true,
+          "quote": "S1, đoạn 4, 2026-10-01"
+        },
+        "independence-and-uncertainty": {
+          "accepted": true,
+          "quote": "CI chứa 0: chưa chứng minh lợi ích, cũng chưa chứng minh không có lợi ích."
+        },
+        "abstract-and-unverified-doi": {
+          "accepted": true,
+          "quote": "chưa đọc fulltext, chưa xác minh phương pháp"
+        },
+        "percentage-point-correctness": {
+          "accepted": true,
+          "quote": "+20 điểm phần trăm, tương đối +50%"
+        },
+        "no-fabricated-search": {
+          "accepted": true,
+          "quote": "không tra web hoặc xác minh nguồn ngoài."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "criteria": {
+        "claim-source-locators": {
+          "accepted": true,
+          "quote": "S1/đoạn 4/2026-10-01"
+        },
+        "independence-and-uncertainty": {
+          "accepted": true,
+          "quote": "cùng chuỗi nguồn, không thêm chứng cứ độc lập."
+        },
+        "abstract-and-unverified-doi": {
+          "accepted": true,
+          "quote": "DOI 10.0000/DEMO-FAKE chưa xác minh"
+        },
+        "percentage-point-correctness": {
+          "accepted": true,
+          "quote": "+20 điểm phần trăm, tương đối +50%"
+        },
+        "no-fabricated-search": {
+          "accepted": true,
+          "quote": "chưa xác minh ngoài, không duyệt web."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "criteria": {
+        "claim-source-locators": {
+          "accepted": true,
+          "quote": "S1 §4, 2026-10-01"
+        },
+        "independence-and-uncertainty": {
+          "accepted": true,
+          "quote": "CI chứa 0: còn tương thích giảm, không đổi hoặc tăng"
+        },
+        "abstract-and-unverified-doi": {
+          "accepted": true,
+          "quote": "Abstract packet; chưa đọc fulltext"
+        },
+        "percentage-point-correctness": {
+          "accepted": true,
+          "quote": "+20 điểm phần trăm, tương đối +50%"
+        },
+        "no-fabricated-search": {
+          "accepted": true,
+          "quote": "không tra web, không xác minh độc lập."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "criteria": {
+        "claim-source-locators": {
+          "accepted": true,
+          "quote": "S1, đoạn 4, 2026-10-01"
+        },
+        "independence-and-uncertainty": {
+          "accepted": true,
+          "quote": "trọng số bổ sung bằng 0 cho bằng chứng độc lập."
+        },
+        "abstract-and-unverified-doi": {
+          "accepted": true,
+          "quote": "chưa đọc fulltext, chưa biết phân nhóm và phương pháp."
+        },
+        "percentage-point-correctness": {
+          "accepted": true,
+          "quote": "+20 điểm phần trăm (+50% tương đối)"
+        },
+        "no-fabricated-search": {
+          "accepted": true,
+          "quote": "không web, chưa xác minh bản gốc."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "criteria": {
+        "claim-source-locators": {
+          "accepted": true,
+          "quote": "S1 §4 (2026-10-01)"
+        },
+        "independence-and-uncertainty": {
+          "accepted": true,
+          "quote": "CI chứa 0, tương thích cả giảm lẫn tăng"
+        },
+        "abstract-and-unverified-doi": {
+          "accepted": true,
+          "quote": "DOI 10.0000/DEMO-FAKE: chưa xác minh, không link/fulltext"
+        },
+        "percentage-point-correctness": {
+          "accepted": true,
+          "quote": "tăng 20 điểm phần trăm, tương đối 50%"
+        },
+        "no-fabricated-search": {
+          "accepted": true,
+          "quote": "không tra web hoặc tìm kiếm toàn diện."
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Cả 5 câu trả lời dùng locator S1/S2/S3 thực của packet; phân biệt chuỗi dẫn lại với chứng cứ độc lập, quan sát trước/sau với nhân quả, abstract với fulltext, DOI chưa xác minh, điểm phần trăm với thay đổi tương đối; không có tìm kiếm hoặc citation được bịa. Trọng số nguồn được trình bày như đánh giá định tính có giới hạn.",
+    "Quy ước đếm độ dài: tách theo khoảng trắng bằng str.split(), tính cả nhãn, ký hiệu đứng riêng và ô bảng; số từ sample 1–5 lần lượt là 219, 217, 212, 216, 216; đều không quá 220.",
+    "Đã đọc guard, workflow-contract, output-template và mã run_checks.py được liên kết; không chạy code nguồn, không mạng, không hành động ngoài, không xem baseline, kết luận cũ, tests/fixtures hoặc báo cáo ngoài phạm vi. Không xác minh khoa học ngoài packet hoặc tính đúng của package tests.",
+    "Kết quả chỉ mô tả 5 mẫu của 1 tình huống tổng hợp; không chứng minh mức cải thiện nhân quả do skill, hiệu quả trên case khác hoặc bảo đảm tổng quát."
+  ]
+}

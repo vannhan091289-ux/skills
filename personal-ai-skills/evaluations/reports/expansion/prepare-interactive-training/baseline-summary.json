@@ -1,0 +1,115 @@
+{
+  "workflow": "prepare-interactive-training",
+  "condition": "without-skill",
+  "classification": "PUBLIC_SYNTHETIC",
+  "sample_count": 5,
+  "method": "5fresh child fork_turns:none chỉ nhận packet+chỉ dẫn trả lời, khôngcriteria/source/docs/answerskhác; tối đa2subject đồng thời.",
+  "source_files": [
+    "work/p2p3/prepare-interactive-training/baseline-1.json",
+    "work/p2p3/prepare-interactive-training/baseline-2.json",
+    "work/p2p3/prepare-interactive-training/baseline-3.json",
+    "work/p2p3/prepare-interactive-training/baseline-4.json",
+    "work/p2p3/prepare-interactive-training/baseline-5.json"
+  ],
+  "criteria": {
+    "time-budget": {
+      "strengths": [
+        "Cả5 có timeline liên tục0–30 phút, các đoạn cộng đúng30. Mẫu1/3/5 còn chỉ rõ đề nghị ban đầu50phút vượt khung."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "observable-objective-alignment": {
+      "strengths": [
+        "Cả5 yêu cầu học viên nhận diện dấu hiệu và chọn hành động xác minh, có bài cá nhân2tình huống tương đương/biến thể để quan sát hành vi thay vì chỉ nghe giảng."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "interactive-exercise-and-feedback": {
+      "strengths": [
+        "Cả5 có nhóm xử lý2tình huống, đáp án thiếu kỳ/nguồnSYSTEM, rubric theo tiêu chí cụ thể và phản hồi/luyện lại; không coi điểm là năng lực chung."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "offline-and-accessibility": {
+      "strengths": [
+        "Cả5 dùng phiếu/thẻ/bút/đáp án in, chữ lớn/tương phản cao và trả lời miệng/đọc hướng dẫn; phù hợp khôngInternet/khôngđăngnhập.",
+        "Mẫu1/2/3/5 nêu rõ2bản cho2người; mẫu4 có phương án chữ lớn chung, không thiếu khả năng sử dụng."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "no-hr-decision": {
+      "strengths": [
+        "Cả5 bác việc gán dưới80% là kém năng lực và không quyết địnhHR/chứng nhận; điểm chỉ phục vụ luyện tập/phản hồi. Không có hành động đặt lịch."
+      ],
+      "gaps": [],
+      "supported_samples": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "format_checks": [
+    {
+      "sample": 1,
+      "valid_json": true,
+      "word_count_whitespace": 218,
+      "max_220_words": true
+    },
+    {
+      "sample": 2,
+      "valid_json": true,
+      "word_count_whitespace": 220,
+      "max_220_words": true
+    },
+    {
+      "sample": 3,
+      "valid_json": true,
+      "word_count_whitespace": 206,
+      "max_220_words": true
+    },
+    {
+      "sample": 4,
+      "valid_json": true,
+      "word_count_whitespace": 209,
+      "max_220_words": true
+    },
+    {
+      "sample": 5,
+      "valid_json": true,
+      "word_count_whitespace": 205,
+      "max_220_words": true
+    }
+  ],
+  "conclusion": "Baseline mạnh trên5tiêu chí; chưa thấy failure thực. Cả5 budget30phút đúng và đáp án/rubric bám hành vi. Cả5<=220 theo tách khoảng trắng. Không tạo lỗi giả hoặc suy rộng hiệu quả giáo dục/nhân quả của skill từ1synthetic case; chưa author/install nguồn."
+}

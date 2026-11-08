@@ -1,7 +1,7 @@
 schema_version: 1
 library:
   name: personal-ai-skills
-  version: 1.0.1
+  version: 1.1.0
 governance:
   security_policy: governance/security-policy.md
   quality_gates: governance/quality-gates.md
@@ -96,6 +96,186 @@ skills:
     sha256: 6b4753a0bb3e0e392f7ca9185cab9bdc0660dd3cfe3159e80d7229d411c5d7cb
   - path: skills/review-code-change/tests/test_review_evidence.py
     sha256: dedde63ddf1b351321811ba0dece7286abdd39157c5cfbfce43242748a820875
+- name: plan-branch-execution
+  path: skills/plan-branch-execution
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: plan-branch-execution
+  files:
+  - path: skills/plan-branch-execution/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/plan-branch-execution/SKILL.md
+    sha256: 0b70b71261594ab34fefba9912f0faa0ab070c900a9564b8f8ec1fd075b6c05e
+  - path: skills/plan-branch-execution/agents/openai.yaml
+    sha256: 1c9b813918d3b5d23a490892fdc53a1bcda1bf363f2b763360b19b2bafec7a56
+  - path: skills/plan-branch-execution/assets/output-template.md
+    sha256: 5c2a394e3fe41075748c86b077a5b892251e88b88158754a66a2ab7066d1778e
+  - path: skills/plan-branch-execution/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/plan-branch-execution/references/workflow-contract.md
+    sha256: bc818cc197c0b220dd528cb539d6e7c9a8e15c821b83d9b97196926c55174ed3
+  - path: skills/plan-branch-execution/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/plan-branch-execution/tests/fixtures/applications.json
+    sha256: 3fdea9009caf193f8af79865d018ab52fc47785d0e306616e48068a1f2d77d83
+  - path: skills/plan-branch-execution/tests/fixtures/case.json
+    sha256: 66eb5c76773d3cc6c334e7b3a1b3a7fb22108b835be851c1eccee7d679395822
+  - path: skills/plan-branch-execution/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+- name: track-management-actions
+  path: skills/track-management-actions
+  version: 1.0.1
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: track-management-actions
+  files:
+  - path: skills/track-management-actions/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/track-management-actions/SKILL.md
+    sha256: 479b9050e14c33b3da176bec2ce8338964fd63a8ef2232e6f7135bcd73e3c6f1
+  - path: skills/track-management-actions/agents/openai.yaml
+    sha256: 25ee7ee37fb2eede14f78d230370e89b2617619453b197f5900450f44b99b1d1
+  - path: skills/track-management-actions/assets/output-template.md
+    sha256: 55ac6c52c93acd5dc7266aee397a43c696bff32811b4a016902b494b8d71514f
+  - path: skills/track-management-actions/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/track-management-actions/references/workflow-contract.md
+    sha256: 651d70a44c0f65dda6f2cfa9fbab33228fecd71dcdfcb21c30e25a28dcad480b
+  - path: skills/track-management-actions/scripts/deadline_window.py
+    sha256: ca63cd2a372d3c7bd874d3cf08aa22fc842dc1f602436e730a9bc570d8af71d8
+  - path: skills/track-management-actions/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/track-management-actions/tests/fixtures/applications.json
+    sha256: 54247281f64c800fe407cf498bd4570b06349191ee174676a977e5b869ca95b5
+  - path: skills/track-management-actions/tests/fixtures/case.json
+    sha256: 0621998e96bc10655c71a722996e9eff0784cc304f9816733ab8b46d8d644356
+  - path: skills/track-management-actions/tests/test_deadline_window.py
+    sha256: 1a76c1a44afa6f29a232016dae9a6743ba445f0ee777dc48db315086a306a2ae
+  - path: skills/track-management-actions/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+- name: review-business-policy
+  path: skills/review-business-policy
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: review-business-policy
+  files:
+  - path: skills/review-business-policy/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/review-business-policy/SKILL.md
+    sha256: 69d394e0feb3195096f72a553223e3c5cf3a3fbd73240760bdfd88ec00f167ae
+  - path: skills/review-business-policy/agents/openai.yaml
+    sha256: 13ddd524b2aa5d784eb4009d4ea2a306f66a22415ca0d7e51554a8c1a9e9ef28
+  - path: skills/review-business-policy/assets/output-template.md
+    sha256: 1f542173faf7648fed4ebe8c9c3103466757c3e177e92c5858140f817274c1ef
+  - path: skills/review-business-policy/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/review-business-policy/references/workflow-contract.md
+    sha256: 508ca8b7cbf6d8490a027b0e7a17b3b7397667a05536d52e67da0f6eae82dedf
+  - path: skills/review-business-policy/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/review-business-policy/tests/fixtures/applications.json
+    sha256: ee32bdc73bc0376c0b608e014647beed57573a14608f4624758889a1506a55bc
+  - path: skills/review-business-policy/tests/fixtures/case.json
+    sha256: e96ca6bd4c3ba517a2056a893828717872593a73c7e7bc0cc7ec46046233d5d7
+  - path: skills/review-business-policy/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+- name: research-with-evidence
+  path: skills/research-with-evidence
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: research-with-evidence
+  files:
+  - path: skills/research-with-evidence/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/research-with-evidence/SKILL.md
+    sha256: 7b01dbf06e3399885b1b0bebfebc904ac6e50564209c6faa470583560d08bc5a
+  - path: skills/research-with-evidence/agents/openai.yaml
+    sha256: 86f76c294246e0114fad83b0d9bd3ee78ed616f2560ef38f93c3346d0e97fb52
+  - path: skills/research-with-evidence/assets/output-template.md
+    sha256: b2a3107267c2d0e24d3ba71fd9a17d92b4380cc67cb04cd369d2e2c92613a113
+  - path: skills/research-with-evidence/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/research-with-evidence/references/workflow-contract.md
+    sha256: 9f8d5f392b31ed2c7d38b4acdb426a15b88fe428a919a8366d32501e391a65e8
+  - path: skills/research-with-evidence/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/research-with-evidence/tests/fixtures/applications.json
+    sha256: 1eab72faa9cc4db1d6565e471a27ee5acc8ec2b07e5352cc51a5808a17a9bde7
+  - path: skills/research-with-evidence/tests/fixtures/case.json
+    sha256: dba992ee3d302198e61259c961c32ffadae34157bb86c2fef26c71e2619947f8
+  - path: skills/research-with-evidence/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+- name: prepare-interactive-training
+  path: skills/prepare-interactive-training
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: prepare-interactive-training
+  files:
+  - path: skills/prepare-interactive-training/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/prepare-interactive-training/SKILL.md
+    sha256: 23dcfdaa21fe027f562dd3a96da1f86e039fb1c37882895356721e891280de33
+  - path: skills/prepare-interactive-training/agents/openai.yaml
+    sha256: d0f01371d0f5500fcf4afcd7e9da6cbb7e69e5152d58e66ffdf45ee576fac147
+  - path: skills/prepare-interactive-training/assets/output-template.md
+    sha256: cbba758cea9b9e64a2cfcb14f7232aaf900fa48582bb48c22c9b85555cd967f4
+  - path: skills/prepare-interactive-training/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/prepare-interactive-training/references/workflow-contract.md
+    sha256: 2c3bf973f7e695e9ee4fc9b12ff8fbd1fa3e3e9224cbc96a0d3face39b4a395f
+  - path: skills/prepare-interactive-training/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/prepare-interactive-training/tests/fixtures/applications.json
+    sha256: bc18d7355e3e31cbec759fe9edcc98c0e261f961a1da624ec97d84326b8730f6
+  - path: skills/prepare-interactive-training/tests/fixtures/case.json
+    sha256: 36d9abd43499ff10bd81b657b265e75fa12ce7b5761a714170d4999d563603e3
+  - path: skills/prepare-interactive-training/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+- name: create-visual-learning-assets
+  path: skills/create-visual-learning-assets
+  version: 1.0.0
+  role: core
+  status: PILOT_GO
+  runtime_scope: Synthetic supplied-packet applications and explicit Codex CLI USER
+    pilot; full adapter lifecycle not verified
+  installed_name: create-visual-learning-assets
+  files:
+  - path: skills/create-visual-learning-assets/LICENSE.txt
+    sha256: ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371
+  - path: skills/create-visual-learning-assets/SKILL.md
+    sha256: a5f262a701b030f1eee9eb484bee48f51c4bb60a59a33f0efc8716491bb388ed
+  - path: skills/create-visual-learning-assets/agents/openai.yaml
+    sha256: 56b05d1d17fc28c3e1eb6635d14146bd87176624ca2a6d871bf1e3f3c41fd943
+  - path: skills/create-visual-learning-assets/assets/output-template.md
+    sha256: f98fe525d03b2953c8e6dff7e8cada6f76a64b4aa24c5b4442e5136b902f2083
+  - path: skills/create-visual-learning-assets/references/usage-guard.md
+    sha256: 1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077
+  - path: skills/create-visual-learning-assets/references/workflow-contract.md
+    sha256: ce1c59ea21a1d0bcf9edccbb5df59571ebe9bd1e9445519349fe283a5fb75732
+  - path: skills/create-visual-learning-assets/scripts/run_checks.py
+    sha256: 4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9
+  - path: skills/create-visual-learning-assets/tests/fixtures/applications.json
+    sha256: 3820e1b3947a00fca9727683d490e993f20dfdf4a7538a75fb43e08e21aaa8c1
+  - path: skills/create-visual-learning-assets/tests/fixtures/case.json
+    sha256: dd764af3636b64c83654e12a174fdaeea8cc7b0f9d7ece538eed35c66135ac73
+  - path: skills/create-visual-learning-assets/tests/test_evidence.py
+    sha256: 16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f
+  - path: skills/create-visual-learning-assets/tests/test_svg_evidence.py
+    sha256: 1b7ac8aeffd27f4cb5afb76b7211e9cc89ba5f17c9e38b027503d01f130a97b8
 - name: grammar-checker-vi
   path: skills/grammar-checker-vi
   version: 0.2.1

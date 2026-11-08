@@ -319,6 +319,56 @@ class RegistryContract(unittest.TestCase):
                     self.refresh('skills')
                 self.check_bad()
 
+    def expanded(self):
+        import shutil
+        added = ['plan-branch-execution', 'track-management-actions', 'review-business-policy',
+                 'research-with-evidence', 'prepare-interactive-training', 'create-visual-learning-assets']
+        for name in added:
+            folder = 'skills/' + name
+            shutil.copytree(self.root / 'skills' / CORE[0], self.root / folder)
+            p = self.root / folder / 'SKILL.md'
+            p.write_text(p.read_text().replace(CORE[0], name))
+            self.registry['skills'].append({'name': name, 'path': folder, 'version': '1.0.0',
+                'role': 'core', 'status': 'STATIC_GO', 'runtime_scope': 'Synthetic expansion fixture',
+                'installed_name': None, 'files': records(self.root, folder)})
+        self.registry['library']['version'] = '1.1.0'
+        save(self.root, self.registry)
+
+    def test_expanded_version_requires_all_six_new_workflows(self):
+        self.registry['library']['version'] = '1.1.0'
+        save(self.root, self.registry)
+        self.check_bad()
+
+    def test_eleven_skill_version_valid_then_deleted_extension_is_rejected(self):
+        import shutil
+        self.expanded()
+        result = self.module.validate(self.root)
+        self.assertEqual(result['status'], 'STATIC_GO', result)
+        self.assertEqual(result['skills_checked'], 11)
+        removed = self.registry['skills'].pop()
+        shutil.rmtree(self.root / removed['path'])
+        save(self.root, self.registry)
+        self.check_bad()
+
+    def test_extension_resource_and_hash_gates_are_not_bypassed(self):
+        self.expanded()
+        added = self.registry['skills'][-1]
+        (self.root / added['path'] / 'scripts/run_checks.py').write_text('TODO')
+        added['files'] = records(self.root, added['path'])
+        save(self.root, self.registry)
+        self.check_bad()
+
+    def test_legacy_release_does_not_accept_unannounced_expansion(self):
+        self.expanded()
+        self.registry['library']['version'] = '1.0.1'
+        save(self.root, self.registry)
+        self.check_bad()
+
+    def test_malformed_library_version_cannot_downgrade_required_inventory(self):
+        self.registry['library']['version'] = 'not-a-version'
+        save(self.root, self.registry)
+        self.check_bad()
+
     def test_unhashable_yaml_key_and_malformed_cli_emit_json(self):
         for text in ['? [a, b]\n: value\n', 'skills: [unterminated', '---\n!!python/object:os.system {}']:
             with self.subTest(text=text):

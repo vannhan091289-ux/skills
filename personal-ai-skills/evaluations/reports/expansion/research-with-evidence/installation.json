@@ -1,0 +1,25 @@
+{
+  "status": "INSTALLED_VERIFIED",
+  "date": "2026-11-08",
+  "skill": "research-with-evidence",
+  "version": "1.0.0",
+  "target": "$HOME/.agents/skills/research-with-evidence",
+  "files": {
+    "SKILL.md": "7b01dbf06e3399885b1b0bebfebc904ac6e50564209c6faa470583560d08bc5a",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "9f8d5f392b31ed2c7d38b4acdb426a15b88fe428a919a8366d32501e391a65e8",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "agents/openai.yaml": "86f76c294246e0114fad83b0d9bd3ee78ed616f2560ef38f93c3346d0e97fb52",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "b2a3107267c2d0e24d3ba71fd9a17d92b4380cc67cb04cd369d2e2c92613a113",
+    "tests/fixtures/applications.json": "1eab72faa9cc4db1d6565e471a27ee5acc8ec2b07e5352cc51a5808a17a9bde7",
+    "tests/fixtures/case.json": "dba992ee3d302198e61259c961c32ffadae34157bb86c2fef26c71e2619947f8"
+  },
+  "source": "Reviewed first-party local candidate; same bytes will be published in canonical feature branch",
+  "method": "Official Codex installer validation/copy helpers; no network",
+  "existing_skills_overwritten": false,
+  "app_config_modified": false,
+  "third_party_code_executed": false,
+  "discovery": "USER folder installed; explicit fresh CLI pilot recorded separately"
+}
