@@ -1,0 +1,6 @@
+interface:
+  display_name: "Tạo học liệu trực quan"
+  short_description: "Tạo học liệu rõ số liệu, nguồn và khả năng đọc"
+  default_prompt: "Dùng $create-visual-learning-assets với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true

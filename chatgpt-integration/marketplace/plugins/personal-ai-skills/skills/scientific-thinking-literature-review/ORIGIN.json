@@ -1,0 +1,24 @@
+{
+  "source_repository": "vannhan091289-ux/ECC",
+  "upstream_repository": "affaan-m/ECC",
+  "source_commit": "ef648e01899ba3e8dc6371642deaaf64b4477775",
+  "distribution_repository": "vannhan091289-ux/skills",
+  "distribution_commit": "8d03d12dbbeffbe8e6815e7bdf143bddb0342a3e",
+  "adapter": "personal-library-standalone-guard-v1",
+  "date": "2026-11-08",
+  "source_files": [
+    {
+      "path": "skills/scientific-thinking-literature-review/SKILL.md",
+      "upstream_path": "skills/scientific-thinking-literature-review/SKILL.md",
+      "git_blob_sha": "dd240c89bcabf71bbe1d181fbb7ba3c0d7935729",
+      "sha256": "380918f545c7e9b297b23bee4a0432deba977acbdb217232bf1ab9d5aa3c562e"
+    },
+    {
+      "path": "skills/scientific-thinking-literature-review/LICENSE.txt",
+      "upstream_path": "LICENSE",
+      "git_blob_sha": "b832b6f642312312367c07688dc7426db40a82ed",
+      "sha256": "326146379f01bb137c0a5d3c54770c1aa31076705c8b88a7f6b26a460f6221b2"
+    }
+  ],
+  "adaptation": "Only add local adapter introduction and usage-guard.md; original workflow and license preserved"
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Theo dõi chỉ đạo"
+  short_description: "Đối soát hạn, trạng thái và bằng chứng công việc"
+  default_prompt: "Dùng $track-management-actions với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true

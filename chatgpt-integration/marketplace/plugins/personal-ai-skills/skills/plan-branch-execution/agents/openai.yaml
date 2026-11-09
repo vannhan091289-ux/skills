@@ -1,0 +1,6 @@
+interface:
+  display_name: "Lập kế hoạch điều hành"
+  short_description: "Chuyển chỉ đạo thành kế hoạch có nghiệm thu"
+  default_prompt: "Dùng $plan-branch-execution với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true

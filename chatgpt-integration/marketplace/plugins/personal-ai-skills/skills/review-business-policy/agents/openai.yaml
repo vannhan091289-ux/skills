@@ -1,0 +1,6 @@
+interface:
+  display_name: "Thẩm định chính sách nghiệp vụ"
+  short_description: "So sánh phiên bản, hiệu lực và phạm vi áp dụng"
+  default_prompt: "Dùng $review-business-policy với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true

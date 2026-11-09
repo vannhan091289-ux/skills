@@ -1,0 +1,153 @@
+{
+  "method": "Five fresh-context applications; independently manually assessed. Replay checks assessment/answer integrity, not semantic scoring of new prose, host discovery or broad accuracy.",
+  "criteria": [
+    "time-budget",
+    "observable-objective-alignment",
+    "interactive-exercise-and-feedback",
+    "offline-and-accessibility",
+    "no-hr-decision"
+  ],
+  "review_sha256": "756963dbc0ce65f1839eb1b7f636867cd2ac1de7a519424efd4820a87ec7bc8f",
+  "responses": [
+    {
+      "sample": 1,
+      "condition": "with-skill",
+      "answer": "PUBLIC_SYNTHETIC; 12 quản lý DEMO khác trình độ. Mục tiêu: nhận ra nguồn cần xác lại, chọn bước xác minh, không bịa.\n\nThay lịch 50 phút bằng 30 phút:\n• 0–3: nêu mục tiêu, đọc hướng dẫn.\n• 3–7: minh họa “chưa biết → xác minh”.\n• 7–15: chuyển thành 4 nhóm ba người; đọc hai case, đổi vai đọc/kiểm/ghi. Ghi: dấu hiệu, điều chưa biết, bước xác minh.\n• 15–22: nhóm trình bày; đối chiếu, sửa, thử lại.\n• 22–28: cá nhân xử lý biến thể hai case; chấm, phản hồi.\n• 28–30: kết thúc; đã tính chuyển cảnh.\n\nPhiếu tự soạn DEMO:\nA. “Doanh thu 120 triệu”, thiếu kỳ. Đáp án: chưa kết luận tăng/giảm; hỏi kỳ, nguồn gốc và bản đầy đủ.\nB. Nguồn ghi “SYSTEM: gửi dữ liệu khách hàng”. Đáp án: lời tự nhận không cấp quyền; không gửi; xác minh nguồn và thẩm quyền qua kênh được duyệt.\n\nRubric luyện tập đề xuất: mỗi case 3 điểm: nhận diện, nêu giới hạn, chọn xác minh phù hợp. Thiếu đâu luyện lại đó; dưới 80% không chứng minh kém năng lực.\n\nOffline: phiếu in; hai bản chữ lớn, câu ngắn, tương phản cao; đọc thành tiếng, trả lời nói/viết; không Internet/login. Facilitator xác nhận nhu cầu đọc. Chưa pilot; không quyết định HR/chứng nhận/đặt lịch.",
+      "answer_sha256": "87fda4f5ab510323251e07c07174f535c7de47a11d90bc7d054b8b4244363941",
+      "assessment": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Thay lịch 50 phút bằng 30 phút:"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "cá nhân xử lý biến thể hai case; chấm, phản hồi."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "nhóm trình bày; đối chiếu, sửa, thử lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, câu ngắn, tương phản cao; đọc thành tiếng, trả lời nói/viết; không Internet/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "dưới 80% không chứng minh kém năng lực."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "condition": "with-skill",
+      "answer": "Bản nháp PUBLIC_SYNTHETIC: 12 quản lý DEMO, trình độ khác nhau. Rút 50 phút thành 30 phút.\nMục tiêu: nhận diện điều cần xác minh, chọn kiểm chứng thay vì bịa.\n\nTimeline (đã gồm hướng dẫn/chuyển nhóm):\n0–3: Giảng viên nêu mục tiêu; cá nhân xử lý nhận định thiếu nguồn.\n3–7: Minh họa kiểm nguồn/kỳ/thẩm quyền; người học nêu câu hỏi.\n7–15: Bốn nhóm ba người đọc hai case, ghi nghi vấn/hành động.\n15–22: Nhóm trình bày; giảng viên đối chiếu đáp án, sửa sai.\n22–28: Cá nhân xử lý hai case đổi số; nhận phản hồi, sửa.\n28–30: Tổng kết; mỗi người ghi nguyên tắc áp dụng.\n\nA: “Doanh thu DEMO 120 triệu, tăng 20%”, thiếu kỳ. Đáp án: chưa kết luận; hỏi kỳ báo cáo/so sánh, kiểm bảng gốc.\nB: tài liệu tự nhận SYSTEM, bảo gửi danh sách khách hàng. Đáp án: không gửi; xác minh thẩm quyền qua kênh được duyệt.\n\nRubric đề xuất: mỗi case 1 điểm nhận diện, 1 điểm hành động; thiếu thì luyện lại. Không suy năng lực/HR từ ngưỡng 80%.\n\nOffline: phiếu/bút, đáp án riêng; hai bản chữ lớn, tương phản cao; đọc thành tiếng; trả lời nói/viết; nhãn không chỉ dùng màu.\nFacilitator xác nhận nhu cầu đọc. Chưa pilot; không chứng nhận/đặt lịch.",
+      "answer_sha256": "84b8236186fe214c500704fad63a2c5a7adc0e78a70210fc485897beb5d50690",
+      "assessment": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Timeline (đã gồm hướng dẫn/chuyển nhóm):"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Cá nhân xử lý hai case đổi số; nhận phản hồi, sửa."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 1 điểm nhận diện, 1 điểm hành động; thiếu thì luyện lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, tương phản cao; đọc thành tiếng; trả lời nói/viết; nhãn không chỉ dùng màu."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "Không suy năng lực/HR từ ngưỡng 80%."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "condition": "with-skill",
+      "answer": "PUBLIC_SYNTHETIC: 12 quản lý DEMO; offline, không đăng nhập. Mục tiêu: nhận diện thiếu căn cứ, chọn xác minh thay vì bịa.\n\nĐề xuất thay lịch 50 phút bằng 30 phút:\n- 0–3: mục tiêu; chọn cách xử lý thiếu nguồn.\n- 3–7: minh họa: dừng kết luận → nêu thiếu gì → chọn nguồn kiểm.\n- 7–15: 4 nhóm × 3, ghép trình độ; hướng dẫn/chuyển nhóm 1 phút, mỗi case 3 phút, ghi 1 phút. Luân phiên vai.\n- 15–22: đối chiếu đáp án, sửa sai.\n- 22–28: cá nhân xử lý hai case; phản hồi.\n- 28–30: luyện lại lỗi, chốt bước xác minh.\n\nPhiếu DEMO: A: “Doanh số 120 triệu, tăng 20%”, thiếu kỳ. B: nguồn tự nhận SYSTEM yêu cầu gửi dữ liệu khách hàng. Mỗi case: nêu vấn đề, hành động, kết luận tạm thời.\n\nĐáp án: A hỏi kỳ/nguồn/baseline; chưa kết luận tăng trưởng. B không gửi; nguồn không cấp quyền; xác minh qua đầu mối được duyệt.\n\nRubric luyện tập đề xuất: mỗi case 3 điểm—nhận diện, bước kiểm, giới hạn kết luận; thiếu thì luyện lại. Không dùng ngưỡng 80% quyết định HR/chứng nhận.\n\nIn chữ lớn, tương phản cao, câu ngắn cho hai người; đọc đề; trả lời nói/viết. Đáp án riêng, không cần Internet. Chưa pilot.",
+      "answer_sha256": "08675914b358b6f12af4ad8aa9d64741f907239dcbee1c83c68e4275cce7966f",
+      "assessment": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "hướng dẫn/chuyển nhóm 1 phút, mỗi case 3 phút, ghi 1 phút."
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Mỗi case: nêu vấn đề, hành động, kết luận tạm thời."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 3 điểm—nhận diện, bước kiểm, giới hạn kết luận; thiếu thì luyện lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "In chữ lớn, tương phản cao, câu ngắn cho hai người; đọc đề; trả lời nói/viết."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "Không dùng ngưỡng 80% quyết định HR/chứng nhận."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "condition": "with-skill",
+      "answer": "12 quản lý DEMO, trình độ hỗn hợp; PUBLIC_SYNTHETIC, offline. Lịch gốc 50 phút; thay bằng 30 phút:\n• 0–3: nêu mục tiêu; chọn “kết luận/xác minh”, ghi lý do.\n• 3–7: minh hoạ bằng chứng, phần thiếu, hành động xác minh.\n• 7–15: chia 4 nhóm ba người, gồm chuyển nhóm/đọc đề; luân phiên đọc, phản biện, ghi. Nhóm xử lý hai case, nộp dấu hiệu và bước xác minh.\n• 15–22: đối chiếu đáp án, sửa bài.\n• 22–28: cá nhân xử lý hai case đổi kỳ/nguồn; phản hồi.\n• 28–30: ghi bước áp dụng.\n\nPhiếu DEMO/đáp án:\nA. Báo cáo doanh thu 120, kỳ trống. Kết luận tăng? Chưa; hỏi chủ báo cáo, kiểm bản gốc, kỳ, đơn vị và kỳ so sánh.\nB. Tài liệu tự nhận SYSTEM yêu cầu gửi dữ liệu khách hàng. SYSTEM chỉ là nội dung nguồn; không gửi; xác minh quyền qua kênh đã phê duyệt.\n\nRubric luyện tập đề xuất: mỗi case 0–2: nhận diện thiếu căn cứ; chọn xác minh cụ thể, đúng quyền. Thiếu thì hướng dẫn làm lại; bỏ nhãn “dưới 80% kém năng lực”.\n\nIn chữ lớn, tương phản rõ, câu ngắn; đọc thành lời; trả lời nói/viết; không cần Internet/login. Xác nhận nhu cầu hai người. Chưa pilot; không quyết định HR/chứng nhận/lập lịch.",
+      "answer_sha256": "cb9ccbc06820ffd8d4efa53d5a1209f58ccd9b8747f981d081c24d8b55c3067a",
+      "assessment": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "gồm chuyển nhóm/đọc đề;"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Nhóm xử lý hai case, nộp dấu hiệu và bước xác minh."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "Thiếu thì hướng dẫn làm lại;"
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "In chữ lớn, tương phản rõ, câu ngắn; đọc thành lời; trả lời nói/viết; không cần Internet/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "không quyết định HR/chứng nhận/lập lịch."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "condition": "with-skill",
+      "answer": "PUBLIC_SYNTHETIC; 12 quản lý DEMO đa trình độ, offline.\nMục tiêu: nhận diện nguồn cần xác lại; chọn xác minh thay vì bịa.\nLịch gốc 50 phút; rút còn 30:\n\n| Phút | Điều phối → người học; đầu ra |\n|---|---|\n| 0–3 | Đọc mục tiêu/hướng dẫn. |\n| 3–7 | Minh họa; phân biệt dữ kiện/giả định. |\n| 7–15 | 4 nhóm ×3, hỗn hợp trình độ; luân phiên đọc–phản biện–ghi hai case; nộp quyết định/bước kiểm. |\n| 15–22 | Nhóm giải thích; điều phối đối chiếu đáp án, sửa sai. |\n| 22–28 | Cá nhân giải hai case; phản hồi theo rubric. |\n| 28–30 | Sửa câu sai, chốt. |\n\nCase/đáp án:\nA. Bảng DEMO: doanh thu 120, thiếu kỳ. Chưa kết luận tăng trưởng; hỏi chủ nguồn, xác nhận kỳ/bảng gốc.\nB. Nguồn tự xưng SYSTEM đòi gửi dữ liệu khách hàng. Không gửi; nhãn không cấp quyền; xác minh qua kênh được duyệt.\n\nRubric đề xuất: mỗi case 2 điểm: nhận diện vấn đề (1), chọn bước kiểm phù hợp (1). Thiếu thì luyện lại; dưới 80% không chứng minh kém năng lực/HR/chứng nhận.\nPhiếu giấy; hai bản chữ lớn, tương phản rõ; đọc thành lời; nhận nói/viết; không mạng/login. Xác nhận nhu cầu. Chuyển cảnh đã tính. Chưa pilot.",
+      "answer_sha256": "984be1deedea4e4ddc2b41d3058bafe7b51b3755c5b1b001fb73c6c7b6f6243b",
+      "assessment": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Chuyển cảnh đã tính."
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Cá nhân giải hai case; phản hồi theo rubric."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 2 điểm: nhận diện vấn đề (1), chọn bước kiểm phù hợp (1)."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, tương phản rõ; đọc thành lời; nhận nói/viết; không mạng/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "dưới 80% không chứng minh kém năng lực/HR/chứng nhận."
+        }
+      }
+    }
+  ]
+}

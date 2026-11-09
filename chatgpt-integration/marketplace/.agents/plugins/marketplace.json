@@ -1,0 +1,20 @@
+{
+  "name": "personal-ai-skills-chatgpt",
+  "interface": {
+    "displayName": "Personal AI Skills"
+  },
+  "plugins": [
+    {
+      "name": "personal-ai-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/personal-ai-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

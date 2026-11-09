@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "status": "STATIC_GO",
+  "reviewer": "/root/chatgpt_export_review",
+  "context": "Fresh-context read-only whole-change Challenger QA; follow-up verified corrected README and Builder receipt",
+  "critical": [],
+  "important": [],
+  "minor": [
+    {
+      "id": "CG-01",
+      "finding": "Personal entry point should follow current docs: Chat/Work, @, Plugin Creator",
+      "resolution": "README corrected; reviewer confirmed closed",
+      "status": "CLOSED"
+    }
+  ],
+  "independently_checked": [
+    "Nine exporter acceptance tests passed",
+    "Five extra adversarial overlap/symlink/unregistered-inventory cases rejected",
+    "Actual distribution: eleven skills,109 pinned source files,113 files byte-equal between ZIP and directory",
+    "Provenance/source hashes and minimal documented manifest/marketplace shape",
+    "No MCP/apps/hooks/config or source execution in exporter",
+    "Readiness and NOT_RUN runtime claims; final README correction and receipt consistency"
+  ],
+  "builder_evidence_only": ["273 canonical files unchanged", "101 native files unchanged", "125 canonical/extracted tests", "11 official format checks"],
+  "not_checked": ["ChatGPT installation/account/runtime", "Bundled helper execution by reviewer", "External JSON Schema engine", "Security certification or production acceptance"],
+  "provenance_note": "Root records the reviewer's returned findings here; this JSON is not authored directly by the reviewer."
+}

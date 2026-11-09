@@ -1,0 +1,6 @@
+interface:
+  display_name: "Thiết kế đào tạo tương tác"
+  short_description: "Thiết kế buổi học có hoạt động và đánh giá"
+  default_prompt: "Dùng $prepare-interactive-training với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true
