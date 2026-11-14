@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-08T15:06:53.612915+00:00",
+  "reviewer": "independent canonical_challenger context",
+  "scope": "outputs/personal-ai-skills against work/structure-spec.md; source files unchanged by reviewer; temporary mutations only; writing this QA report authorized by parent",
+  "status": "STATIC_GO_FOR_REVIEWED_FIXES_AND_NARROW_PILOT",
+  "finding_count_initial": 5,
+  "findings": [
+    {
+      "id": "CQ1",
+      "priority": "P1",
+      "initial_location": "evaluations/validate_library.py:142-148,162,221-222 (before fix)",
+      "finding": "Unregistered executable/script outside skill/adapter inventory accepted",
+      "repro_cases": [
+        "root_rogue_executable",
+        "evaluation_rogue_executable",
+        "governance_extra_unregistered"
+      ],
+      "impact": "Executable inventory promise did not cover root/evaluations/governance",
+      "smallest_correction": "Exact governance closure and explicit first-party executable allowlist; reject other scripts/shebang/executable files",
+      "current_location": "evaluations/validate_library.py:109-118,221,284",
+      "resolution": "CLOSED_INDEPENDENT_REPRO",
+      "initial_raw_proofs": {
+        "root_rogue_executable": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        },
+        "evaluation_rogue_executable": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        },
+        "governance_extra_unregistered": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        }
+      },
+      "fix_raw_proofs": {
+        "root_rogue_executable": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: undeclared executable/script: rogue.py"
+          ],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        },
+        "evaluation_rogue_executable": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: undeclared executable/script: evaluations/rogue.py"
+          ],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        },
+        "governance_extra_unregistered": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: file closure mismatch: governance; undeclared=['governance/unregistered.py']; missing=[]"
+          ],
+          "skills_checked": 0,
+          "adapters_checked": 0
+        }
+      }
+    },
+    {
+      "id": "CQ2",
+      "priority": "P2",
+      "initial_location": "evaluations/validate_library.py:189; evaluations/tests/test_registry_validator.py:102-107 (before fix)",
+      "finding": "Both preserved support skills optional despite exactly-five canonical contract",
+      "repro_cases": [
+        "support_removed"
+      ],
+      "impact": "Library can silently lose approved support workflows and still report STATIC_GO",
+      "smallest_correction": "Require exact CORE|SUPPORT names and replace optional-support assertion",
+      "current_location": "evaluations/validate_library.py:252",
+      "resolution": "CLOSED_INDEPENDENT_REPRO",
+      "initial_raw_proofs": {
+        "support_removed": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 3,
+          "adapters_checked": 4
+        }
+      },
+      "fix_raw_proofs": {
+        "support_removed": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: exactly five canonical skills required; missing=['grammar-checker-vi', 'scientific-thinking-literature-review']; extra=[]"
+          ],
+          "skills_checked": 3,
+          "adapters_checked": 0
+        }
+      }
+    },
+    {
+      "id": "CQ3",
+      "priority": "P2",
+      "initial_location": "evaluations/validate_library.py:221-222 (before fix)",
+      "finding": "Fixture catalog may reference nonexistent path and still pass",
+      "repro_cases": [
+        "fixture_unresolved"
+      ],
+      "impact": "Shipped evidence routing can be unresolved",
+      "smallest_correction": "Validate catalog schema, safe paths, duplicates and existing regular-file targets",
+      "current_location": "evaluations/validate_library.py:121-142,285",
+      "resolution": "CLOSED_INDEPENDENT_REPRO",
+      "initial_raw_proofs": {
+        "fixture_unresolved": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        }
+      },
+      "fix_raw_proofs": {
+        "fixture_unresolved": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: fixture catalog target missing or unsafe: skills/missing/data.json"
+          ],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        }
+      }
+    },
+    {
+      "id": "CQ4",
+      "priority": "P2",
+      "initial_location": "evaluations/validate_library.py:74-79,184-186 (before fix)",
+      "finding": "TODO-only nonempty placeholder accepted as useful script resource",
+      "repro_cases": [
+        "scripts_placeholder"
+      ],
+      "impact": "Directory-shape compliance can pass without a usable runner",
+      "smallest_correction": "Reject obvious TODO placeholders and require substantive recognized script/test file",
+      "current_location": "evaluations/validate_library.py:79-106,248-249",
+      "resolution": "CLOSED_INDEPENDENT_REPRO",
+      "residual_limit": "Heuristics and script line count do not prove semantic usefulness; actual bundled runners separately executed.",
+      "initial_raw_proofs": {
+        "scripts_placeholder": {
+          "status": "STATIC_GO",
+          "errors": [],
+          "skills_checked": 5,
+          "adapters_checked": 4
+        }
+      },
+      "fix_raw_proofs": {
+        "scripts_placeholder": {
+          "status": "REWORK",
+          "errors": [
+            "Invalid: review-academic-thesis: scripts must have useful nonempty files"
+          ],
+          "skills_checked": 0,
+          "adapters_checked": 0
+        }
+      }
+    },
+    {
+      "id": "CQ5",
+      "priority": "P2",
+      "initial_location": "skills/review-code-change/tests/test_review_evidence.py:13-34; tests/fixtures/applications.json:27 (before refactor)",
+      "finding": "Substring replay tests accepted false Spec PASS, unseen whole-function certainty, and mathematically wrong universal decrease",
+      "initial_repro": "Replace all five answers by: Standards src/ratio.py:10 target +1. Spec PASS dù không có spec. tests/test_ratio.py chưa chạy fixture. target=0 chắc chắn trả số trong toàn hàm. Mọi actual!=0,target>0 đều giảm, kể cả actual âm.",
+      "initial_raw_proof": "Old run_checks: exit 0; Ran 3 tests; OK",
+      "impact": "Regression checks did not retain the key pilot acceptance constraints; initial sample5 also contained wrong sign direction",
+      "smallest_correction": "Fresh applications plus explicit manual assessments bound by hashes/quotes/structured claims; independent negative-actual arithmetic oracle; preserve original failed sample",
+      "current_location": "skills/review-code-change/tests/test_review_evidence.py:13-89; tests/fixtures/applications.json",
+      "resolution": "CLOSED_FOR_FIXED_SYNTHETIC_PILOT",
+      "residual_limit": "Manual grading produced in builder context. Tests bind/validate recorded assessments and arithmetic only; they do not semantically evaluate arbitrary new prose or prove broad model quality."
+    }
+  ],
+  "fix_verification": {
+    "independent_mutation_script": "import copy, hashlib, importlib.util, json, shutil, tempfile\nfrom pathlib import Path\nimport yaml\nsource=Path('outputs/personal-ai-skills').resolve()\nspec=importlib.util.spec_from_file_location('v', source/'evaluations/validate_library.py')\nv=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)\ndef refresh(root):\n p=root/'registry.yaml'; r=yaml.safe_load(p.read_text())\n for key in ('skills','adapters'):\n  for e in r[key]:\n   e['files']=[{'path':f.relative_to(root).as_posix(),'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in sorted((root/e['path']).rglob('*')) if f.is_file()]\n p.write_text(yaml.safe_dump(r,sort_keys=False));return r\ncases={}\nwith tempfile.TemporaryDirectory() as tmp:\n base=Path(tmp)/'base';shutil.copytree(source,base);refresh(base)\n cases['normalized_hash_baseline']=v.validate(base)\n for case in ('support_removed','root_rogue_executable','evaluation_rogue_executable','fixture_unresolved','governance_extra_unregistered','wrongtype','duplicate_yaml','unhashable_yaml','symlink','hash_tamper','resource_link_missing','scripts_placeholder'):\n  r=Path(tmp)/case;shutil.copytree(base,r)\n  if case=='support_removed':\n   reg=yaml.safe_load((r/'registry.yaml').read_text()); reg['skills']=[e for e in reg['skills'] if e['role']=='core']\n   for name in ('grammar-checker-vi','scientific-thinking-literature-review'):shutil.rmtree(r/'skills'/name)\n   (r/'registry.yaml').write_text(yaml.safe_dump(reg))\n  elif case.endswith('rogue_executable'):\n   p=r/('rogue.py' if case.startswith('root') else 'evaluations/rogue.py');p.write_text('raise RuntimeError(\"MUST NEVER RUN\")\\n');p.chmod(0o755)\n  elif case=='fixture_unresolved':\n   p=r/'evaluations/fixtures/fixture-catalog.json';obj=json.loads(p.read_text());obj['fixtures'][0]['path']='skills/missing/data.json';p.write_text(json.dumps(obj))\n  elif case=='governance_extra_unregistered':(r/'governance/unregistered.py').write_text('raise RuntimeError(\"MUST NEVER RUN\")\\n')\n  elif case=='wrongtype':\n   reg=yaml.safe_load((r/'registry.yaml').read_text());reg['skills'][0]['role']=[];(r/'registry.yaml').write_text(yaml.safe_dump(reg))\n  elif case=='duplicate_yaml':\n   p=r/'registry.yaml';p.write_text(p.read_text()+'\\nschema_version: 1\\n')\n  elif case=='unhashable_yaml':(r/'registry.yaml').write_text('? [a, b]\\n: value\\n')\n  elif case=='symlink':(r/'external').symlink_to('/tmp')\n  elif case=='hash_tamper':\n   p=r/'skills/review-academic-thesis/SKILL.md';p.write_text(p.read_text()+'\\nchanged\\n')\n  elif case=='resource_link_missing':\n   p=r/'skills/review-academic-thesis/SKILL.md';p.write_text(p.read_text()+'\\n[missing](references/not-here.md)\\n');refresh(r)\n  elif case=='scripts_placeholder':\n   p=r/'skills/review-academic-thesis/scripts';shutil.rmtree(p);p.mkdir();(p/'placeholder.txt').write_text('TODO\\n');refresh(r)\n  cases[case]=v.validate(r)\n print(json.dumps(cases,ensure_ascii=False,indent=2))\n",
+    "normalization": "Script refreshes hashes on temp copy for reproducible baseline. Audited live mismatches before this final report are review-code-change only; no other source/registry mismatch excused. Actual source CLI below is authoritative for final live freeze.",
+    "live_hash_mismatches_before_final_run": [],
+    "results": {
+      "normalized_hash_baseline": {
+        "status": "STATIC_GO",
+        "errors": [],
+        "skills_checked": 5,
+        "adapters_checked": 4
+      },
+      "support_removed": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: exactly five canonical skills required; missing=['grammar-checker-vi', 'scientific-thinking-literature-review']; extra=[]"
+        ],
+        "skills_checked": 3,
+        "adapters_checked": 0
+      },
+      "root_rogue_executable": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: undeclared executable/script: rogue.py"
+        ],
+        "skills_checked": 5,
+        "adapters_checked": 4
+      },
+      "evaluation_rogue_executable": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: undeclared executable/script: evaluations/rogue.py"
+        ],
+        "skills_checked": 5,
+        "adapters_checked": 4
+      },
+      "fixture_unresolved": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: fixture catalog target missing or unsafe: skills/missing/data.json"
+        ],
+        "skills_checked": 5,
+        "adapters_checked": 4
+      },
+      "governance_extra_unregistered": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: file closure mismatch: governance; undeclared=['governance/unregistered.py']; missing=[]"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "wrongtype": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: review-academic-thesis: invalid role"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "duplicate_yaml": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: duplicate YAML key: 'schema_version'"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "unhashable_yaml": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: YAML mapping key must be hashable"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "symlink": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: symlink forbidden: external"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "hash_tamper": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: hash mismatch: skills/review-academic-thesis/SKILL.md"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "resource_link_missing": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: Markdown link outside resource closure or missing: skills/review-academic-thesis/SKILL.md: references/not-here.md"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      },
+      "scripts_placeholder": {
+        "status": "REWORK",
+        "errors": [
+          "Invalid: review-academic-thesis: scripts must have useful nonempty files"
+        ],
+        "skills_checked": 0,
+        "adapters_checked": 0
+      }
+    }
+  },
+  "commands": [
+    {
+      "command": "work/official-skill-validator/venv/bin/python -B -m unittest discover -s outputs/personal-ai-skills/evaluations/tests -v",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_adapters_have_manifests_and_actual_instructions (test_layout_contract.CanonicalLayout.test_adapters_have_manifests_and_actual_instructions) ... ok\ntest_all_three_core_packages_are_populated (test_layout_contract.CanonicalLayout.test_all_three_core_packages_are_populated) ... ok\ntest_fixture_and_report_directories_contain_evidence (test_layout_contract.CanonicalLayout.test_fixture_and_report_directories_contain_evidence) ... ok\ntest_required_top_level_files_exist (test_layout_contract.CanonicalLayout.test_required_top_level_files_exist) ... ok\ntest_adapter_claim_and_source_registry (test_registry_validator.RegistryContract.test_adapter_claim_and_source_registry) ... ok\ntest_both_preserved_support_skills_are_required (test_registry_validator.RegistryContract.test_both_preserved_support_skills_are_required) ... ok\ntest_core_requires_script_and_test_files_not_only_prose (test_registry_validator.RegistryContract.test_core_requires_script_and_test_files_not_only_prose) ... ok\ntest_core_resources_cannot_be_todo_placeholders (test_registry_validator.RegistryContract.test_core_resources_cannot_be_todo_placeholders) ... ok\ntest_description_length_boundary (test_registry_validator.RegistryContract.test_description_length_boundary) ... ok\ntest_duplicate_file_records (test_registry_validator.RegistryContract.test_duplicate_file_records) ... ok\ntest_duplicate_yaml_keys_every_surface (test_registry_validator.RegistryContract.test_duplicate_yaml_keys_every_surface) ... ok\ntest_fixture_catalog_paths_and_schema (test_registry_validator.RegistryContract.test_fixture_catalog_paths_and_schema) ... ok\ntest_frontmatter_and_local_link_closure (test_registry_validator.RegistryContract.test_frontmatter_and_local_link_closure) ... ok\ntest_governance_requires_exact_physical_closure (test_registry_validator.RegistryContract.test_governance_requires_exact_physical_closure) ... ok\ntest_hash_tamper_missing_and_undeclared_files (test_registry_validator.RegistryContract.test_hash_tamper_missing_and_undeclared_files) ... ok\ntest_malformed_adapter_and_frontmatter_yaml (test_registry_validator.RegistryContract.test_malformed_adapter_and_frontmatter_yaml) ... ok\ntest_missing_adapter_and_governance_wrong_mapping (test_registry_validator.RegistryContract.test_missing_adapter_and_governance_wrong_mapping) ... ok\ntest_missing_core (test_registry_validator.RegistryContract.test_missing_core) ... ok\ntest_missing_license_and_unregistered_adapter_file (test_registry_validator.RegistryContract.test_missing_license_and_unregistered_adapter_file) ... ok\ntest_required_directories_cannot_be_placeholder_only (test_registry_validator.RegistryContract.test_required_directories_cannot_be_placeholder_only) ... ok\ntest_scripts_outside_registered_surface_are_rejected (test_registry_validator.RegistryContract.test_scripts_outside_registered_surface_are_rejected) ... ok\ntest_symlink_anywhere (test_registry_validator.RegistryContract.test_symlink_anywhere) ... ok\ntest_unhashable_yaml_key_and_malformed_cli_emit_json (test_registry_validator.RegistryContract.test_unhashable_yaml_key_and_malformed_cli_emit_json) ... ok\ntest_unsafe_declared_paths_and_missing_hash (test_registry_validator.RegistryContract.test_unsafe_declared_paths_and_missing_hash) ... ok\ntest_valid_and_read_only (test_registry_validator.RegistryContract.test_valid_and_read_only) ... ok\ntest_valid_cli_counts_and_no_stderr (test_registry_validator.RegistryContract.test_valid_cli_counts_and_no_stderr) ... ok\ntest_wrong_field_types_and_duplicates (test_registry_validator.RegistryContract.test_wrong_field_types_and_duplicates) ... ok\ntest_wrong_top_level_types (test_registry_validator.RegistryContract.test_wrong_top_level_types) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 2.368s\n\nOK\n"
+    },
+    {
+      "command": "work/official-skill-validator/venv/bin/python -B outputs/personal-ai-skills/skills/review-code-change/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_altered_prose_invalidates_assessment (test_review_evidence.ReviewEvidence.test_altered_prose_invalidates_assessment) ... ok\ntest_five_audited_fresh_context_responses (test_review_evidence.ReviewEvidence.test_five_audited_fresh_context_responses) ... ok\ntest_negative_actual_oracle_contradicts_universal_decrease (test_review_evidence.ReviewEvidence.test_negative_actual_oracle_contradicts_universal_decrease) ... ok\ntest_numeric_zero_is_not_boolean_evidence (test_review_evidence.ReviewEvidence.test_numeric_zero_is_not_boolean_evidence) ... ok\ntest_overclaims_are_rejected (test_review_evidence.ReviewEvidence.test_overclaims_are_rejected) ... ok\ntest_rehashed_prose_without_quoted_evidence_is_rejected (test_review_evidence.ReviewEvidence.test_rehashed_prose_without_quoted_evidence_is_rejected) ... ok\ntest_wrong_or_missing_sign_assessment_is_rejected (test_review_evidence.ReviewEvidence.test_wrong_or_missing_sign_assessment_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.002s\n\nOK\n"
+    },
+    {
+      "command": "work/official-skill-validator/venv/bin/python -B outputs/personal-ai-skills/evaluations/validate_library.py outputs/personal-ai-skills",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"STATIC_GO\", \"errors\": [], \"skills_checked\": 5, \"adapters_checked\": 4}\n",
+      "stderr": ""
+    }
+  ],
+  "prior_independent_skill_runs": {
+    "audit_branch_kpi_tests": 36,
+    "thesis_tests": 6,
+    "initial_code_tests": 3,
+    "all_exit_zero": true,
+    "python": "reviewed pinned-PyYAML venv Python -B"
+  },
+  "final_five_application_review": {
+    "raw_sources": "work/structure-evals/refactor-code-1.json through refactor-code-5.json",
+    "checks": [
+      {
+        "sample": 1,
+        "raw_answer_exact": true,
+        "sha256_exact": true,
+        "all_quotes_present": true,
+        "challenger_full_answer_review": "Accepted for packet: no official-spec PASS, unseen-guard caveat, scoped sign direction/magnitude, real patch/test locators, no execution claimed."
+      },
+      {
+        "sample": 2,
+        "raw_answer_exact": true,
+        "sha256_exact": true,
+        "all_quotes_present": true,
+        "challenger_full_answer_review": "Accepted for packet: no official-spec PASS, unseen-guard caveat, scoped sign direction/magnitude, real patch/test locators, no execution claimed."
+      },
+      {
+        "sample": 3,
+        "raw_answer_exact": true,
+        "sha256_exact": true,
+        "all_quotes_present": true,
+        "challenger_full_answer_review": "Accepted for packet: no official-spec PASS, unseen-guard caveat, scoped sign direction/magnitude, real patch/test locators, no execution claimed."
+      },
+      {
+        "sample": 4,
+        "raw_answer_exact": true,
+        "sha256_exact": true,
+        "all_quotes_present": true,
+        "challenger_full_answer_review": "Accepted for packet: no official-spec PASS, unseen-guard caveat, scoped sign direction/magnitude, real patch/test locators, no execution claimed."
+      },
+      {
+        "sample": 5,
+        "raw_answer_exact": true,
+        "sha256_exact": true,
+        "all_quotes_present": true,
+        "challenger_full_answer_review": "Accepted for packet: no official-spec PASS, unseen-guard caveat, scoped sign direction/magnitude, real patch/test locators, no execution claimed."
+      }
+    ],
+    "arithmetic_recomputed": "actual=-10,target=10: old=-100,new=-90.909090909...; new > old and abs(new)<abs(old). Positive actual,target causes decrease; nonzero actual with positive target causes magnitude decrease.",
+    "unreviewed_broad_claims": "None accepted; this remains one PUBLIC_SYNTHETIC supplied-diff packet, no target code execution or real repository SHA."
+  },
+  "preservation": {
+    "method": "Rehashed all four native trees against saved installation receipt hashes; compared original files with canonical copies. Read only.",
+    "native_four_exact_receipts": true,
+    "support_canonical_exact_bytes": true,
+    "core_original_files_exact_bytes": true,
+    "core_additions": "Only first-party portable runners/tests/fixture resources",
+    "new_review_code_change_not_globally_installed": true
+  },
+  "privacy": {
+    "source": "work/repositories.json visibility=private entries",
+    "identifiers_compared": 6,
+    "canonical_matches": 0,
+    "private_identifiers_in_report": false,
+    "governance_review": "User working contract and classifications; no private bank business rules or invented laws found."
+  },
+  "limits": [
+    "No third-party source/plugin code or hooks executed.",
+    "Four adapter docs/manifests read; runtime_verified false preserved; no actual ChatGPT/Gemini/Claude/Codex adapter client installation/discovery/activation executed. Official primary-source freshness verification was assigned to builder; not independently browsed here.",
+    "Original source-copy/plugin corpus remains unreviewed and unexecuted by this QA.",
+    "Official quick_validate metadata assigned to root; not duplicated.",
+    "Publication, canonical remote tree, Draft PR/archive, extracted archive checks and final frozen registry assigned to root; not claimed by reviewer.",
+    "Same-context manual grading binding is not independent automatic semantic scoring; this report independently reads final supplied answers but cannot infer broad model accuracy or statistical benefit."
+  ]
+}

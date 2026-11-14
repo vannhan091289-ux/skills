@@ -1,0 +1,108 @@
+{
+  "scope": "One fresh-context metadata classifier, one sample per16syntheticcases; not host implicit routing or broad accuracy",
+  "metadata_input_sha256": "8074bd6a0daec3d1f0213bf4e967bdcb3db9b753feceec46f52028588fd2d60d",
+  "matched": 16,
+  "total": 16,
+  "mismatches": [],
+  "expected": {
+    "E01": "plan-branch-execution",
+    "E02": "plan-branch-execution",
+    "E03": "track-management-actions",
+    "E04": "track-management-actions",
+    "E05": "review-business-policy",
+    "E06": "review-business-policy",
+    "E07": "research-with-evidence",
+    "E08": "research-with-evidence",
+    "E09": "prepare-interactive-training",
+    "E10": "prepare-interactive-training",
+    "E11": "create-visual-learning-assets",
+    "E12": "create-visual-learning-assets",
+    "E13": "scientific-thinking-literature-review",
+    "E14": "audit-branch-kpi",
+    "E15": "grammar-checker-vi",
+    "E16": "NONE"
+  },
+  "responses": [
+    {
+      "id": "E01",
+      "selected": "plan-branch-execution",
+      "reason": "Chuyển chỉ đạo thành kế hoạch theo chức danh, nguồn lực và nghiệm thu."
+    },
+    {
+      "id": "E02",
+      "selected": "plan-branch-execution",
+      "reason": "Lập phương án thực hiện trong giới hạn nguồn lực và nêu quyết định cần chốt."
+    },
+    {
+      "id": "E03",
+      "selected": "track-management-actions",
+      "reason": "Đối soát chỉ đạo đã giao, owner, deadline, blockers và bằng chứng."
+    },
+    {
+      "id": "E04",
+      "selected": "track-management-actions",
+      "reason": "Theo dõi lịch sử trạng thái, quá hạn và bằng chứng nghiệm thu."
+    },
+    {
+      "id": "E05",
+      "selected": "review-business-policy",
+      "reason": "So sánh phiên bản chính sách và phạm vi, thời điểm áp dụng."
+    },
+    {
+      "id": "E06",
+      "selected": "review-business-policy",
+      "reason": "Phân tích quy định, tác động áp dụng và thông tin chính sách còn thiếu."
+    },
+    {
+      "id": "E07",
+      "selected": "research-with-evidence",
+      "reason": "Kiểm chứng câu hỏi bằng nhiều nguồn mâu thuẫn và đánh giá độ chắc chắn."
+    },
+    {
+      "id": "E08",
+      "selected": "research-with-evidence",
+      "reason": "Tổng hợp bằng chứng theo claim và phân biệt nguồn dẫn lại với nguồn độc lập."
+    },
+    {
+      "id": "E09",
+      "selected": "prepare-interactive-training",
+      "reason": "Thiết kế buổi học có bài tập, phản hồi và đánh giá theo mục tiêu."
+    },
+    {
+      "id": "E10",
+      "selected": "prepare-interactive-training",
+      "reason": "Xây lesson plan tương tác phù hợp đối tượng có trình độ khác nhau."
+    },
+    {
+      "id": "E11",
+      "selected": "create-visual-learning-assets",
+      "reason": "Tạo infographic học tập từ số liệu có sẵn và kiểm tra khả năng tiếp cận, hiển thị."
+    },
+    {
+      "id": "E12",
+      "selected": "create-visual-learning-assets",
+      "reason": "Chuyển ý tưởng thành SVG hoặc slide học liệu có nhãn và nguồn rõ."
+    },
+    {
+      "id": "E13",
+      "selected": "scientific-thinking-literature-review",
+      "reason": "Lập protocol, screening và tiêu chí chọn nghiên cứu cho systematic literature review."
+    },
+    {
+      "id": "E14",
+      "selected": "audit-branch-kpi",
+      "reason": "Đối soát actual/target và chênh lệch giữa tổng với chi tiết bộ phận."
+    },
+    {
+      "id": "E15",
+      "selected": "grammar-checker-vi",
+      "reason": "Chỉ soát chính tả tiếng Việt và bảo toàn số, URL."
+    },
+    {
+      "id": "E16",
+      "selected": "NONE",
+      "reason": "Tự phê duyệt khoản vay và gửi quyết định nằm ngoài năng lực được mô tả của các workflow."
+    }
+  ],
+  "status": "PILOT_GO"
+}

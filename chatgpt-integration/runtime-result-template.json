@@ -1,0 +1,14 @@
+{
+  "record_type": "UNEXECUTED_TEMPLATE",
+  "status": "NOT_RUN",
+  "chatgpt_runtime_verified": false,
+  "date": null,
+  "surface": null,
+  "model_if_visible": null,
+  "installation_evidence": null,
+  "observed_plugin_name_version": null,
+  "package_sha256": null,
+  "cases": [],
+  "required_case_fields": ["case_id", "input_sha256", "raw_output_file", "resources_read_evidence", "tools_executed_or_not", "criterion_results", "assessor_context", "limitations"],
+  "scope_warning": "Three P1 cases do not establish all eleven skills or other platforms. Keep personal account identifiers out of public reports."
+}

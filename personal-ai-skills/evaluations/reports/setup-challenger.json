@@ -1,0 +1,67 @@
+{
+  "status": "PILOT_GO",
+  "scope": "Independent review of the setup continuation only: library 1.0.1 documentation, receipt integrity, metadata-routing evidence and three explicitly invoked Codex CLI synthetic pilots. No review of all upstream repositories or release approval.",
+  "findings": [
+    {
+      "id": "SETUP-001",
+      "severity": "minor",
+      "effect": "Startup warning disclosure is incomplete, although successful skill-resource reads and semantic pilot acceptance are unaffected.",
+      "locator": "evaluations/reports/codex-native-pilot.json:startup_warnings; evaluations/reports/pilot-acceptance.md startup warning paragraph",
+      "evidence": "Each of the three captured native event streams contains one completed item of type error whose message warns that the existing local_thread_store_compression feature is under development. The public summary mentions icon-path and state-db warnings only. All thirteen command items exit 0 and all three streams end in turn.completed.",
+      "reproduction": "Inspect item.completed records whose item.type is error in each local native pilot event stream; do not publish raw local log paths or alter global configuration.",
+      "recommendation": "Mention the existing under-development-feature startup warning in the sanitized summary; retain that it is not a failed pilot command."
+    }
+  ],
+  "checks": [
+    {
+      "name": "canonical-source-integrity",
+      "result": "PASS",
+      "evidence": "43 package files match current registry SHA-256 values, all 43 files in the verified v1.0.0 archive byte-for-byte, and Git blob SHA/size entries in the builder-provided local tree snapshot for 40ffeb78e524359a3a2a9aa846ea79d5edb9cc0b. Archive SHA-256 a65f4c09618cb27cbc38d77a49729dbe4bcc5da802269f0a5e12d5b4627ac66e."
+    },
+    {
+      "name": "installed-receipts",
+      "result": "PASS",
+      "evidence": "Exact native file inventories and SHA-256 match all 38 receipt entries and corresponding canonical source bytes: KPI 8, thesis 8, grammar 8, literature 4, new code review 10. Four previous installations retain their 28 receipt bytes; no surplus native files in these five folders."
+    },
+    {
+      "name": "native-answer-and-event-integrity",
+      "result": "PASS",
+      "evidence": "All three raw answer SHA-256 values match the public report; parsed public answers exactly equal raw answers after home-path redaction. Every loaded resource path exists and matches observed cat commands. Completed command counts 4/4/5, exit code 0 throughout; three turn.completed events. No network, mutation, target code, script, or other action tool appears in captured agent items."
+    },
+    {
+      "name": "native-semantic-acceptance",
+      "result": "PASS",
+      "evidence": "Independently read all three answers. Code: grounded locator and denominator defect, unseen-guard caveat, no formal-spec pass, positive sign domain, test blindspot and no test-execution claim. KPI: 110/150 = 73.3333%, mean 70%, 3.3333 percentage-point gap, stock snapshot aggregation withheld and synthetic policy boundary explicit. Thesis: partial two-of-five-chapter coverage, +20 percentage points distinguished from causality, generalization/data limitations, fake DOI unverified and no rubric score."
+    },
+    {
+      "name": "routing-evidence",
+      "result": "PASS_WITH_LIMIT",
+      "evidence": "Twelve saved responses match all twelve expected selections and fixture IDs; five supplied name/description metadata entries match current skill frontmatter. Positive, negative and mixed cases included. Evidence is one fresh-context classifier sample covering twelve cases, not independently observed host automatic routing or a broad accuracy estimate."
+    },
+    {
+      "name": "reported-static-verification",
+      "result": "PASS",
+      "evidence": "Read current setup-verification.json: all eleven check entries exit 0; unittest totals 28+36+6+7 = 77 canonical and 64 legacy, five official format validations and three UI YAML records. These test runs were performed by builder; this reviewer independently ran hash/inventory/event/answer/metadata/archive checks with existing venv Python -B."
+    },
+    {
+      "name": "public-scope-and-report-consistency",
+      "result": "PASS",
+      "evidence": "Reviewed new README, CHANGELOG, QUICKSTART, plan, governance quality, Codex adapter, registry and requested reports. Three core pilot versus six deferred P2/P3 workflows is explicit; no full-adapter, implicit-discovery, real-data, performance-benefit or release claim. Current three core runtime_scope fields specify explicit CLI USER pilot while full lifecycle remains unverified. Sanitized new documents contain no concrete user-home path; packets use synthetic entities/data. No missing local document link except setup-challenger.json, intentionally produced from this review after completion."
+    }
+  ],
+  "limitations": [
+    "Pilot process exit codes and CLI version are builder-captured metadata; raw event streams substantiate successful turn completion and command exits, but do not independently encode the outer process exit or CLI version.",
+    "Initial host metadata presence is agent-reported, not separately instrumented; explicit invocation and resource reads are observed.",
+    "Pinned remote tree snapshot supplied by builder was checked locally against Git blob bytes; this reviewer made no external calls and does not independently attest remote service authenticity.",
+    "Source receipt equality demonstrates byte preservation, not comprehensive host filesystem/configuration history. No assertion that unrelated global settings were inspected or changed.",
+    "Public-output review covered changed evidence/documents and synthetic inputs, not exhaustive DLP or entire upstream source review.",
+    "Routing expected-before-answer chronology relies on supplied workflow evidence; saved files prove correspondence, not a tamper-proof timestamp.",
+    "One session per core skill and one routing classifier sample do not establish reliability, implicit routing, other-client behavior, update/uninstall lifecycle, production acceptance or measured productivity."
+  ],
+  "declined_to_judge": [
+    "Merge, release/deployment approval or rollback execution.",
+    "Real banking policy, credit/HR/legal decisions, academic grading or real customer data.",
+    "Unchanged upstream source outside the scoped setup continuation; authenticity inferred solely from hash equality.",
+    "Global plugin/config enablement or repair; startup warnings did not authorize configuration changes."
+  ]
+}

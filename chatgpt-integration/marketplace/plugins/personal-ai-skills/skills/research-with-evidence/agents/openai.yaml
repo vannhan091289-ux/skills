@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nghiên cứu có bằng chứng"
+  short_description: "Tổng hợp nguồn, kết luận và độ bất định"
+  default_prompt: "Dùng $research-with-evidence với đầu vào được cung cấp; ghi rõ bằng chứng, giả định và phần cần xác nhận."
+policy:
+  allow_implicit_invocation: true

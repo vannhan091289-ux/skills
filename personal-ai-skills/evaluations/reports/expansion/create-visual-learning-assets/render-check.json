@@ -1,0 +1,37 @@
+{
+  "status": "PILOT_GO",
+  "scope": "One heldout SVG source, parent-side offline fit preview visually inspected",
+  "original_svg_sha256": "f96f0c3e2d260c72e0e42fdff9c4ee73b081a8c38203dd8381488e74b00ae813",
+  "original_canvas": [
+    900,
+    550
+  ],
+  "preview_export_svg_sha256": "3b6457073376934a64537971ead691a0485b9e13c6427f8faee5c21422b6c80d",
+  "viewBox_unchanged": [
+    0,
+    0,
+    900,
+    550
+  ],
+  "export_only_outer_dimensions": [
+    768,
+    469.333333
+  ],
+  "preview_png_sha256": "3be460a6a0acefb055fba50798aa5638ffed85ca19a5a053583257d2e2e642e2",
+  "preview_png_delivery": "outputs/visual-learning-skill-preview.png (local deliverable, outside canonical ZIP)",
+  "renderer": "macOS Quick Look qlmanage, offline",
+  "final_command": "qlmanage -t -s1200 -f1 -o <work>/render-fit <work>/visual-preview-fit.svg",
+  "final_exit_code": 0,
+  "observations": [
+    "All100axis/90/50/68.18percent labels visible",
+    "75/110=68.18percent, points and2026-11sourcecaption visible",
+    "No clipped/overlapping labels observed in fit preview",
+    "Hatching/dots/text supplement color; SVGtitle/desc and alternative text supplied"
+  ],
+  "limitations": [
+    "Default1200 and900/1x QuickLook thumbnails cropped rightedge; fit exportcopy changes only outer dimensions, original bytes/viewBox/content preserved",
+    "Preview1200x1200 has letterboxing; not claiming original900x550 renderedunmodified byQuickLook",
+    "Browser local-file protocol blocked, no browser workaround or alternate browser surface used; dedicated offline renderer only",
+    "No screenreader/print/allformats/device testing, no computedcontrast or fullWCAGconformance claim"
+  ]
+}

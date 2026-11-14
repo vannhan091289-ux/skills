@@ -1,0 +1,50 @@
+test_applied_reports_respect_requested_word_limit (test_behavior_evidence.CapturedApplications.test_applied_reports_respect_requested_word_limit) ... ok
+test_five_fresh_samples_per_condition_and_skill_are_present (test_behavior_evidence.CapturedApplications.test_five_fresh_samples_per_condition_and_skill_are_present) ... ok
+test_kpi_numbers_scope_and_unresolved_zero_remain_in_outputs (test_behavior_evidence.CapturedApplications.test_kpi_numbers_scope_and_unresolved_zero_remain_in_outputs) ... ok
+test_thesis_locator_conflict_and_citation_limits_are_preserved (test_behavior_evidence.CapturedApplications.test_thesis_locator_conflict_and_citation_limits_are_preserved) ... ok
+test_calculate_does_not_mutate_input_or_decimal_context (test_kpi_calculator.RatioCalculatorTests.test_calculate_does_not_mutate_input_or_decimal_context) ... ok
+test_calculation_is_independent_of_callers_decimal_traps (test_kpi_calculator.RatioCalculatorTests.test_calculation_is_independent_of_callers_decimal_traps) ... ok
+test_cli_argument_errors_return_json (test_kpi_calculator.RatioCalculatorTests.test_cli_argument_errors_return_json) ... ok
+test_cli_duplicate_json_keys_rejected_at_any_depth (test_kpi_calculator.RatioCalculatorTests.test_cli_duplicate_json_keys_rejected_at_any_depth) ... ok
+test_cli_file_read_only_and_missing_or_directory_io (test_kpi_calculator.RatioCalculatorTests.test_cli_file_read_only_and_missing_or_directory_io) ... ok
+test_cli_invalid_schema_exit_2 (test_kpi_calculator.RatioCalculatorTests.test_cli_invalid_schema_exit_2) ... ok
+test_cli_malformed_json_utf8_and_nonstandard_constants (test_kpi_calculator.RatioCalculatorTests.test_cli_malformed_json_utf8_and_nonstandard_constants) ... ok
+test_cli_stdin_calculated_exit_0 (test_kpi_calculator.RatioCalculatorTests.test_cli_stdin_calculated_exit_0) ... ok
+test_cli_undefined_exit_1 (test_kpi_calculator.RatioCalculatorTests.test_cli_undefined_exit_1) ... ok
+test_decimal_sums_are_exact (test_kpi_calculator.RatioCalculatorTests.test_decimal_sums_are_exact) ... ok
+test_duplicate_entity_even_identical_is_rejected (test_kpi_calculator.RatioCalculatorTests.test_duplicate_entity_even_identical_is_rejected) ... ok
+test_empty_rows_rejected (test_kpi_calculator.RatioCalculatorTests.test_empty_rows_rejected) ... ok
+test_float_bool_int_null_and_container_rejected (test_kpi_calculator.RatioCalculatorTests.test_float_bool_int_null_and_container_rejected) ... ok
+test_fraction_digit_limit (test_kpi_calculator.RatioCalculatorTests.test_fraction_digit_limit) ... ok
+test_half_even_rounds_tie_to_even (test_kpi_calculator.RatioCalculatorTests.test_half_even_rounds_tie_to_even) ... ok
+test_integer_digit_limit (test_kpi_calculator.RatioCalculatorTests.test_integer_digit_limit) ... ok
+test_limit_accepts_10000_rows_exact_sum (test_kpi_calculator.RatioCalculatorTests.test_limit_accepts_10000_rows_exact_sum) ... ok
+test_maximum_numeric_values_and_small_denominator (test_kpi_calculator.RatioCalculatorTests.test_maximum_numeric_values_and_small_denominator) ... ok
+test_missing_fields_and_invalid_containers (test_kpi_calculator.RatioCalculatorTests.test_missing_fields_and_invalid_containers) ... ok
+test_negative_rejected (test_kpi_calculator.RatioCalculatorTests.test_negative_rejected) ... ok
+test_nonadditive_formula_rejected (test_kpi_calculator.RatioCalculatorTests.test_nonadditive_formula_rejected) ... ok
+test_nonplain_decimal_strings_rejected (test_kpi_calculator.RatioCalculatorTests.test_nonplain_decimal_strings_rejected) ... ok
+test_one_zero_row_denominator_blocks_nonzero_total (test_kpi_calculator.RatioCalculatorTests.test_one_zero_row_denominator_blocks_nonzero_total) ... ok
+test_period_mismatch_rejected (test_kpi_calculator.RatioCalculatorTests.test_period_mismatch_rejected) ... ok
+test_repeating_decimal (test_kpi_calculator.RatioCalculatorTests.test_repeating_decimal) ... ok
+test_schema_version_rejects_bool_or_unsupported (test_kpi_calculator.RatioCalculatorTests.test_schema_version_rejects_bool_or_unsupported) ... ok
+test_snapshot_cannot_aggregate_reporting_dates (test_kpi_calculator.RatioCalculatorTests.test_snapshot_cannot_aggregate_reporting_dates) ... ok
+test_snapshot_single_period_valid (test_kpi_calculator.RatioCalculatorTests.test_snapshot_single_period_valid) ... ok
+test_too_many_rows_rejected (test_kpi_calculator.RatioCalculatorTests.test_too_many_rows_rejected) ... ok
+test_unit_mismatch_rejected (test_kpi_calculator.RatioCalculatorTests.test_unit_mismatch_rejected) ... ok
+test_unknown_and_unhashable_operation_rejected (test_kpi_calculator.RatioCalculatorTests.test_unknown_and_unhashable_operation_rejected) ... ok
+test_unknown_fields_rejected (test_kpi_calculator.RatioCalculatorTests.test_unknown_fields_rejected) ... ok
+test_weighted_aggregation_is_not_mean_of_percentages (test_kpi_calculator.RatioCalculatorTests.test_weighted_aggregation_is_not_mean_of_percentages) ... ok
+test_wrong_typed_or_empty_metadata_rejected (test_kpi_calculator.RatioCalculatorTests.test_wrong_typed_or_empty_metadata_rejected) ... ok
+test_zero_numerator_is_valid (test_kpi_calculator.RatioCalculatorTests.test_zero_numerator_is_valid) ... ok
+test_zero_total_denominator_is_undefined (test_kpi_calculator.RatioCalculatorTests.test_zero_total_denominator_is_undefined) ... ok
+test_demo_calculator_fixture_has_no_customer_fields (test_skill_packages.DomainSkillPackages.test_demo_calculator_fixture_has_no_customer_fields) ... ok
+test_guard_is_loaded_by_each_skill (test_skill_packages.DomainSkillPackages.test_guard_is_loaded_by_each_skill) ... ok
+test_names_descriptions_and_discovery_metadata (test_skill_packages.DomainSkillPackages.test_names_descriptions_and_discovery_metadata) ... ok
+test_relative_resource_closure_and_no_symlinks (test_skill_packages.DomainSkillPackages.test_relative_resource_closure_and_no_symlinks) ... ok
+test_required_entrypoints_and_notices_exist (test_skill_packages.DomainSkillPackages.test_required_entrypoints_and_notices_exist) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 0.412s
+
+OK

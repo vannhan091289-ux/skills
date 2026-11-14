@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "skills": [
+    {
+      "name": "audit-branch-kpi",
+      "path": "audit-branch-kpi",
+      "version": "1.0.0",
+      "source_kind": "first-party-authored",
+      "verified_level": "PILOT_GO",
+      "scope": "synthetic application; no business or academic approval",
+      "local_installation_verified": true,
+      "files": [
+        {
+          "path": "audit-branch-kpi/LICENSE.txt",
+          "sha256": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+          "git_blob_sha": "4f7bb9d40b41f0ac737c3a13bd11181c13a5d0c6"
+        },
+        {
+          "path": "audit-branch-kpi/SKILL.md",
+          "sha256": "440ae0ea5d7677eaf2d10e20b717690b5d13f60ed90719afbf7a49e8456d826e",
+          "git_blob_sha": "62426717545f9b71e884b778cb3d5aec8046f054"
+        },
+        {
+          "path": "audit-branch-kpi/agents/openai.yaml",
+          "sha256": "24ada1b5c9dd452050763b763a7fe8c843a73dfe0c9d2f4c5b1b515342c5e314",
+          "git_blob_sha": "2dcbf6696fb0bfa02a2427740187670b8e5193a8"
+        },
+        {
+          "path": "audit-branch-kpi/assets/demo-ratio.json",
+          "sha256": "b12fe492fddce2d36f4e7c6ad81f49353376c1a4ecfffa675bde488cd11d38b6",
+          "git_blob_sha": "4cd91cb514e13d246dc5422c70a58363ed789888"
+        },
+        {
+          "path": "audit-branch-kpi/references/data-contract.md",
+          "sha256": "cc44f92cb26886ae4c313c691815cb9c35e09750bdce6d910e1d03d9d28302da",
+          "git_blob_sha": "e98e4db0a07455283ca914b2bc60395ee89a779f"
+        },
+        {
+          "path": "audit-branch-kpi/references/report-contract.md",
+          "sha256": "8d88f29824adad569c969ebddaf07d9a2daca77faeecc8da0f4b29f12af9220f",
+          "git_blob_sha": "a9177e5e715352397a1f36205270f9b8afdcf1aa"
+        },
+        {
+          "path": "audit-branch-kpi/references/usage-guard.md",
+          "sha256": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+          "git_blob_sha": "b800a94a4ed5f90cc08f3ec895a25fce904faea7"
+        },
+        {
+          "path": "audit-branch-kpi/scripts/calculate_ratio.py",
+          "sha256": "6d8134c4e57003da2b22c548fb3319eb5cd302936ea4f2191cf05bec029623e0",
+          "git_blob_sha": "71fc953077d440976cdabdd1dd6e50f2a0f94018"
+        }
+      ]
+    },
+    {
+      "name": "review-academic-thesis",
+      "path": "review-academic-thesis",
+      "version": "1.0.0",
+      "source_kind": "first-party-authored",
+      "verified_level": "PILOT_GO",
+      "scope": "synthetic application; no business or academic approval",
+      "local_installation_verified": true,
+      "files": [
+        {
+          "path": "review-academic-thesis/LICENSE.txt",
+          "sha256": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+          "git_blob_sha": "4f7bb9d40b41f0ac737c3a13bd11181c13a5d0c6"
+        },
+        {
+          "path": "review-academic-thesis/SKILL.md",
+          "sha256": "d9c2457265fd4ea1ef848c05fa729ba14cc6303b1f8e0b5aa6d2627392776ffc",
+          "git_blob_sha": "57aae3e92820d5c71be1348e0a1bc5280a6afd30"
+        },
+        {
+          "path": "review-academic-thesis/agents/openai.yaml",
+          "sha256": "b982a92c738c1140a12b9a7ef2ff9be065b76262ba298d852911a2288e75ae00",
+          "git_blob_sha": "00af12070a9f4917a578d9afbcba6de2e88cd57a"
+        },
+        {
+          "path": "review-academic-thesis/assets/review-template.md",
+          "sha256": "5622bf8e37f1760a5585ff8c1aa9e12790b5f6a2eea191cd7d08a7272225a2b5",
+          "git_blob_sha": "78a1ba8dc51c96dcaf46655cfcd9355654965ef8"
+        },
+        {
+          "path": "review-academic-thesis/references/citation-ledger.md",
+          "sha256": "72849eff019d56095e193f457c72a3134d7349581707f4af1b0385ae0fd8116f",
+          "git_blob_sha": "8ac99bac8c98bdb5cd4d0018bdcd0fa368318959"
+        },
+        {
+          "path": "review-academic-thesis/references/method-lenses.md",
+          "sha256": "5a82d57bab2194d9a133eb099b97dbd34c3bec33e22a885d22e9758d15b8e22c",
+          "git_blob_sha": "425f1a9c35d07958d914fa2233ffa4989fb48e9f"
+        },
+        {
+          "path": "review-academic-thesis/references/review-contract.md",
+          "sha256": "68572049521acd8184299d1469ce32f49191aaac360f2b5f9c49ed55c774ef8f",
+          "git_blob_sha": "677682e4b7ec028f13d9ddb0decc40f008a6fe63"
+        },
+        {
+          "path": "review-academic-thesis/references/usage-guard.md",
+          "sha256": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+          "git_blob_sha": "b800a94a4ed5f90cc08f3ec895a25fce904faea7"
+        }
+      ]
+    }
+  ]
+}

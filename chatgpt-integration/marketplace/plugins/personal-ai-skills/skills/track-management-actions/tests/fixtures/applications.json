@@ -1,0 +1,153 @@
+{
+  "method": "Five fresh-context applications; independently manually assessed. Replay checks assessment/answer integrity, not semantic scoring of new prose, host discovery or broad accuracy.",
+  "criteria": [
+    "as-of-and-deadline-precision",
+    "reported-vs-accepted",
+    "history-and-dedup",
+    "owner-and-blocker",
+    "no-external-action"
+  ],
+  "review_sha256": "9b37b7ad1d48739a5e2e8a8432a55225b0f0b031b1f5926b9a4c99ebfda7c7af",
+  "responses": [
+    {
+      "sample": 1,
+      "condition": "with-skill",
+      "answer": "Snapshot: 09/11/2026 10:00, UTC+07:00. Nguồn: PUBLIC_SYNTHETIC; thiếu locator/thời điểm cập nhật.\n\n| ID | Owner | Hạn/precision | Báo cáo → đối soát | Bằng chứng/nghiệm thu | Tuổi quá hạn | Cần xác minh |\n|---|---|---|---|---|---|---|\n| A1 | DEMO-A | 08/11, ngày | v2: done → reported_done/pending_verification | Không có; thiếu verified_by; chưa accepted | Qua ngày hạn 1 ngày lịch; không tính giờ trễ | DEMO-A bổ sung đầu ra, tiêu chí, bằng chứng/người nghiệm thu |\n| A2 | Thiếu | 10/11 17:00 +07, phút | blocked | Chưa cung cấp; chưa accepted | Chưa quá hạn; còn 31 giờ | Xác nhận owner, điều kiện gỡ chặn depends_on A1 và bằng chứng riêng của A2 |\n| A3 | DEMO-C | 09/11, ngày | open | Chưa cung cấp; chưa accepted | Đến hạn hôm nay; không xác định giờ hoặc giờ trễ | DEMO-C xác nhận đầu ra/giờ hạn |\n\nLịch sử A1: giữ v1 in_progress/evidence:none; thêm v2 tự báo done. A1 done/accepted không tự làm A2 done.\n\nTổng: 3 ID unique; 1 thiếu owner; 1 reported_done chờ xác minh; 0 accepted có căn cứ. Không tự chốt A3 lúc 17h; chưa gửi Slack hoặc ghi ứng dụng.",
+      "answer_sha256": "d3da4e99d4e062829d4e3e241e0b07f77121cabfce805bdcabc01ed2948c8c74",
+      "assessment": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Snapshot: 09/11/2026 10:00, UTC+07:00."
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2: done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Lịch sử A1: giữ v1 in_progress/evidence:none; thêm v2 tự báo done."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Xác nhận owner, điều kiện gỡ chặn depends_on A1 và bằng chứng riêng của A2"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "chưa gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "condition": "with-skill",
+      "answer": "Snapshot: 09/11/2026 10:00, UTC+07:00; nguồn: packet PUBLIC_SYNTHETIC. Thiếu locator, thời điểm cập nhật.\n\n| ID | Owner | Hạn/precision | Báo cáo → đối soát | Bằng chứng/nghiệm thu | Tuổi quá hạn | Cần xác minh |\n|---|---|---|---|---|---|---|\n| A1 | DEMO-A | 08/11, ngày | v2 done → reported_done/pending_verification | Không có; thiếu verified_by; chưa accepted | Hạn đã qua 1 ngày lịch; không suy giờ trễ | Đầu ra, tiêu chí đạt, bằng chứng, người có thẩm quyền nghiệm thu và thời điểm v2 |\n| A2 | Thiếu | 10/11/2026 17:00 +07, phút | blocked → blocked | Chưa được cung cấp | Chưa quá hạn; còn 31 giờ | Bổ sung owner; xác nhận điều kiện gỡ chặn A1, đầu ra và tiêu chí nghiệm thu |\n| A3 | DEMO-C | 09/11, ngày | open → open | Chưa được cung cấp | Đến hạn hôm nay; chưa quá hạn theo ngày | Xác nhận giờ hạn, đầu ra, tiêu chí đạt |\n\nLịch sử A1: giữ v1 in_progress, evidence:none; ghi riêng v2 reported_done. Không ghi đè v1, không suy A2 done hoặc tự gỡ chặn.\n\nTổng: 3 ID unique; 1 reported_done chưa nghiệm thu; 0 accepted; 1 thiếu owner. Không tự chốt 17h cho A3; không gửi Slack hoặc ghi ứng dụng.",
+      "answer_sha256": "c7915e268af2cb775930b8b1714ced91e86b231d9878f41e54052715ceb04b40",
+      "assessment": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Chưa quá hạn; còn 31 giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2 done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Không ghi đè v1, không suy A2 done hoặc tự gỡ chặn."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Bổ sung owner; xác nhận điều kiện gỡ chặn A1, đầu ra và tiêu chí nghiệm thu"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "không gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "condition": "with-skill",
+      "answer": "Snapshot: 09/11/2026 10:00, UTC+07:00. Nguồn: PUBLIC_SYNTHETIC; thiếu locator/update time.\n\n| ID | Owner | Báo cáo → đối soát | Bằng chứng/nghiệm thu | Deadline và tuổi quá hạn | Cần xác minh |\n|---|---|---|---|---|---|\n| A1 | DEMO-A | v1 in_progress; v2 done → reported_done/pending_verification | v1 none; v2 thiếu nghiệm thu/verified_by; chưa accepted | 08/11, chỉ ngày: qua hạn 1 ngày lịch; không tính giờ trễ | Đầu ra, tiêu chí, bằng chứng, người nghiệm thu, timestamp v2 |\n| A2 | Thiếu | blocked → còn blocked | Chưa có; chưa accepted | 10/11 17:00 +07:00: còn 31 giờ, chưa quá hạn | Owner, blocker, điều kiện gỡ chặn, bằng chứng A2 |\n| A3 | DEMO-C | open → còn open | Chưa có; chưa accepted | 09/11, chỉ ngày: đến hạn hôm nay; chưa kết luận trễ theo giờ | Giờ hạn/quy tắc ngày, đầu ra, tiêu chí |\n\nGiữ lịch sử A1 v1→v2, không ghi đè hoặc đếm thành hai việc. A2 phụ thuộc A1; tự báo done chưa đủ gỡ chặn, và A1 được nghiệm thu cũng không tự làm A2 done.\n\nTổng: 3 ID; 1 reported_done chờ xác minh; 0 accepted; 1 thiếu owner. Không tự chốt 17h cho A3. Chưa gửi Slack hoặc ghi ứng dụng.",
+      "answer_sha256": "f4b1a7b8e21ebeabd240ff93781a7d73674f534c603b50c0239d22e176c49f02",
+      "assessment": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "09/11, chỉ ngày: đến hạn hôm nay; chưa kết luận trễ theo giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v1 in_progress; v2 done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Giữ lịch sử A1 v1→v2, không ghi đè hoặc đếm thành hai việc."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "A2 phụ thuộc A1; tự báo done chưa đủ gỡ chặn"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "condition": "with-skill",
+      "answer": "Snapshot PUBLIC_SYNTHETIC: 09/11/2026 10:00, UTC+07:00. Nguồn: packet đề bài; thiếu locator/thời điểm cập nhật.\n\n| ID / Owner | Hạn / precision | Trạng thái đối soát | Bằng chứng / thời gian |\n|---|---|---|---|\n| A1 / DEMO-A | 08/11/2026, ngày | v2 done: reported_done/pending_verification; chưa accepted | Không bằng chứng/verified_by; qua ngày hạn 1 ngày lịch, không suy ra 24 giờ |\n| A2 / thiếu | 10/11/2026 17:00 +07:00, timestamp | blocked, phụ thuộc A1 | Chưa cung cấp bằng chứng; còn 31 giờ |\n| A3 / DEMO-C | 09/11/2026, ngày | open | Chưa cung cấp bằng chứng; đúng ngày hạn, không tính giờ trễ |\n\nLịch sử A1: giữ v1 in_progress/evidence:none cùng v2 tự báo done; không ghi đè hoặc đếm hai lần. Thiếu thời điểm hoàn tất/nghiệm thu nên chưa kết luận hoàn tất đúng hạn.\n\nCần xác minh: A1 đầu ra, tiêu chí đạt, bằng chứng, người có thẩm quyền và thời điểm nghiệm thu; A2 owner, blocker, điều kiện gỡ phụ thuộc. A1 tự báo done không làm A2 done. A3 chỉ xác nhận giờ hạn khi có căn cứ; không tự gán 17h.\n\nTổng: 3 ID unique; 0 accepted; 1 reported_done chờ xác minh; 1 thiếu owner. Không gửi Slack, đổi hạn hoặc ghi ứng dụng.",
+      "answer_sha256": "01ad1e339059edd0876f692c9d438933f1b80e33d2841699c799adc0d5d10bd8",
+      "assessment": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "qua ngày hạn 1 ngày lịch, không suy ra 24 giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2 done: reported_done/pending_verification; chưa accepted"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "giữ v1 in_progress/evidence:none cùng v2 tự báo done; không ghi đè hoặc đếm hai lần."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "A2 owner, blocker, điều kiện gỡ phụ thuộc."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Không gửi Slack, đổi hạn hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "condition": "with-skill",
+      "answer": "Snapshot: 2026-11-09 10:00, UTC+07:00. Nguồn: packet PUBLIC_SYNTHETIC; thiếu locator và thời điểm cập nhật.\n\n| ID | Owner | Hạn | Trạng thái đối soát | Bằng chứng | Thời gian | Cần xác minh |\n|---|---|---|---|---|---|---|\n| A1 | DEMO-A | 2026-11-08, chỉ ngày | reported_done / pending_verification; chưa accepted | Không có nghiệm thu hoặc verified_by | Ngày hạn đã qua 1 ngày lịch; không tính giờ trễ | Đầu ra, tiêu chí đạt, bằng chứng và người có thẩm quyền nghiệm thu |\n| A2 | Thiếu | 2026-11-10 17:00 +07:00 | blocked; chưa done | Chưa cung cấp | Còn 31 giờ | Bổ sung owner; xác nhận điều kiện gỡ chặn từ A1 |\n| A3 | DEMO-C | 2026-11-09, chỉ ngày | open | Chưa cung cấp | Đến ngày hạn; chưa đủ căn cứ kết luận trễ giờ | Xác nhận giờ hạn/quy tắc deadline; không tự gán 17h |\n\nLịch sử A1: giữ v1 = in_progress, evidence:none; v2 tự báo done, chưa nghiệm thu. Hai version thuộc một ID, không ghi đè hoặc đếm đôi. A1 tự báo hoàn thành không khiến A2 hoàn thành hay tự gỡ chặn.\n\nTổng: 3 ID; 1 reported_done, 0 accepted được chứng minh; 1 thiếu owner. Chưa gửi Slack, đổi hạn hoặc ghi ứng dụng; phạm vi chỉ đối soát.",
+      "answer_sha256": "0d40725f2268cbd509c83aa4f4f5424c6a7ece4ad4b5c060968eddc7e4cdcaaf",
+      "assessment": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Ngày hạn đã qua 1 ngày lịch; không tính giờ trễ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "reported_done / pending_verification; chưa accepted"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Hai version thuộc một ID, không ghi đè hoặc đếm đôi."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Bổ sung owner; xác nhận điều kiện gỡ chặn từ A1"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi Slack, đổi hạn hoặc ghi ứng dụng; phạm vi chỉ đối soát."
+        }
+      }
+    }
+  ]
+}

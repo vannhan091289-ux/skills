@@ -1,0 +1,7 @@
+{
+  "command": "python3 -B -m unittest discover -s outputs/domain-skills/tests -p test_skill_packages.py -v",
+  "tests": 5,
+  "failed_subtests": 7,
+  "exit_code": 1,
+  "reason": "Requested skill entrypoints and demo asset not yet implemented"
+}

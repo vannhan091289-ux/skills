@@ -1,0 +1,34 @@
+{
+  "status": "INSTALLED_VERIFIED",
+  "date": "2026-11-08",
+  "skill": "track-management-actions",
+  "version": "1.0.1",
+  "target": "$HOME/.agents/skills/track-management-actions",
+  "files": {
+    "SKILL.md": "479b9050e14c33b3da176bec2ce8338964fd63a8ef2232e6f7135bcd73e3c6f1",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "651d70a44c0f65dda6f2cfa9fbab33228fecd71dcdfcb21c30e25a28dcad480b",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "tests/test_deadline_window.py": "1a76c1a44afa6f29a232016dae9a6743ba445f0ee777dc48db315086a306a2ae",
+    "agents/openai.yaml": "25ee7ee37fb2eede14f78d230370e89b2617619453b197f5900450f44b99b1d1",
+    "scripts/deadline_window.py": "ca63cd2a372d3c7bd874d3cf08aa22fc842dc1f602436e730a9bc570d8af71d8",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "55ac6c52c93acd5dc7266aee397a43c696bff32811b4a016902b494b8d71514f",
+    "tests/fixtures/applications.json": "54247281f64c800fe407cf498bd4570b06349191ee174676a977e5b869ca95b5",
+    "tests/fixtures/case.json": "0621998e96bc10655c71a722996e9eff0784cc304f9816733ab8b46d8d644356"
+  },
+  "source": "Reviewed first-party local candidate; same bytes will be published in canonical feature branch",
+  "method": "Official Codex installer validation/copy helpers; no network",
+  "existing_skills_overwritten": false,
+  "app_config_modified": false,
+  "third_party_code_executed": false,
+  "discovery": "USER folder installed; explicit fresh CLI pilot recorded separately",
+  "supersedes_version": "1.0.0",
+  "update_reason": "Reject invalid offset components and return structured REWORK for UTC calendar overflow; regression-tested",
+  "only_task_owned_files_updated": [
+    "SKILL.md",
+    "scripts/deadline_window.py",
+    "tests/test_deadline_window.py"
+  ]
+}

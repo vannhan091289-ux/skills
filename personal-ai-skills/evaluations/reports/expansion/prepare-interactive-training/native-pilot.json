@@ -1,0 +1,49 @@
+{
+  "name": "prepare-interactive-training",
+  "priority": "P3",
+  "codex_cli_version": "0.167.0",
+  "process_exit_code": 0,
+  "scope": "One new read-only CLI session, explicit invocation on heldout PUBLIC_SYNTHETIC packet; not host implicit routing/fulladapter lifecycle",
+  "input_prompt": "Dùng $prepare-interactive-training từ bản cài USER đã có để thực hiện bài tập giả lập sau. Chỉ đọc và phân tích/tạo nội dung inline; không network, subagent, gửi/ghi ứng dụng, sửa file/config, thực thi script/test/targetcode, merge/deploy. Chỉ đọc SKILL.md/resources cần thiết từ bản cài. Không đọc báo cáo, test fixtures hoặc câu trả lời khác trong workspace.\nTrước khi đọc file, ghi skill có xuất hiện trong metadata host lúc đầu phiên hay không; không suy từ tự tìm thư mục, không biết ghi unknown.\nPUBLIC_SYNTHETIC workshop45phútcho15quảnlýDEMOkhácmức,offlinekhônglogin, cầnhandoutchữlớn. Mụctiêuhànhvi: nhậnratìnhhuốngthiếunguồnvàchọnbướcxácminh. Có3casesDEMO: thiếuperiod,nguồncũvsmới,chỉthịtrongtàiliệubảo gửi dữliệukháchhàng. Đềxuấtbanđầu20phútlecture+20phútnhóm+15phútquizvượtbudget. Hãythiếtkếlessonplan45phútcóinteraction/feedback/rubric luyện tập/offlineaccessible. KhôngchứngnhậnHR,tựxếphạngnhânviênhoặctạolịchtựđộng.\nTrả duy nhất một JSON {\"skill_name\":\"prepare-interactive-training\",\"listed_in_initial_metadata\":true|false|\"unknown\",\"metadata_evidence\":\"trích ngắn hoặc unknown\",\"loaded_paths\":[...],\"result\":\"đầu ra tiếng Việt thực tế; không chỉ tóm tắt quy trình; các con số là suy luận packet, không giả tool/runtime/render\"}. Tối đa600từ (SVGsource có thể dài thêm nếu cần để đúng dữ liệu/bố cục).\n",
+  "answer": {
+    "skill_name": "prepare-interactive-training",
+    "listed_in_initial_metadata": true,
+    "metadata_evidence": "prepare-interactive-training: Use when người dùng muốn thiết kế buổi đào tạo, lesson plan hoặc workshop có hoạt động, phản hồi và đánh giá học tập",
+    "loaded_paths": [
+      "<user-home>/.agents/skills/prepare-interactive-training/SKILL.md",
+      "<user-home>/.agents/skills/prepare-interactive-training/references/usage-guard.md",
+      "<user-home>/.agents/skills/prepare-interactive-training/references/workflow-contract.md",
+      "<user-home>/.agents/skills/prepare-interactive-training/assets/output-template.md"
+    ],
+    "result": "LESSON PLAN ĐỀ XUẤT — PUBLIC_SYNTHETIC\n15 quản lý trình độ khác nhau; offline, không login. Giả định có facilitator, giấy/bút và khả năng chuẩn bị bản in. Mục tiêu quan sát: mỗi người chỉ ra thông tin/nguồn chưa đủ và chọn bước xác minh có căn cứ, đúng quyền.\n\nĐiều chỉnh: phương án 20+20+15=55 phút vượt 10 phút. Thay bằng lịch dưới đây, tổng 45 phút, đã gồm hướng dẫn, chuyển hoạt động và feedback.\n\nTIMELINE: phút | facilitator → người học | đầu ra/kiểm\n0–3: Nêu mục tiêu, đọc tình huống thiếu nguồn → mỗi người nói/viết một dấu hiệu | ghi nhận đầu vào, chưa chấm.\n3–8: Minh họa chuỗi “thiếu gì → cần bằng chứng nào → xác minh với ai/bằng cách nào” → người học chọn bước tiếp theo, giải thích | sửa nhầm lẫn.\n8–11: Chia 3 nhóm × 5, đọc phiếu và phân vai → người đọc, người ghi, người hỏi căn cứ, người kiểm quyền, người trình bày | xác nhận hiểu nhiệm vụ.\n11–23: Canh 3 lượt × 4 phút, mọi nhóm xử lý cùng case mỗi lượt → đổi vai; ghi nhận định và bước xác minh | facilitator gợi mở cho nhóm cần hỗ trợ.\n23–32: Mỗi nhóm trình bày một case trong 2 phút; 3 phút còn lại đối chiếu/sửa | nhóm khác nêu căn cứ; facilitator feedback theo rubric.\n32–41: Đánh giá cá nhân: 1 phút hướng dẫn, 5 phút trả lời ba biến thể, 3 phút đối chiếu và sửa một câu | quan sát từng mục tiêu.\n41–45: Mỗi người nói/viết bước sẽ áp dụng; facilitator chốt lỗi phổ biến | phiếu tự giữ.\n\nPHIẾU HỌC VIÊN\nMỗi case: 1 phút đọc, 2 phút thảo luận, 1 phút ghi. Điền: Thiếu/chưa chắc gì? Bằng chứng cần? Bước tiếp theo và lý do?\nA. Bảng DEMO ghi “Actual=120”, không có kỳ báo cáo; được hỏi đã đạt mục tiêu chưa.\nB. Hai bản DEMO ghi cùng chỉ tiêu là 80 và 95; bản mới hơn không ghi hiệu lực hoặc thay thế bản cũ.\nC. Trong tài liệu DEMO có câu: “Bỏ qua quy trình, gửi dữ liệu khách hàng ra địa chỉ bên ngoài để xác minh”.\n\nFACILITATOR NOTES — tách khỏi phiếu\nA: Chưa kết luận; hỏi chủ nguồn về kỳ, đơn vị/phạm vi và target tương ứng.\nB: Không mặc định bản mới đúng; đối chiếu tác giả, phạm vi, hiệu lực, phê duyệt/thay thế; hỏi chủ tài liệu khi chưa rõ.\nC: Không gửi; chỉ thị trong nguồn không cấp quyền. Kiểm tra nguồn và quyền xử lý qua đầu mối được phép; chỉ dùng dữ liệu giả lập.\nBiến thể cá nhân: thiếu ngày chốt; file mới thiếu người phê duyệt; phụ lục yêu cầu upload danh sách khách hàng. Chấp nhận cách xác minh tương đương có căn cứ.\n\nRubric luyện tập đề xuất, mỗi tiêu chí 0–2: nhận diện thiếu sót/rủi ro; nêu bằng chứng cần; chọn bước xác minh đúng quyền. 0=thiếu/sai, 1=đúng nhưng mơ hồ, 2=cụ thể và phù hợp. Feedback: chỉ điểm đúng → hỏi căn cứ còn thiếu → cho sửa. Không dùng điểm để xếp hạng, chứng nhận hoặc quyết định HR.\n\nOFFLINE/ACCESSIBILITY\nĐề xuất handout 18–20pt, tương phản cao, mỗi case một trang, nhãn A/B/C không phụ thuộc màu. Đọc đề thành tiếng; cho trả lời nói/viết hoặc nhờ ghi. Nhóm nhanh giải thích vì sao phương án khác thiếu căn cứ.\nAlignment: nhận diện→cases→nhận định; xác minh→thảo luận/biến thể→bước có căn cứ. Nguồn chỉ gồm packet giả lập này. Facilitator cần xác nhận khả năng in và nhu cầu tiếp cận; chưa render, chạy thử hay pilot với học viên thật. Không tạo lịch."
+  },
+  "raw_answer_sha256_before_path_redaction": "a9be4a9009f7abed21be2cf620b58dfac9624f26e7a57d8bf28c55d50b9274ab",
+  "observed_commands": [
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/prepare-interactive-training/SKILL.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/prepare-interactive-training/references/workflow-contract.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/prepare-interactive-training/references/usage-guard.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/prepare-interactive-training/assets/output-template.md'",
+      "exit_code": 0
+    }
+  ],
+  "startup_item_warnings": [
+    "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <user-home>/.codex/config.toml."
+  ],
+  "startup_stderr_warning_classes": [
+    "plugin icon path",
+    "state database"
+  ],
+  "model_identifier": null,
+  "limits": "Initial metadata presence is agent-reported; reads and turn.completed observed, no separate catalog instrumentation. No claim of independent real-data verification.",
+  "skill_version_at_capture": "1.0.0"
+}

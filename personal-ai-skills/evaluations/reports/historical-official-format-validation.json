@@ -1,0 +1,106 @@
+{
+  "status": "STATIC_GO",
+  "date": "2026-11-08",
+  "dependency": {
+    "package": "PyYAML",
+    "version": "6.0.3",
+    "source": "https://pypi.org/project/PyYAML/6.0.3/",
+    "wheel": "pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl",
+    "sha256": "34d5fcd24b8445fadc33f9cf348c1047101756fd760b4dacb5c3e99755703310",
+    "pypi_hash_verified": true,
+    "binary_wheel_only": true,
+    "no_pth_or_install_scripts": true
+  },
+  "installed_pyyaml_version": "6.0.3",
+  "official_validator": {
+    "path": "<Codex skill-creator>/scripts/quick_validate.py",
+    "sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+    "modified": false
+  },
+  "skill_checks": [
+    {
+      "skill": "audit-branch-kpi",
+      "copy": "authored",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    },
+    {
+      "skill": "review-academic-thesis",
+      "copy": "authored",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    },
+    {
+      "skill": "audit-branch-kpi",
+      "copy": "github-payload",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    },
+    {
+      "skill": "review-academic-thesis",
+      "copy": "github-payload",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    },
+    {
+      "skill": "audit-branch-kpi",
+      "copy": "installed",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    },
+    {
+      "skill": "review-academic-thesis",
+      "copy": "installed",
+      "exit_code": 0,
+      "stdout": "Skill is valid!",
+      "stderr": ""
+    }
+  ],
+  "checks_passed": 6,
+  "ui_yaml_checks_passed": 6,
+  "negative_controls": [
+    {
+      "case": "unknown-field",
+      "exit_code": 1,
+      "stdout": "Unexpected key(s) in SKILL.md frontmatter: unexpected. Allowed properties are: allowed-tools, description, license, metadata, name"
+    },
+    {
+      "case": "oversized-description",
+      "exit_code": 1,
+      "stdout": "Description is too long (1025 characters). Maximum is 1024 characters."
+    }
+  ],
+  "source_changes_needed": false,
+  "limits": [
+    "Format and metadata checks; not business approval or real-data academic validation"
+  ],
+  "regression_suites": [
+    {
+      "suite": "domain",
+      "exit_code": 0,
+      "summary": [
+        "----------------------------------------------------------------------",
+        "Ran 45 tests in 0.506s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "vendor",
+      "exit_code": 0,
+      "summary": [
+        "----------------------------------------------------------------------",
+        "Ran 64 tests in 0.421s",
+        "",
+        "OK"
+      ]
+    }
+  ],
+  "environment": "Isolated workspace virtual environment, Python3.14; no user/system Python package changes",
+  "reviewed_dependency_executed": "PyYAML6.0.3 for validation only; no third-party skill runtime or installer executed"
+}

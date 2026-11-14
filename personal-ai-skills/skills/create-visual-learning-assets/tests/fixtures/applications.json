@@ -1,0 +1,153 @@
+{
+  "method": "Five fresh-context applications; independently manually assessed. Replay checks assessment/answer integrity, not semantic scoring of new prose, host discovery or broad accuracy.",
+  "criteria": [
+    "numeric-and-scale-integrity",
+    "labels-source-and-alt",
+    "not-color-only",
+    "license-and-source-boundary",
+    "honest-render-status"
+  ],
+  "review_sha256": "57f11d5ed472d196b9b7a1eefd3d0983974909f8e1c516b7d29b1822e3a741c5",
+  "responses": [
+    {
+      "sample": 1,
+      "condition": "with-skill",
+      "answer": "```svg\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-labelledby=\"title desc\">\n  <title id=\"title\">Gộp tỷ lệ theo mẫu số</title>\n  <desc id=\"desc\">Dữ liệu giả lập PUBLIC_SYNTHETIC tháng 2026-10. DEMO-A đạt 80 trên 100 points, DEMO-B đạt 30 trên 50 points. Tổng 110 trên 150 points bằng 73.33%, không phải trung bình đơn giản 70%. Ba thanh cùng thang 0 đến 100%.</desc>\n  <rect width=\"800\" height=\"500\" fill=\"#ffffff\"/>\n  <g font-family=\"Arial, sans-serif\" fill=\"#172c43\">\n    <text x=\"30\" y=\"38\" font-size=\"25\" font-weight=\"700\">Gộp tỷ lệ: trọng số nằm ở mẫu số</text>\n    <text x=\"30\" y=\"70\" font-size=\"17\">PUBLIC_SYNTHETIC · Kỳ 2026-10 · Đơn vị gốc: points</text>\n    <text x=\"30\" y=\"102\" font-size=\"16\">Cùng thang đo 0–100%; nhãn và hình phân biệt từng hàng.</text>\n    <g font-size=\"15\" text-anchor=\"middle\">\n      <text x=\"220\" y=\"135\">0%</text><text x=\"345\" y=\"135\">25%</text>\n      <text x=\"470\" y=\"135\">50%</text><text x=\"595\" y=\"135\">75%</text><text x=\"720\" y=\"135\">100%</text>\n    </g>\n    <path d=\"M220 145V310 M345 145V310 M470 145V310 M595 145V310 M720 145V310\" stroke=\"#c1cbd4\" stroke-width=\"1\"/>\n    <circle cx=\"40\" cy=\"177\" r=\"8\"/>\n    <rect x=\"32\" y=\"229\" width=\"16\" height=\"16\"/>\n    <path d=\"M40 287L49 297L40 307L31 297Z\"/>\n    <g font-size=\"18\" font-weight=\"700\">\n      <text x=\"62\" y=\"183\">DEMO-A</text><text x=\"62\" y=\"243\">DEMO-B</text><text x=\"62\" y=\"303\">TỔNG</text>\n    </g>\n    <g fill=\"#244b70\">\n      <rect x=\"220\" y=\"160\" width=\"400\" height=\"34\"/>\n      <rect x=\"220\" y=\"220\" width=\"300\" height=\"34\"/>\n      <rect x=\"220\" y=\"280\" width=\"366.67\" height=\"34\"/>\n    </g>\n    <g fill=\"#ffffff\" font-size=\"18\" font-weight=\"700\">\n      <text x=\"232\" y=\"183\">80/100 = 80%</text>\n      <text x=\"232\" y=\"243\">30/50 = 60%</text>\n      <text x=\"232\" y=\"303\">110/150 = 73.33%</text>\n    </g>\n    <text x=\"30\" y=\"352\" font-size=\"19\" font-weight=\"700\">Tổng = (80 + 30)/(100 + 50) = 73.33%</text>\n    <text x=\"30\" y=\"382\" font-size=\"17\">Trọng số: A = 100/150; B = 50/150.</text>\n    <text x=\"30\" y=\"410\" font-size=\"17\">70% là trung bình đơn giản (80% + 60%)/2, không phải tỷ lệ tổng.</text>\n    <text x=\"30\" y=\"448\" font-size=\"16\">Nguồn: packet DEMO, số liệu được giao; tỷ lệ tổng làm tròn 2 chữ số.</text>\n    <text x=\"30\" y=\"476\" font-size=\"16\">Minh họa giáo dục; không phải chính sách ngân hàng.</text>\n  </g>\n</svg>\n```\n\nAlt text: Infographic 800×500 dùng chung thang 0–100%. Hình tròn DEMO-A: 80/100 points = 80%; hình vuông DEMO-B: 30/50 points = 60%; hình thoi tổng: 110/150 points = 73.33%. Tổng dùng trọng số theo mẫu số, không bằng trung bình đơn giản 70%. Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC.\n\nTrạng thái: Đã tạo SVG source inline; chưa render hoặc kiểm thị giác, chưa xác minh độc lập dữ liệu nguồn. Dùng hình tự tạo, không logo hay asset ngoài. Không có URL nguồn được cung cấp; không tạo citation hoặc link tải.",
+      "answer_sha256": "40186217b26a7888b5cd8267a29024f1e06cd32bdddbe6c8c0f73464a8ad9f81",
+      "assessment": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Tổng = (80 + 30)/(100 + 50) = 73.33%"
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Hình tròn DEMO-A: 80/100 points = 80%; hình vuông DEMO-B: 30/50 points = 60%; hình thoi tổng: 110/150 points = 73.33%."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Dùng hình tự tạo, không logo hay asset ngoài."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác"
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "condition": "with-skill",
+      "answer": "```svg\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-labelledby=\"title desc\">\n<title id=\"title\">Tỷ lệ tổng được tính theo mẫu số</title>\n<desc id=\"desc\">PUBLIC_SYNTHETIC. Kỳ 2026-10. DEMO-A đạt 80/100 points, 80%; DEMO-B đạt 30/50 points, 60%. Tổng 110/150 points, 73.33%, khác trung bình đơn giản 70%. Các thanh dùng chung thang 0–100%.</desc>\n<rect width=\"800\" height=\"500\" fill=\"#ffffff\"/>\n<g font-family=\"Arial, sans-serif\" fill=\"#172b3a\">\n<text x=\"32\" y=\"38\" font-size=\"15\">PUBLIC_SYNTHETIC · Kỳ 2026-10 · Đơn vị: points</text>\n<text x=\"32\" y=\"76\" font-size=\"27\" font-weight=\"700\">Tổng tỷ lệ cần trọng số theo mẫu số</text>\n<text x=\"32\" y=\"105\" font-size=\"17\">Mỗi nhóm đóng góp theo số points trong mẫu số.</text>\n<g fill=\"#edf1f4\">\n<rect x=\"260\" y=\"132\" width=\"480\" height=\"32\"/>\n<rect x=\"260\" y=\"202\" width=\"480\" height=\"32\"/>\n<rect x=\"260\" y=\"272\" width=\"480\" height=\"32\"/>\n</g>\n<g fill=\"#176272\">\n<rect x=\"260\" y=\"132\" width=\"384\" height=\"32\"/>\n<rect x=\"260\" y=\"202\" width=\"288\" height=\"32\"/>\n<rect x=\"260\" y=\"272\" width=\"352\" height=\"32\"/>\n</g>\n<g font-size=\"19\" font-weight=\"700\">\n<text x=\"32\" y=\"154\">■ DEMO-A</text>\n<text x=\"32\" y=\"224\">● DEMO-B</text>\n<text x=\"32\" y=\"294\">◆ Tổng</text>\n</g>\n<g font-size=\"17\">\n<text x=\"32\" y=\"179\">80/100 points</text>\n<text x=\"32\" y=\"249\">30/50 points</text>\n<text x=\"32\" y=\"319\">110/150 points</text>\n</g>\n<g fill=\"#ffffff\" font-size=\"19\" font-weight=\"700\">\n<text x=\"632\" y=\"155\" text-anchor=\"end\">80%</text>\n<text x=\"536\" y=\"225\" text-anchor=\"end\">60%</text>\n<text x=\"600\" y=\"295\" text-anchor=\"end\">73.33%</text>\n</g>\n<path d=\"M260 325H740 M260 325v7 M380 325v7 M500 325v7 M620 325v7 M740 325v7\" stroke=\"#172b3a\" fill=\"none\"/>\n<g font-size=\"15\" text-anchor=\"middle\">\n<text x=\"260\" y=\"353\">0%</text><text x=\"380\" y=\"353\">25%</text><text x=\"500\" y=\"353\">50%</text><text x=\"620\" y=\"353\">75%</text><text x=\"740\" y=\"353\">100%</text>\n</g>\n<text x=\"32\" y=\"389\" font-size=\"20\" font-weight=\"700\">(80 + 30)/(100 + 50) × 100 = 73.33%</text>\n<text x=\"32\" y=\"417\" font-size=\"17\">Trọng số: 100/150 và 50/150; không phải (80% + 60%)/2 = 70%.</text>\n<text x=\"32\" y=\"450\" font-size=\"15\">Nguồn: packet DEMO, các mục DEMO-A, DEMO-B; tổng làm tròn 2 chữ số.</text>\n<text x=\"32\" y=\"476\" font-size=\"15\">Dữ liệu minh họa giáo dục; không phải chính sách ngân hàng.</text>\n</g>\n</svg>\n```\nAlt text: Kỳ 2026-10, DEMO-A 80/100 points = 80%; DEMO-B 30/50 points = 60%; tổng 110/150 points = 73.33%. Ba thanh cùng thang 0–100%, có nhãn và ký hiệu riêng. Tổng sử dụng trọng số mẫu số 100:50, khác trung bình đơn giản 70%. Nguồn: packet DEMO; không có URL được cung cấp.\nTrạng thái: Đã tạo SVG source inline; chưa render hoặc kiểm thị giác. Chưa kiểm contrast bằng công cụ, screen reader hay bản in. Hình tự tạo, không dùng logo hoặc asset ngoài; không có link tải hay tuyên bố chứng thực.",
+      "answer_sha256": "4c5bc64f9aa98c3114ee4f4a1af46da85c5e08f62c172a1e68a38cab19cad10b",
+      "assessment": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số: 100/150 và 50/150; không phải (80% + 60%)/2 = 70%."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10, DEMO-A 80/100 points = 80%; DEMO-B 30/50 points = 60%; tổng 110/150 points = 73.33%."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Ba thanh cùng thang 0–100%, có nhãn và ký hiệu riêng."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Hình tự tạo, không dùng logo hoặc asset ngoài; không có link tải hay tuyên bố chứng thực."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "condition": "with-skill",
+      "answer": "```svg\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-labelledby=\"title desc\">\n<title id=\"title\">Gộp tỷ lệ theo mẫu số</title>\n<desc id=\"desc\">Dữ liệu PUBLIC_SYNTHETIC, kỳ 2026-10. DEMO-A: 80/100 points, 80%; DEMO-B: 30/50 points, 60%. Tổng: 110/150 points, 73.33%. Ba thanh cùng thang 0–100%. Nguồn: packet DEMO.</desc>\n<rect width=\"800\" height=\"500\" fill=\"#fff\"/>\n<g font-family=\"Arial, sans-serif\" fill=\"#172b4d\">\n<text x=\"40\" y=\"42\" font-size=\"26\" font-weight=\"700\">Gộp tỷ lệ: mẫu số quyết định trọng số</text>\n<text x=\"40\" y=\"74\" font-size=\"17\">PUBLIC_SYNTHETIC · Kỳ 2026-10 · Đơn vị dữ liệu: points</text>\n<g stroke=\"#c5ced8\" stroke-width=\"1\">\n<path d=\"M240 108V323 M365 108V323 M490 108V323 M615 108V323 M740 108V323\"/>\n</g>\n<g font-size=\"16\" text-anchor=\"middle\">\n<text x=\"240\" y=\"102\">0%</text><text x=\"365\" y=\"102\">25%</text>\n<text x=\"490\" y=\"102\">50%</text><text x=\"615\" y=\"102\">75%</text><text x=\"740\" y=\"102\">100%</text>\n</g>\n<g font-size=\"19\">\n<text x=\"40\" y=\"148\">● DEMO-A</text><text x=\"40\" y=\"174\">80/100 points</text>\n<text x=\"40\" y=\"218\">■ DEMO-B</text><text x=\"40\" y=\"244\">30/50 points</text>\n<text x=\"40\" y=\"288\" font-weight=\"700\">◆ Tổng</text><text x=\"40\" y=\"314\">110/150 points</text>\n</g>\n<g fill=\"#164e63\">\n<rect x=\"240\" y=\"128\" width=\"400\" height=\"30\"/>\n<rect x=\"240\" y=\"198\" width=\"300\" height=\"30\"/>\n<rect x=\"240\" y=\"268\" width=\"366.667\" height=\"30\"/>\n</g>\n<g font-size=\"18\" font-weight=\"700\">\n<text x=\"650\" y=\"150\">80%</text><text x=\"550\" y=\"220\">60%</text>\n<text x=\"617\" y=\"290\">73.33%</text>\n</g>\n<rect x=\"40\" y=\"340\" width=\"720\" height=\"101\" rx=\"8\" fill=\"#eaf2f6\"/>\n<text x=\"56\" y=\"368\" font-size=\"20\" font-weight=\"700\">Tổng = (80 + 30)/(100 + 50) = 73.33%</text>\n<text x=\"56\" y=\"396\" font-size=\"18\">Trọng số: DEMO-A = 100/150; DEMO-B = 50/150.</text>\n<text x=\"56\" y=\"423\" font-size=\"18\">70% là trung bình đơn giản; không phải tỷ lệ tổng.</text>\n<text x=\"40\" y=\"470\" font-size=\"16\">Nguồn: packet DEMO · Tổng làm tròn 2 chữ số thập phân.</text>\n<text x=\"40\" y=\"491\" font-size=\"14\">Ví dụ giáo dục; không phải chính sách ngân hàng. Đồ họa tự tạo, không logo.</text>\n</g>\n</svg>\n```\nAlt text: Infographic 800×500, kỳ 2026-10, đơn vị points; DEMO-A 80/100 = 80%, DEMO-B 30/50 = 60%, tổng 110/150 = 73.33%. Các thanh dùng chung thang 0–100%, có tên, ký hiệu và nhãn số; tỷ lệ tổng có trọng số theo mẫu số, không bằng trung bình đơn giản 70%.\n\nTrạng thái: Đã tạo SVG source inline; chưa render hoặc kiểm thị giác, độ tương phản và việc cắt chữ. Nguồn số: packet DEMO được cung cấp trong đề; không có URL để liên kết. Không tạo ảnh tải xuống, không xuất bản.",
+      "answer_sha256": "5888276b0776aaf703b228c107be6237a65bb945b0c1c6dc3a21b181e03162f0",
+      "assessment": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số: DEMO-A = 100/150; DEMO-B = 50/150."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Dữ liệu PUBLIC_SYNTHETIC, kỳ 2026-10. DEMO-A: 80/100 points, 80%; DEMO-B: 30/50 points, 60%. Tổng: 110/150 points, 73.33%. Ba thanh cùng thang 0–100%. Nguồn: packet DEMO."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "Các thanh dùng chung thang 0–100%, có tên, ký hiệu và nhãn số"
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Đồ họa tự tạo, không logo."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác, độ tương phản và việc cắt chữ."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "condition": "with-skill",
+      "answer": "```svg\n<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-labelledby=\"title desc\">\n<title id=\"title\">Gộp tỷ lệ theo mẫu số — PUBLIC_SYNTHETIC</title>\n<desc id=\"desc\">Kỳ 2026-10, đơn vị points. DEMO-A đạt 80/100, tức 80%; DEMO-B đạt 30/50, tức 60%. Tổng đạt 110/150, làm tròn hai chữ số thập phân là 73.33%, không phải trung bình đơn giản 70%. Ba thanh cùng thang 0 đến 100%. Nguồn packet DEMO; dữ liệu giả lập, không phải chính sách ngân hàng.</desc>\n<rect width=\"800\" height=\"500\" fill=\"#ffffff\"/>\n<g font-family=\"Arial, sans-serif\" fill=\"#172b4d\">\n<text x=\"40\" y=\"43\" font-size=\"27\" font-weight=\"700\">Gộp tỷ lệ: mẫu số quyết định trọng số</text>\n<text x=\"40\" y=\"76\" font-size=\"17\">PUBLIC_SYNTHETIC · Kỳ 2026-10 · Đơn vị: points</text>\n<g fill=\"#e8edf3\">\n<rect x=\"230\" y=\"124\" width=\"420\" height=\"30\" rx=\"3\"/>\n<rect x=\"230\" y=\"194\" width=\"420\" height=\"30\" rx=\"3\"/>\n<rect x=\"230\" y=\"264\" width=\"420\" height=\"30\" rx=\"3\"/>\n</g>\n<rect x=\"230\" y=\"124\" width=\"336\" height=\"30\" fill=\"#245577\"/>\n<rect x=\"230\" y=\"194\" width=\"252\" height=\"30\" fill=\"#245577\"/>\n<rect x=\"230\" y=\"264\" width=\"308\" height=\"30\" fill=\"#245577\"/>\n<g font-size=\"19\" font-weight=\"700\">\n<text x=\"40\" y=\"137\">● DEMO-A</text><text x=\"675\" y=\"146\">80%</text>\n<text x=\"40\" y=\"207\">■ DEMO-B</text><text x=\"675\" y=\"216\">60%</text>\n<text x=\"40\" y=\"277\">◆ Tổng</text><text x=\"675\" y=\"286\">73.33%</text>\n</g>\n<g font-size=\"17\">\n<text x=\"40\" y=\"161\">80/100 points</text>\n<text x=\"40\" y=\"231\">30/50 points</text>\n<text x=\"40\" y=\"301\">110/150 points</text>\n</g>\n<path d=\"M230 313H650 M230 309V319 M335 309V319 M440 309V319 M545 309V319 M650 309V319\" stroke=\"#172b4d\" fill=\"none\"/>\n<g font-size=\"16\" text-anchor=\"middle\">\n<text x=\"230\" y=\"340\">0%</text><text x=\"335\" y=\"340\">25%</text><text x=\"440\" y=\"340\">50%</text><text x=\"545\" y=\"340\">75%</text><text x=\"650\" y=\"340\">100%</text>\n</g>\n<rect x=\"40\" y=\"362\" width=\"720\" height=\"88\" rx=\"8\" fill=\"#edf3f8\"/>\n<text x=\"56\" y=\"389\" font-size=\"20\" font-weight=\"700\">(80 + 30)/(100 + 50) × 100 = 73.33%</text>\n<text x=\"56\" y=\"415\" font-size=\"17\">Trọng số A:B = 100:50 = 2:1, theo mẫu số.</text>\n<text x=\"56\" y=\"438\" font-size=\"17\">(80% + 60%)/2 = 70% gán trọng số bằng nhau, nên khác tổng.</text>\n<text x=\"40\" y=\"479\" font-size=\"16\">Nguồn: packet DEMO · Dữ liệu giả lập · Không phải chính sách ngân hàng</text>\n</g>\n</svg>\n```\n\nAlt text: Ba thanh cùng thang 0–100%: DEMO-A 80/100 points = 80%; DEMO-B 30/50 points = 60%; tổng 110/150 points ≈ 73.33%. Tổng dùng trọng số mẫu số 2:1, khác trung bình đơn giản 70%. Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC.\n\nTrạng thái: Đã tạo SVG source inline; chưa render hoặc kiểm thị giác. Asset tự tạo; không dùng logo. Nguồn không cung cấp URL.",
+      "answer_sha256": "852b32ebda3cfdd0bb1398f7fcf2fb0105896d8a661cd9df182b9e4617d27ea3",
+      "assessment": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Trọng số A:B = 100:50 = 2:1, theo mẫu số."
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Kỳ 2026-10; nguồn packet DEMO; PUBLIC_SYNTHETIC."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "● DEMO-A"
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Asset tự tạo; không dùng logo. Nguồn không cung cấp URL."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline; chưa render hoặc kiểm thị giác."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "condition": "with-skill",
+      "answer": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"800\" height=\"500\" viewBox=\"0 0 800 500\" role=\"img\" aria-labelledby=\"title desc\">\n<title id=\"title\">Gộp tỷ lệ theo mẫu số</title>\n<desc id=\"desc\">Dữ liệu giả lập PUBLIC_SYNTHETIC kỳ 2026-10, đơn vị points, nguồn packet DEMO. DEMO-A đạt 80/100 bằng 80%; DEMO-B đạt 30/50 bằng 60%; tổng đạt 110/150 bằng 73.33%. Ba thanh dùng chung thang 0 đến 100%. Tổng dùng trọng số theo mẫu số, không phải trung bình đơn giản 70%.</desc>\n<rect width=\"800\" height=\"500\" fill=\"#ffffff\"/>\n<g font-family=\"Arial, sans-serif\" fill=\"#172b4d\">\n<text x=\"32\" y=\"44\" font-size=\"28\" font-weight=\"700\">Gộp tỷ lệ: mẫu số quyết định trọng số</text>\n<text x=\"32\" y=\"77\" font-size=\"16\">PUBLIC_SYNTHETIC · Kỳ 2026-10 · Đơn vị gốc: points</text>\n<g stroke=\"#d8dee8\" stroke-width=\"1\">\n<path d=\"M240 118V320 M365 118V320 M490 118V320 M615 118V320 M740 118V320\"/>\n</g>\n<g font-size=\"18\">\n<text x=\"32\" y=\"146\" font-weight=\"700\">● DEMO-A</text>\n<text x=\"32\" y=\"170\">80/100 points</text>\n<text x=\"32\" y=\"216\" font-weight=\"700\">▲ DEMO-B</text>\n<text x=\"32\" y=\"240\">30/50 points</text>\n<text x=\"32\" y=\"286\" font-weight=\"700\">■ Tổng</text>\n<text x=\"32\" y=\"310\">110/150 points</text>\n</g>\n<g fill=\"#e9edf3\">\n<rect x=\"240\" y=\"132\" width=\"500\" height=\"36\"/>\n<rect x=\"240\" y=\"202\" width=\"500\" height=\"36\"/>\n<rect x=\"240\" y=\"272\" width=\"500\" height=\"36\"/>\n</g>\n<g fill=\"#174b73\">\n<rect x=\"240\" y=\"132\" width=\"400\" height=\"36\"/>\n<rect x=\"240\" y=\"202\" width=\"300\" height=\"36\"/>\n<rect x=\"240\" y=\"272\" width=\"366.65\" height=\"36\"/>\n</g>\n<g fill=\"#ffffff\" font-size=\"20\" font-weight=\"700\">\n<text x=\"624\" y=\"157\" text-anchor=\"end\">80%</text>\n<text x=\"524\" y=\"227\" text-anchor=\"end\">60%</text>\n<text x=\"591\" y=\"297\" text-anchor=\"end\">73.33%</text>\n</g>\n<g font-size=\"15\" text-anchor=\"middle\">\n<text x=\"240\" y=\"344\">0%</text><text x=\"365\" y=\"344\">25%</text>\n<text x=\"490\" y=\"344\">50%</text><text x=\"615\" y=\"344\">75%</text>\n<text x=\"740\" y=\"344\">100%</text>\n</g>\n<text x=\"32\" y=\"382\" font-size=\"19\" font-weight=\"700\">Tổng = (80 + 30) / (100 + 50) × 100 = 73.33%</text>\n<text x=\"32\" y=\"412\" font-size=\"18\">Mẫu số là trọng số: 100/150 và 50/150.</text>\n<text x=\"32\" y=\"440\" font-size=\"17\">70% chỉ là trung bình đơn giản của 80% và 60%.</text>\n<text x=\"32\" y=\"478\" font-size=\"15\">Nguồn: packet DEMO · Tổng làm tròn 2 chữ số · Không phải chính sách ngân hàng</text>\n</g>\n</svg>\n\nAlt text: Infographic 800×500, dữ liệu giả lập kỳ 2026-10, đơn vị points từ packet DEMO. DEMO-A 80/100 = 80%, DEMO-B 30/50 = 60%, tổng 110/150 ≈ 73.33%; cùng thang 0–100%, có nhãn và glyph. Tỷ lệ tổng dùng trọng số theo mẫu số; 70% là trung bình đơn giản.\n\nTrạng thái: Đã tạo SVG source inline. Chưa render hoặc kiểm thị giác; chưa kiểm accessibility toàn diện. Không dùng logo, asset ngoài hay liên kết nguồn/tải tự tạo.",
+      "answer_sha256": "bf40e5048be9c572bb24d5e656476bb068ad7f31044f2fbb898b881027f7c6f2",
+      "assessment": {
+        "numeric-and-scale-integrity": {
+          "accepted": true,
+          "quote": "Tổng = (80 + 30) / (100 + 50) × 100 = 73.33%"
+        },
+        "labels-source-and-alt": {
+          "accepted": true,
+          "quote": "Infographic 800×500, dữ liệu giả lập kỳ 2026-10, đơn vị points từ packet DEMO."
+        },
+        "not-color-only": {
+          "accepted": true,
+          "quote": "cùng thang 0–100%, có nhãn và glyph."
+        },
+        "license-and-source-boundary": {
+          "accepted": true,
+          "quote": "Không dùng logo, asset ngoài hay liên kết nguồn/tải tự tạo."
+        },
+        "honest-render-status": {
+          "accepted": true,
+          "quote": "Đã tạo SVG source inline. Chưa render hoặc kiểm thị giác; chưa kiểm accessibility toàn diện."
+        }
+      }
+    }
+  ]
+}

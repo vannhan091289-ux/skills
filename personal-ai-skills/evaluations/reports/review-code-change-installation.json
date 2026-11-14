@@ -1,0 +1,26 @@
+{
+  "status": "INSTALLED_VERIFIED",
+  "date": "2026-11-08",
+  "skill": "review-code-change",
+  "target": "$HOME/.agents/skills/review-code-change",
+  "version": "1.0.0",
+  "files": {
+    "SKILL.md": "503aeb67516f07c6ccfb77a6ee579e7930c1c346a8a3bd03104e12abec8fb63f",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/finding-contract.md": "0fde044537850950dcaa5edecfc20dfe069d302b91f715e439eb21ef6b6f6b32",
+    "tests/test_review_evidence.py": "dedde63ddf1b351321811ba0dece7286abdd39157c5cfbfce43242748a820875",
+    "agents/openai.yaml": "7cc9422924637308b9c26edbb63c5773e8fa6479e4bef464c9719b1446f4025b",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/review-template.md": "210b2583684d6bdb47c47dc0204b1b76fe0f2fb6a23b94444b4b4eba921f6ce0",
+    "assets/diff-demo.json": "b665e4f7cbec535b913205d8c8e5a7733b423bb91d0b2f8aedebd0bede0734ab",
+    "tests/fixtures/applications.json": "6b4753a0bb3e0e392f7ca9185cab9bdc0660dd3cfe3159e80d7229d411c5d7cb"
+  },
+  "method": "Reviewed first-party package via official Codex installer copy helper",
+  "existing_skills_overwritten": false,
+  "app_config_modified": false,
+  "third_party_code_executed": false,
+  "discovery": "Explicit invocation pilot evidenced in codex-native-pilot.json; initial metadata presence agent-reported, resource reads observed",
+  "source_commit": "40ffeb78e524359a3a2a9aa846ea79d5edb9cc0b",
+  "source_path": "personal-ai-skills/skills/review-code-change"
+}

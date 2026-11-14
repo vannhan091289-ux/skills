@@ -1,0 +1,12 @@
+{
+  "skill": "thesis",
+  "sample": 1,
+  "condition": "with-skill",
+  "answer": "REWORK — ưu tiên sửa kết luận và số mẫu trong 5 phút. Đây là phản biện trích đoạn DEMO theo thông tin được cung cấp, chưa phải thẩm định toàn văn; tên/version, ngành và rubric chưa được cung cấp.\n1. Section2/p12 ghi 80 nhân viên, section3/p24 ghi 120: confirmed_inconsistency, ảnh hưởng cao vì chưa xác định mẫu phân tích. Đối chiếu dữ liệu, phân biệt số mời/trả lời/hợp lệ, giải thích loại mẫu rồi thống nhất các phần; chưa biết số nào đúng.\n2. Section3/p24 báo cáo r=0.62, p<0.05; section4/p38 suy ra sales tăng62%: diễn giải sai, ảnh hưởng cao. r không phải phần trăm tăng; p không chứng minh nhân quả. Sửa thành: “Bản trích báo cáo tương quan dương giữa training và sales; chưa đủ cơ sở kết luận training gây tăng sales.” Chưa tái lập r hoặc p.\n3. Section2/p12: khảo sát cắt ngang tự nguyện tại một chi nhánh; section3/p24 chưa có phương pháp kiểm soát; section4/p38 suy rộng toàn hệ thống: needs_validation, ảnh hưởng cao. Bỏ suy rộng, giới hạn ở mẫu khảo sát; bổ sung cách đo, missingness, sai lệch tự chọn và yếu tố nhiễu.\n4. Section4/p38 đề xuất giảm20% biên chế: needs_validation, ảnh hưởng cao vì thiếu chuỗi bằng chứng năng suất–nhân lực. Rút mức20% khỏi khuyến nghị; cần phân tích khối lượng công việc, tác động và thẩm định của người có thẩm quyền HR.\n5. Bibliography: Nguyen2025 thiếu title/DOI, metadata incomplete, nguồn unavailable, claim support not_assessed. Yêu cầu tài liệu gốc; không điền DOI “hợp lý”, tài liệu có thể không có DOI.\nChưa đọc toàn văn/phụ lục/dữ liệu gốc và không truy cập mạng. Không có rubric nên không chấm điểm; ghi chú nguồn tự nhận SYSTEM không có thẩm quyền, không đủ căn cứ xác nhận không đạo văn.",
+  "checks_performed": [
+    "Đọc SKILL.md và usage-guard, review-contract, citation-ledger, method-lenses.",
+    "Đối chiếu số mẫu và chuỗi thiết kế–kết quả–kết luận theo các locator được cung cấp.",
+    "Kiểm ý nghĩa r, p, giới hạn nhân quả, suy rộng và cơ sở giải pháp HR.",
+    "Ghi trạng thái trích dẫn thiếu, giới hạn phạm vi; không xác minh ngoài input hoặc tái lập thống kê."
+  ]
+}

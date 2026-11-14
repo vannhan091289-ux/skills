@@ -1,0 +1,70 @@
+...FFF...FF.
+======================================================================
+FAIL: test_invalid_offset_components_are_not_silently_normalized (test_deadline_window.Deadline.test_invalid_offset_components_are_not_silently_normalized) (offset='+07:99')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 35, in test_invalid_offset_components_are_not_silently_normalized
+    self.assertEqual(self.run_request(self.payload('2026-11-10T17:00:00'+offset),1)['status'],'REWORK')
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 8, in run_request
+    self.assertEqual(p.returncode,code,p.stderr or p.stdout);self.assertEqual(p.stderr,'');return json.loads(p.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : {"status": "CALCULATED", "as_of": "2026-11-09T10:00:00+07:00", "hours_method": "Decimal seconds/3600, precision28; null for date-only", "rows": [{"id": "D", "due": "2026-11-10T17:00:00+07:99", "precision": "timestamp", "relation": "future_timestamp", "calendar_days_until_due": 1, "hours_until_due": "29.35"}]}
+
+
+======================================================================
+FAIL: test_invalid_offset_components_are_not_silently_normalized (test_deadline_window.Deadline.test_invalid_offset_components_are_not_silently_normalized) (offset='-07:99')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 35, in test_invalid_offset_components_are_not_silently_normalized
+    self.assertEqual(self.run_request(self.payload('2026-11-10T17:00:00'+offset),1)['status'],'REWORK')
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 8, in run_request
+    self.assertEqual(p.returncode,code,p.stderr or p.stdout);self.assertEqual(p.stderr,'');return json.loads(p.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : {"status": "CALCULATED", "as_of": "2026-11-09T10:00:00+07:00", "hours_method": "Decimal seconds/3600, precision28; null for date-only", "rows": [{"id": "D", "due": "2026-11-10T17:00:00-07:99", "precision": "timestamp", "relation": "future_timestamp", "calendar_days_until_due": 2, "hours_until_due": "46.65"}]}
+
+
+======================================================================
+FAIL: test_invalid_offset_components_are_not_silently_normalized (test_deadline_window.Deadline.test_invalid_offset_components_are_not_silently_normalized) (offset='+07:60')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 35, in test_invalid_offset_components_are_not_silently_normalized
+    self.assertEqual(self.run_request(self.payload('2026-11-10T17:00:00'+offset),1)['status'],'REWORK')
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 8, in run_request
+    self.assertEqual(p.returncode,code,p.stderr or p.stdout);self.assertEqual(p.stderr,'');return json.loads(p.stdout)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 1 : {"status": "CALCULATED", "as_of": "2026-11-09T10:00:00+07:00", "hours_method": "Decimal seconds/3600, precision28; null for date-only", "rows": [{"id": "D", "due": "2026-11-10T17:00:00+07:60", "precision": "timestamp", "relation": "future_timestamp", "calendar_days_until_due": 1, "hours_until_due": "30"}]}
+
+
+======================================================================
+FAIL: test_utc_conversion_outside_calendar_returns_json_rework (test_deadline_window.Deadline.test_utc_conversion_outside_calendar_returns_json_rework) (due='0001-01-01T00:00:00+01:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 41, in test_utc_conversion_outside_calendar_returns_json_rework
+    self.assertEqual(self.run_request(self.payload(due),1)['status'],'REWORK')
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 8, in run_request
+    self.assertEqual(p.returncode,code,p.stderr or p.stdout);self.assertEqual(p.stderr,'');return json.loads(p.stdout)
+                                                             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 'Traceback (most recent call last):\n  Fil[877 chars]ge\n' != ''
+Diff is 933 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_utc_conversion_outside_calendar_returns_json_rework (test_deadline_window.Deadline.test_utc_conversion_outside_calendar_returns_json_rework) (due='9999-12-31T23:59:59-01:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 41, in test_utc_conversion_outside_calendar_returns_json_rework
+    self.assertEqual(self.run_request(self.payload(due),1)['status'],'REWORK')
+                     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "<workspace>/work/p2p3/staged/track-management-actions/tests/test_deadline_window.py", line 8, in run_request
+    self.assertEqual(p.returncode,code,p.stderr or p.stdout);self.assertEqual(p.stderr,'');return json.loads(p.stdout)
+                                                             ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+AssertionError: 'Traceback (most recent call last):\n  Fil[877 chars]ge\n' != ''
+Diff is 933 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.595s
+
+FAILED (failures=5)

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "classification": "PUBLIC_SYNTHETIC",
+  "fixtures": [
+    {
+      "path": "skills/audit-branch-kpi/assets/demo-ratio.json",
+      "type": "ratio-single-period"
+    },
+    {
+      "path": "skills/review-academic-thesis/tests/fixtures/review-cases.json",
+      "type": "captured-synthetic-review-cases"
+    },
+    {
+      "path": "skills/review-code-change/assets/diff-demo.json",
+      "type": "supplied-diff-not-live-repository"
+    },
+    {
+      "path": "evaluations/fixtures/routing-cases.json",
+      "type": "synthetic-metadata-routing-positive-negative-mixed"
+    },
+    {
+      "path": "evaluations/fixtures/expansion-routing-cases.json",
+      "type": "11workflow-metadata-16syntheticcases"
+    },
+    {
+      "path": "evaluations/fixtures/visual-native.svg",
+      "type": "heldout-native-SVG-source-900x550"
+    },
+    {
+      "path": "evaluations/fixtures/visual-preview-fit.svg",
+      "type": "offline-render-export-copy-same-viewBox"
+    }
+  ]
+}

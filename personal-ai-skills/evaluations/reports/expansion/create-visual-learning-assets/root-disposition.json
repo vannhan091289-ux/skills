@@ -1,0 +1,6 @@
+{
+  "decision": "RESOLVED_BEFORE_INSTALL",
+  "finding": "applications.json pending independent grading at review time",
+  "resolution": "Materialized from25exactmanualassessment quotes; source+fixture hashes recorded; officialformat and9tests passed after RED9missingfixtureerrors. No sourcebehaviorchange or alteredrawanswer.",
+  "ready_evidence": "ready.json"
+}

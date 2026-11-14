@@ -1,0 +1,45 @@
+{
+  "component": "canonical read-only registry validator",
+  "scope": "Builder QA for validator; not independent Challenger QA or native runtime assurance",
+  "status": "STATIC_GO",
+  "dependency": "Existing reviewed venv with PyYAML 6.0.3; no dependency installation performed",
+  "artifacts": [
+    "outputs/personal-ai-skills/evaluations/validate_library.py",
+    "outputs/personal-ai-skills/evaluations/tests/test_registry_validator.py"
+  ],
+  "tdd": [
+    {"phase": "RED", "result": "Expected missing implementation assertion in setUpClass before validator file existed", "exit_code": 5},
+    {"phase": "GREEN", "tests": 15, "elapsed_seconds": 1.09, "exit_code": 0},
+    {"phase": "boundary RED", "tests": 19, "failed": 1, "case": "description with leading space and 1024 content characters incorrectly passed raw 1024 limit", "exit_code": 1},
+    {"phase": "boundary GREEN", "tests": 19, "elapsed_seconds": 1.339, "exit_code": 0}
+  ],
+  "coverage": [
+    "Self-contained canonical fixture with three core and two optional support skills; valid API and CLI counts",
+    "Read-only before/after file hash inventory; optional support omission",
+    "Malformed YAML, duplicate keys across registry/adapter/frontmatter, unsafe YAML tags, unhashable YAML keys",
+    "Wrong scalar/container types including bool-as-integer, duplicate skill names and file records",
+    "Missing core/license, placeholder-only required core resources and fixture/report directories",
+    "Symlink anywhere, traversal/absolute/backslash paths, missing SHA256 and physical file",
+    "Byte tamper, undeclared skill source/executable and adapter file closure",
+    "Four adapter membership, runtime false identity, mode/name/registry-source/instructions agreement",
+    "Exact governance mapping, frontmatter name/description and 1024-character boundary",
+    "Missing Markdown target and cross-skill/library escape links",
+    "Malformed CLI emits JSON REWORK, exit 1, no stderr traceback"
+  ],
+  "full_evaluations_suite_snapshot": {
+    "command": "work/official-skill-validator/venv/bin/python -B -m unittest discover -s outputs/personal-ai-skills/evaluations/tests",
+    "tests": 23,
+    "failed_subtests": 2,
+    "failures": [
+      "test_layout_contract.CanonicalLayout.test_required_top_level_files_exist: README.md absent while root work in progress",
+      "test_layout_contract.CanonicalLayout.test_required_top_level_files_exist: registry.yaml absent while root work in progress"
+    ],
+    "validator_tests": "all 19 pass; no tests weakened for root in progress"
+  },
+  "actual_root_snapshot": {"status": "REWORK", "errors": ["Invalid: missing README.md"], "skills_checked": 0, "adapters_checked": 0},
+  "limitations": [
+    "Hash integrity does not establish source authenticity, host permissions, discovery, installation or native runtime compatibility",
+    "Evidence substance is not semantically judged; required directories must contain regular nonempty files excluding hidden placeholders/cache artifacts",
+    "Root packaging and per-skill checks belong to parent task; complete assembled library must be rerun after registry is created"
+  ]
+}

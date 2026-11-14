@@ -1,0 +1,42 @@
+{
+  "name": "track-management-actions",
+  "status": "READY_FOR_INSTALL",
+  "version": "1.0.1",
+  "files": {
+    "SKILL.md": "479b9050e14c33b3da176bec2ce8338964fd63a8ef2232e6f7135bcd73e3c6f1",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "651d70a44c0f65dda6f2cfa9fbab33228fecd71dcdfcb21c30e25a28dcad480b",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "tests/test_deadline_window.py": "1a76c1a44afa6f29a232016dae9a6743ba445f0ee777dc48db315086a306a2ae",
+    "agents/openai.yaml": "25ee7ee37fb2eede14f78d230370e89b2617619453b197f5900450f44b99b1d1",
+    "scripts/deadline_window.py": "ca63cd2a372d3c7bd874d3cf08aa22fc842dc1f602436e730a9bc570d8af71d8",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "55ac6c52c93acd5dc7266aee397a43c696bff32811b4a016902b494b8d71514f",
+    "tests/fixtures/applications.json": "54247281f64c800fe407cf498bd4570b06349191ee174676a977e5b869ca95b5",
+    "tests/fixtures/case.json": "0621998e96bc10655c71a722996e9eff0784cc304f9816733ab8b46d8d644356"
+  },
+  "checks": [
+    {
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/work/p2p3/staged/track-management-actions",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/work/p2p3/staged/track-management-actions/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_date_only_never_invents_exact_hours (test_deadline_window.Deadline.test_date_only_never_invents_exact_hours) ... ok\ntest_duplicate_id_and_key_rejected (test_deadline_window.Deadline.test_duplicate_id_and_key_rejected) ... ok\ntest_equal_instant_across_offsets (test_deadline_window.Deadline.test_equal_instant_across_offsets) ... ok\ntest_invalid_offset_components_are_not_silently_normalized (test_deadline_window.Deadline.test_invalid_offset_components_are_not_silently_normalized) ... ok\ntest_missing_timezone_and_invalid_calendar_date (test_deadline_window.Deadline.test_missing_timezone_and_invalid_calendar_date) ... ok\ntest_past_timestamp_and_fractional_hours (test_deadline_window.Deadline.test_past_timestamp_and_fractional_hours) ... ok\ntest_thirty_one_hours_not_fifty_five (test_deadline_window.Deadline.test_thirty_one_hours_not_fifty_five) ... ok\ntest_utc_conversion_outside_calendar_returns_json_rework (test_deadline_window.Deadline.test_utc_conversion_outside_calendar_returns_json_rework) ... ok\ntest_wrong_type_and_missing_asof_timezone (test_deadline_window.Deadline.test_wrong_type_and_missing_asof_timezone) ... ok\ntest_changed_answer_invalidates_assessment (test_evidence.Evidence.test_changed_answer_invalidates_assessment) ... ok\ntest_five_independently_assessed_applications (test_evidence.Evidence.test_five_independently_assessed_applications) ... ok\ntest_missing_requirement_cannot_pass (test_evidence.Evidence.test_missing_requirement_cannot_pass) ... ok\ntest_rehashed_answer_without_original_quotes_cannot_pass (test_evidence.Evidence.test_rehashed_answer_without_original_quotes_cannot_pass) ... ok\ntest_rejected_assessment_cannot_pass (test_evidence.Evidence.test_rejected_assessment_cannot_pass) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.696s\n\nOK\n"
+    }
+  ],
+  "manual_independent_criteria_pass": true,
+  "independent_review_status": "REWORK",
+  "root_disposition": {
+    "decision": "ACCEPT_WITH_DEFERRED_MINOR",
+    "finding": "224 whitespace tokens vs test budget220, including Markdown separators",
+    "reason": "All25semanticcriteria and7helpertests pass; no critical/important source finding. Keep raw and REWORK reviewer status visible. Four-token presentation overrun is deferred, not a reason to alter reusable workflow or its correct calculations.",
+    "cost_if_wrong": "Occasional slight output-length overrun; no false deadline/approval or external action."
+  },
+  "baseline": "Five controls observed; no causal improvement claim"
+}

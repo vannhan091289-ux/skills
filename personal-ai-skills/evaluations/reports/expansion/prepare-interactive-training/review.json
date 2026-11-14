@@ -1,0 +1,137 @@
+{
+  "status": "ACCEPTED",
+  "scope": "Đánh giá độc lập tĩnh 1 staged skill prepare-interactive-training cùng guard, workflow contract, output template và mã run_checks.py được liên kết; đối chiếu toàn bộ 5 raw treatment answers green-1 đến green-5 với 5 criteria của 1 case PUBLIC_SYNTHETIC. Cả 5 timeline có các khoảng liên tục 0–3, 3–7, 7–15, 15–22, 22–28, 28–30: tổng 3+4+8+7+6+2=30 phút. Mỗi bản có thực hành hai case, đáp án cụ thể, rubric đề xuất và phản hồi/sửa sai; chuỗi mục tiêu → thực hành → đánh giá/debrief phù hợp. Các liên kết trực tiếp của SKILL đã được đọc; không phát hiện tài nguyên cần cho lesson plan bị thiếu. Độ dài theo từ ngăn bằng khoảng trắng: 220/215/217/219/220.",
+  "findings": [],
+  "assessment_rows": [
+    {
+      "sample": 1,
+      "criteria": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Thay lịch 50 phút bằng 30 phút:"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "cá nhân xử lý biến thể hai case; chấm, phản hồi."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "nhóm trình bày; đối chiếu, sửa, thử lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, câu ngắn, tương phản cao; đọc thành tiếng, trả lời nói/viết; không Internet/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "dưới 80% không chứng minh kém năng lực."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "criteria": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Timeline (đã gồm hướng dẫn/chuyển nhóm):"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Cá nhân xử lý hai case đổi số; nhận phản hồi, sửa."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 1 điểm nhận diện, 1 điểm hành động; thiếu thì luyện lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, tương phản cao; đọc thành tiếng; trả lời nói/viết; nhãn không chỉ dùng màu."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "Không suy năng lực/HR từ ngưỡng 80%."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "criteria": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "hướng dẫn/chuyển nhóm 1 phút, mỗi case 3 phút, ghi 1 phút."
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Mỗi case: nêu vấn đề, hành động, kết luận tạm thời."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 3 điểm—nhận diện, bước kiểm, giới hạn kết luận; thiếu thì luyện lại."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "In chữ lớn, tương phản cao, câu ngắn cho hai người; đọc đề; trả lời nói/viết."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "Không dùng ngưỡng 80% quyết định HR/chứng nhận."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "criteria": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "gồm chuyển nhóm/đọc đề;"
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Nhóm xử lý hai case, nộp dấu hiệu và bước xác minh."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "Thiếu thì hướng dẫn làm lại;"
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "In chữ lớn, tương phản rõ, câu ngắn; đọc thành lời; trả lời nói/viết; không cần Internet/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "không quyết định HR/chứng nhận/lập lịch."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "criteria": {
+        "time-budget": {
+          "accepted": true,
+          "quote": "Chuyển cảnh đã tính."
+        },
+        "observable-objective-alignment": {
+          "accepted": true,
+          "quote": "Cá nhân giải hai case; phản hồi theo rubric."
+        },
+        "interactive-exercise-and-feedback": {
+          "accepted": true,
+          "quote": "mỗi case 2 điểm: nhận diện vấn đề (1), chọn bước kiểm phù hợp (1)."
+        },
+        "offline-and-accessibility": {
+          "accepted": true,
+          "quote": "hai bản chữ lớn, tương phản rõ; đọc thành lời; nhận nói/viết; không mạng/login."
+        },
+        "no-hr-decision": {
+          "accepted": true,
+          "quote": "dưới 80% không chứng minh kém năng lực/HR/chứng nhận."
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Chỉ đánh giá 5 mẫu của 1 case giả lập; không khái quát độ tin cậy của skill trên tình huống khác hoặc suy hiệu quả nhân quả so với baseline. Không đọc baseline hay các kết luận trước.",
+    "Không thực thi mã nguồn, tests/fixtures, network hoặc hành động bên ngoài; không cài/sửa skill. run_checks.py chỉ được đọc, chưa xác minh kết quả checks hay toàn bộ test resources.",
+    "Chưa quan sát buổi đào tạo hoặc học viên thật; không phải pilot hay chứng minh hiệu quả học tập/accessibility thực tế. Mọi mẫu đều nêu chưa pilot; không thực hiện quyết định HR, chứng nhận, gửi dữ liệu hay đặt lịch."
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "INSTALLED_VERIFIED",
+  "date": "2026-11-08",
+  "skill": "review-business-policy",
+  "version": "1.0.0",
+  "target": "$HOME/.agents/skills/review-business-policy",
+  "files": {
+    "SKILL.md": "69d394e0feb3195096f72a553223e3c5cf3a3fbd73240760bdfd88ec00f167ae",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "508ca8b7cbf6d8490a027b0e7a17b3b7397667a05536d52e67da0f6eae82dedf",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "agents/openai.yaml": "13ddd524b2aa5d784eb4009d4ea2a306f66a22415ca0d7e51554a8c1a9e9ef28",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "1f542173faf7648fed4ebe8c9c3103466757c3e177e92c5858140f817274c1ef",
+    "tests/fixtures/applications.json": "ee32bdc73bc0376c0b608e014647beed57573a14608f4624758889a1506a55bc",
+    "tests/fixtures/case.json": "e96ca6bd4c3ba517a2056a893828717872593a73c7e7bc0cc7ec46046233d5d7"
+  },
+  "source": "Reviewed first-party local candidate; same bytes will be published in canonical feature branch",
+  "method": "Official Codex installer validation/copy helpers; no network",
+  "existing_skills_overwritten": false,
+  "app_config_modified": false,
+  "third_party_code_executed": false,
+  "discovery": "USER folder installed; explicit fresh CLI pilot recorded separately"
+}

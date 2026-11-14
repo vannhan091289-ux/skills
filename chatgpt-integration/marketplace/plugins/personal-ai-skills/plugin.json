@@ -1,0 +1,6 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "personal-ai-skills",
+  "version": "1.1.0",
+  "description": "Vietnamese evidence-based personal workflows; eleven reviewed skills."
+}

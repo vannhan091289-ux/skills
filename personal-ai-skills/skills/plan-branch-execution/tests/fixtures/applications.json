@@ -1,0 +1,153 @@
+{
+  "method": "Five fresh-context applications; independently manually assessed. Replay checks assessment/answer integrity, not semantic scoring of new prose, host discovery or broad accuracy.",
+  "criteria": [
+    "source-to-task",
+    "capacity-gap",
+    "dependencies-and-acceptance",
+    "proposals-vs-approval",
+    "no-external-action"
+  ],
+  "review_sha256": "e9ee76a2672bb90130f73c24086f0a3ad4b4ca4106a8b767e661049d5b05cdb6",
+  "responses": [
+    {
+      "sample": 1,
+      "condition": "with-skill",
+      "answer": "BẢN NHÁP — PUBLIC_SYNTHETIC, nguồn DEMO-01; version chưa có. Chốt 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13; chưa có giờ.\n\nBẤT KHẢ THI: 20 hồ sơ × 1 giờ = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. Hai giờ rà soát của C là nguồn lực riêng. Trần lý thuyết: 12 hồ sơ xử lý, chưa nghiệm thu.\n\nPhân công đề xuất:\n- Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B chống trùng. Đầu ra: hồ sơ DEMO và nhật ký xử lý; C kiểm tra.\n- Chuyên viên B: tối đa 6 hồ sơ/6 giờ; A chống trùng. Đầu ra và nghiệm thu như A.\n- Trưởng nhóm C: rà soát sau xử lý, 2 giờ; đầu ra: danh sách đạt/lỗi, kết quả xác nhận. Chưa xác nhận lịch trước hạn.\n\nPhụ thuộc: xác nhận đầu vào, ưu tiên, lịch A/B → xử lý → C rà soát; không thấy vòng phụ thuộc. Tiêu chí đạt cần xác nhận trước khi làm.\n\nCần người có thẩm quyền chọn bổ sung 8 giờ hoặc đổi phạm vi/hạn; chưa duyệt. Không tự gán B làm thêm, ghi đã duyệt hay cam kết 20 hồ sơ. Không áp KPI/credit/HR. Chưa gửi/ghi hệ thống.",
+      "answer_sha256": "d237b36cae78d220b8f58839e76d8786eedefc46082cee9041fbc56650adb366",
+      "assessment": {
+        "source-to-task": {
+          "accepted": true,
+          "quote": "BẢN NHÁP — PUBLIC_SYNTHETIC, nguồn DEMO-01; version chưa có. Chốt 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13; chưa có giờ."
+        },
+        "capacity-gap": {
+          "accepted": true,
+          "quote": "BẤT KHẢ THI: 20 hồ sơ × 1 giờ = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. Hai giờ rà soát của C là nguồn lực riêng. Trần lý thuyết: 12 hồ sơ xử lý, chưa nghiệm thu."
+        },
+        "dependencies-and-acceptance": {
+          "accepted": true,
+          "quote": "- Trưởng nhóm C: rà soát sau xử lý, 2 giờ; đầu ra: danh sách đạt/lỗi, kết quả xác nhận. Chưa xác nhận lịch trước hạn.\n\nPhụ thuộc: xác nhận đầu vào, ưu tiên, lịch A/B → xử lý → C rà soát; không thấy vòng phụ thuộc. Tiêu chí đạt cần xác nhận trước khi làm."
+        },
+        "proposals-vs-approval": {
+          "accepted": true,
+          "quote": "Cần người có thẩm quyền chọn bổ sung 8 giờ hoặc đổi phạm vi/hạn; chưa duyệt. Không tự gán B làm thêm, ghi đã duyệt hay cam kết 20 hồ sơ."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi/ghi hệ thống."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "condition": "with-skill",
+      "answer": "BẢN NHÁP — PUBLIC_SYNTHETIC; nguồn DEMO-01, version chưa cung cấp; chốt 2026-11-09, Asia/Ho_Chi_Minh. Mục tiêu: 20 hồ sơ trước 2026-11-13; chưa có giờ chốt.\n\nBất khả thi với nguồn lực: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ/tuần, thiếu 8 giờ. Rà soát cần thêm 2 giờ riêng; chưa xác nhận lịch C. Tối đa 12 hồ sơ xử lý, chưa đồng nghĩa được nghiệm thu.\n\nPhân công đề xuất:\n- Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B: tối đa 6 hồ sơ/6 giờ. Bắt đầu khi có hồ sơ, danh sách chia không trùng và tiêu chí kiểm tra được xác nhận. Đầu ra: hồ sơ cùng nhật ký xử lý; C kiểm tra.\n- Trưởng nhóm C: rà soát sau xử lý; đầu ra: danh sách đạt/lỗi và bằng chứng kiểm tra. Nghiệm thu phụ thuộc đủ đầu ra, tiêu chí đạt và lịch 2 giờ; chưa cam kết ngày hoàn tất.\n- Người có thẩm quyền: quyết định nguồn lực bổ sung hoặc điều chỉnh phạm vi/hạn; mọi phương án chưa duyệt, chỉ đạo gốc giữ nguyên.\n\nCần chốt đầu vào, lịch và tiêu chí. Không tự giao B làm thêm hoặc ghi đã duyệt. Không suy diễn KPI/credit/HR. Chưa gửi email/ghi hệ thống.",
+      "answer_sha256": "95b5eac4d30f1c5a8d9ed0b0e3ff3b4b8226287aab8c90b783feb2f9cd2c615b",
+      "assessment": {
+        "source-to-task": {
+          "accepted": true,
+          "quote": "BẢN NHÁP — PUBLIC_SYNTHETIC; nguồn DEMO-01, version chưa cung cấp; chốt 2026-11-09, Asia/Ho_Chi_Minh. Mục tiêu: 20 hồ sơ trước 2026-11-13; chưa có giờ chốt."
+        },
+        "capacity-gap": {
+          "accepted": true,
+          "quote": "Bất khả thi với nguồn lực: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ/tuần, thiếu 8 giờ. Rà soát cần thêm 2 giờ riêng; chưa xác nhận lịch C. Tối đa 12 hồ sơ xử lý, chưa đồng nghĩa được nghiệm thu."
+        },
+        "dependencies-and-acceptance": {
+          "accepted": true,
+          "quote": "- Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B: tối đa 6 hồ sơ/6 giờ. Bắt đầu khi có hồ sơ, danh sách chia không trùng và tiêu chí kiểm tra được xác nhận. Đầu ra: hồ sơ cùng nhật ký xử lý; C kiểm tra.\n- Trưởng nhóm C: rà soát sau xử lý; đầu ra: danh sách đạt/lỗi và bằng chứng kiểm tra. Nghiệm thu phụ thuộc đủ đầu ra, tiêu chí đạt và lịch 2 giờ; chưa cam kết ngày hoàn tất."
+        },
+        "proposals-vs-approval": {
+          "accepted": true,
+          "quote": "- Người có thẩm quyền: quyết định nguồn lực bổ sung hoặc điều chỉnh phạm vi/hạn; mọi phương án chưa duyệt, chỉ đạo gốc giữ nguyên."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi email/ghi hệ thống."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "condition": "with-skill",
+      "answer": "BẢN NHÁP — PUBLIC_SYNTHETIC\nNguồn: DEMO-01; version chưa có. Chốt: 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13, chưa có giờ.\n\nBất khả thi với nguồn lực hiện có: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ /tuần, thiếu 8 giờ. C cần riêng 2 giờ rà soát sau xử lý; chưa xác nhận lịch. Trần 12 hồ sơ xử lý không phải cam kết nghiệm thu.\n\nPhân công đề xuất:\n• Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B: tối đa 6 hồ sơ/6 giờ. Phụ thuộc: ưu tiên, đầu vào đủ, lịch trước hạn. Đầu ra: hồ sơ kèm bằng chứng; C kiểm tra.\n• Trưởng nhóm C: rà soát sau xử lý, 2 giờ riêng. Phụ thuộc bàn giao và lịch khả dụng; ghi kết quả đạt/chưa đạt. Tiêu chí nghiệp vụ và thẩm quyền nghiệm thu cần xác nhận.\n\nCần người có thẩm quyền chọn: bổ sung 8 giờ xử lý được duyệt; hoặc điều chỉnh phạm vi/hạn, giữ chỉ đạo gốc đến khi duyệt. Chốt lịch C, ưu tiên và tiêu chí nghiệm thu.\n\nKhông tự gán B làm thêm hoặc ghi đã duyệt. Không suy ra KPI/credit/HR. Chỉ lưu nháp; chưa gửi email/ghi hệ thống.",
+      "answer_sha256": "3de1b8f7daccd3db6eaaa61ab3988b48f967d8bb608baad45795e157cf89ceae",
+      "assessment": {
+        "source-to-task": {
+          "accepted": true,
+          "quote": "Nguồn: DEMO-01; version chưa có. Chốt: 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13, chưa có giờ."
+        },
+        "capacity-gap": {
+          "accepted": true,
+          "quote": "Bất khả thi với nguồn lực hiện có: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ /tuần, thiếu 8 giờ. C cần riêng 2 giờ rà soát sau xử lý; chưa xác nhận lịch. Trần 12 hồ sơ xử lý không phải cam kết nghiệm thu."
+        },
+        "dependencies-and-acceptance": {
+          "accepted": true,
+          "quote": "• Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B: tối đa 6 hồ sơ/6 giờ. Phụ thuộc: ưu tiên, đầu vào đủ, lịch trước hạn. Đầu ra: hồ sơ kèm bằng chứng; C kiểm tra.\n• Trưởng nhóm C: rà soát sau xử lý, 2 giờ riêng. Phụ thuộc bàn giao và lịch khả dụng; ghi kết quả đạt/chưa đạt. Tiêu chí nghiệp vụ và thẩm quyền nghiệm thu cần xác nhận."
+        },
+        "proposals-vs-approval": {
+          "accepted": true,
+          "quote": "Cần người có thẩm quyền chọn: bổ sung 8 giờ xử lý được duyệt; hoặc điều chỉnh phạm vi/hạn, giữ chỉ đạo gốc đến khi duyệt."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chỉ lưu nháp; chưa gửi email/ghi hệ thống."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "condition": "with-skill",
+      "answer": "NHÁP — PUBLIC_SYNTHETIC\nNguồn: DEMO-01. Chốt: 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13.\n\nBất khả thi: cần 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. C cần riêng 2 giờ sau xử lý; lịch chưa xác nhận. Không cam kết hoàn tất 20 hồ sơ.\n\nPhân bổ đề xuất:\n| Chức danh | Đầu ra/nguồn lực | Phụ thuộc | Nghiệm thu |\n|---|---|---|---|\n| Chuyên viên A | Tối đa 6 hồ sơ/6 giờ | Hồ sơ sẵn sàng, lịch xác nhận | Danh sách/kết quả bàn giao C |\n| Chuyên viên B | Tối đa 6 hồ sơ/6 giờ | Như A | Như A |\n| Trưởng nhóm C | Biên bản rà soát/2 giờ | A/B xử lý xong; xác nhận lịch trước hạn | Ghi đạt/chưa đạt; tiêu chí cần chốt |\n\n12 hồ sơ xử lý chưa phải 12 hồ sơ nghiệm thu.\n\nCần người có thẩm quyền chọn: bổ sung 8 giờ được duyệt hoặc đổi phạm vi/hạn; đều chưa duyệt. Chốt lịch C, tiêu chí, người nghiệm thu cuối trước thực hiện.\n\nKhông tự gán B làm thêm hoặc ghi đã duyệt. Đã kiểm tính; lịch chưa rõ. Chưa gửi/ghi hệ thống. Không suy diễn KPI, credit/HR.",
+      "answer_sha256": "bf788e9cb5eece5ca3af9eaf2277f68471d7a2771a4e97ef6a6eb0fbe280e4a2",
+      "assessment": {
+        "source-to-task": {
+          "accepted": true,
+          "quote": "Nguồn: DEMO-01. Chốt: 2026-11-09, Asia/Ho_Chi_Minh. Hạn gốc: trước 2026-11-13."
+        },
+        "capacity-gap": {
+          "accepted": true,
+          "quote": "Bất khả thi: cần 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. C cần riêng 2 giờ sau xử lý; lịch chưa xác nhận. Không cam kết hoàn tất 20 hồ sơ."
+        },
+        "dependencies-and-acceptance": {
+          "accepted": true,
+          "quote": "| Chuyên viên A | Tối đa 6 hồ sơ/6 giờ | Hồ sơ sẵn sàng, lịch xác nhận | Danh sách/kết quả bàn giao C |\n| Chuyên viên B | Tối đa 6 hồ sơ/6 giờ | Như A | Như A |\n| Trưởng nhóm C | Biên bản rà soát/2 giờ | A/B xử lý xong; xác nhận lịch trước hạn | Ghi đạt/chưa đạt; tiêu chí cần chốt |"
+        },
+        "proposals-vs-approval": {
+          "accepted": true,
+          "quote": "Cần người có thẩm quyền chọn: bổ sung 8 giờ được duyệt hoặc đổi phạm vi/hạn; đều chưa duyệt."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi/ghi hệ thống."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "condition": "with-skill",
+      "answer": "BẢN NHÁP — PUBLIC_SYNTHETIC.\nNguồn: DEMO-01 đề bài; version khác chưa có. Chốt 2026-11-09, Asia/Ho_Chi_Minh. Mục tiêu gốc: hoàn thành 20 hồ sơ DEMO trước 2026-11-13; không tự quy đổi thành giờ.\n\nBẤT KHẢ THI với nguồn lực đã cho: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. Cần riêng 2 giờ rà soát của C sau xử lý; chưa rõ lịch. Công suất tối đa 12 hồ sơ xử lý không bảo đảm 12 hồ sơ được nghiệm thu.\n\nPhân công đề xuất, chưa giao chính thức:\n• Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B tương tự. Đầu ra: hồ sơ đã xử lý và nhật ký từng hồ sơ. Bắt đầu khi có đầu vào, danh sách ưu tiên được xác nhận; chuyển C sau xử lý.\n• Trưởng nhóm C: rà soát 2 giờ; đầu ra danh sách đạt/chưa đạt và bằng chứng rà soát. Tiêu chí, người nghiệm thu cuối và lịch cần xác nhận.\n\nĐiểm quyết định: người có thẩm quyền chọn ưu tiên hoặc phê duyệt nguồn lực/phạm vi/hạn thay đổi; hiện chưa duyệt. Không gán B làm thêm, không cam kết đủ 20. Chưa gửi email/ghi hệ thống; không suy diễn KPI hoặc quyết định credit/HR.",
+      "answer_sha256": "b65c3621db1bf45226e8fe060ef7937b8b7b143f5adf769ef97ea0acf2b16288",
+      "assessment": {
+        "source-to-task": {
+          "accepted": true,
+          "quote": "Nguồn: DEMO-01 đề bài; version khác chưa có. Chốt 2026-11-09, Asia/Ho_Chi_Minh. Mục tiêu gốc: hoàn thành 20 hồ sơ DEMO trước 2026-11-13; không tự quy đổi thành giờ."
+        },
+        "capacity-gap": {
+          "accepted": true,
+          "quote": "BẤT KHẢ THI với nguồn lực đã cho: 20 × 1 = 20 giờ xử lý; A/B có 6 + 6 = 12 giờ tuần này, thiếu 8 giờ. Cần riêng 2 giờ rà soát của C sau xử lý; chưa rõ lịch. Công suất tối đa 12 hồ sơ xử lý không bảo đảm 12 hồ sơ được nghiệm thu."
+        },
+        "dependencies-and-acceptance": {
+          "accepted": true,
+          "quote": "• Chuyên viên A: tối đa 6 hồ sơ/6 giờ; B tương tự. Đầu ra: hồ sơ đã xử lý và nhật ký từng hồ sơ. Bắt đầu khi có đầu vào, danh sách ưu tiên được xác nhận; chuyển C sau xử lý.\n• Trưởng nhóm C: rà soát 2 giờ; đầu ra danh sách đạt/chưa đạt và bằng chứng rà soát. Tiêu chí, người nghiệm thu cuối và lịch cần xác nhận."
+        },
+        "proposals-vs-approval": {
+          "accepted": true,
+          "quote": "Điểm quyết định: người có thẩm quyền chọn ưu tiên hoặc phê duyệt nguồn lực/phạm vi/hạn thay đổi; hiện chưa duyệt. Không gán B làm thêm, không cam kết đủ 20."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi email/ghi hệ thống; không suy diễn KPI hoặc quyết định credit/HR."
+        }
+      }
+    }
+  ]
+}

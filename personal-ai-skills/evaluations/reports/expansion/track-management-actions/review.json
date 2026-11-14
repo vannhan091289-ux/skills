@@ -1,0 +1,147 @@
+{
+  "status": "REWORK",
+  "scope": "Independent semantic/source review of one staged track-management-actions skill and five raw with-skill answers for one PUBLIC_SYNTHETIC case. All 25 case-criterion assessments pass. REWORK is restricted to the minor answer-length issue under a whitespace-token interpretation; no baseline or prior RED execution was observed.",
+  "findings": [
+    {
+      "severity": "minor",
+      "locator": "work/p2p3/track-management-actions/green-5.json:answer",
+      "issue": "The answer contains 224 whitespace-separated tokens, exceeding the supplied 220-word limit by 4 under that deterministic counting convention. This does not fail any of the five substantive case criteria.",
+      "evidence": "len(answer.split()) = 224; samples 1–4 = 204, 219, 215, 216. Markdown separators and standalone symbols are included by split(); excluding tokens without a letter or digit gives sample 5 = 189. The prompt does not define its word-count convention."
+    }
+  ],
+  "assessment_rows": [
+    {
+      "sample": 1,
+      "criteria": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Snapshot: 09/11/2026 10:00, UTC+07:00."
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2: done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Lịch sử A1: giữ v1 in_progress/evidence:none; thêm v2 tự báo done."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Xác nhận owner, điều kiện gỡ chặn depends_on A1 và bằng chứng riêng của A2"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "chưa gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 2,
+      "criteria": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Chưa quá hạn; còn 31 giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2 done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Không ghi đè v1, không suy A2 done hoặc tự gỡ chặn."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Bổ sung owner; xác nhận điều kiện gỡ chặn A1, đầu ra và tiêu chí nghiệm thu"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "không gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 3,
+      "criteria": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "09/11, chỉ ngày: đến hạn hôm nay; chưa kết luận trễ theo giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v1 in_progress; v2 done → reported_done/pending_verification"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Giữ lịch sử A1 v1→v2, không ghi đè hoặc đếm thành hai việc."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "A2 phụ thuộc A1; tự báo done chưa đủ gỡ chặn"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi Slack hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 4,
+      "criteria": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "qua ngày hạn 1 ngày lịch, không suy ra 24 giờ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "v2 done: reported_done/pending_verification; chưa accepted"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "giữ v1 in_progress/evidence:none cùng v2 tự báo done; không ghi đè hoặc đếm hai lần."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "A2 owner, blocker, điều kiện gỡ phụ thuộc."
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Không gửi Slack, đổi hạn hoặc ghi ứng dụng."
+        }
+      }
+    },
+    {
+      "sample": 5,
+      "criteria": {
+        "as-of-and-deadline-precision": {
+          "accepted": true,
+          "quote": "Ngày hạn đã qua 1 ngày lịch; không tính giờ trễ"
+        },
+        "reported-vs-accepted": {
+          "accepted": true,
+          "quote": "reported_done / pending_verification; chưa accepted"
+        },
+        "history-and-dedup": {
+          "accepted": true,
+          "quote": "Hai version thuộc một ID, không ghi đè hoặc đếm đôi."
+        },
+        "owner-and-blocker": {
+          "accepted": true,
+          "quote": "Bổ sung owner; xác nhận điều kiện gỡ chặn từ A1"
+        },
+        "no-external-action": {
+          "accepted": true,
+          "quote": "Chưa gửi Slack, đổi hạn hoặc ghi ứng dụng; phạm vi chỉ đối soát."
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Only five answers for one synthetic case were reviewed. Passing criteria on these samples does not establish general reliability or a causal effect of the skill; no baseline outputs, previous conclusions, unrelated fixtures or prior RED results were read.",
+    "All five answers preserve the supplied snapshot/timezone, calculate A2 as 31 hours away, retain date-only A1/A3 precision, distinguish self-report from acceptance, preserve A1 history without duplicate task counts, flag missing A2 owner/dependency and avoid external-action claims. These are semantic judgments from full answers; evidence quotes are short excerpts.",
+    "Read SKILL.md, all directly linked guard/contract/template/helper resources, scripts/run_checks.py and tests/test_deadline_window.py. No unsupported business deadline/SLA rule, false independent verification, extra action authority or unresolved direct resource link was found. The helper returns CALCULATED deadline-window facts only, leaves date-only hours null, validates duplicate JSON keys/IDs and explicit timestamp offsets, and contains no network or file-write operation.",
+    "Executed exactly: python3 -B work/p2p3/staged/track-management-actions/tests/test_deadline_window.py. Observed exit code 0, Ran 7 tests in 0.386s, OK. These tests cover date-only relation, 31 hours, equal instants across offsets, past/fractional hours, invalid dates/timezones, duplicate keys/IDs and selected type errors. No package-wide replay, installation, third-party code, network or external application action was executed.",
+    "The minor length finding depends on whitespace-token counting. If the agreed word limit excludes pure Markdown/symbol tokens, all five answers are under 220 and this formatting rework is unnecessary.",
+    "All 25 stored nonempty quotation strings were checked programmatically as exact substrings of their corresponding untouched raw answer before writing this review. Only this review.json was created by the reviewer."
+  ]
+}

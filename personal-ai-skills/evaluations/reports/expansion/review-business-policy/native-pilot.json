@@ -1,0 +1,49 @@
+{
+  "name": "review-business-policy",
+  "priority": "P2",
+  "codex_cli_version": "0.167.0",
+  "process_exit_code": 0,
+  "scope": "One new read-only CLI session, explicit invocation on heldout PUBLIC_SYNTHETIC packet; not host implicit routing/fulladapter lifecycle",
+  "input_prompt": "Dùng $review-business-policy từ bản cài USER đã có để thực hiện bài tập giả lập sau. Chỉ đọc và phân tích/tạo nội dung inline; không network, subagent, gửi/ghi ứng dụng, sửa file/config, thực thi script/test/targetcode, merge/deploy. Chỉ đọc SKILL.md/resources cần thiết từ bản cài. Không đọc báo cáo, test fixtures hoặc câu trả lời khác trong workspace.\nTrước khi đọc file, ghi skill có xuất hiện trong metadata host lúc đầu phiên hay không; không suy từ tự tìm thư mục, không biết ghi unknown.\nPUBLIC_SYNTHETIC as-of2026-11-09. DEMO-v1§2phí2points,effective2026-01-01,scopeSME; DEMO-v2§2phí3points,effective2026-12-01,scoperetail,§3dẫnAnnexBchưacungcấp. CasekháchDEMOthuộcSME. Emaildraftkhôngkýđềnghịápv2ngayvàthayphíSME. Phântíchscope/version/effectivedate/authority/annex, thayđổiđềxuấtvàviệccầnxácminh. KhôngđượccoiràngbuộcDEMOlàluật/chínhsáchngânhàngthật, khôngphêduyệtngoạilệhoặcthayhệthống.\nTrả duy nhất một JSON {\"skill_name\":\"review-business-policy\",\"listed_in_initial_metadata\":true|false|\"unknown\",\"metadata_evidence\":\"trích ngắn hoặc unknown\",\"loaded_paths\":[...],\"result\":\"đầu ra tiếng Việt thực tế; không chỉ tóm tắt quy trình; các con số là suy luận packet, không giả tool/runtime/render\"}. Tối đa600từ (SVGsource có thể dài thêm nếu cần để đúng dữ liệu/bố cục).\n",
+  "answer": {
+    "skill_name": "review-business-policy",
+    "listed_in_initial_metadata": true,
+    "metadata_evidence": "review-business-policy: Use when người dùng yêu cầu phân tích chính sách… (file: r1/review-business-policy/SKILL.md)",
+    "loaded_paths": [
+      "<user-home>/.agents/skills/review-business-policy/SKILL.md",
+      "<user-home>/.agents/skills/review-business-policy/references/usage-guard.md",
+      "<user-home>/.agents/skills/review-business-policy/references/workflow-contract.md",
+      "<user-home>/.agents/skills/review-business-policy/assets/output-template.md"
+    ],
+    "result": "Phân tích PUBLIC_SYNTHETIC tại as-of 2026-11-09, khách DEMO thuộc SME. Đây là dữ liệu giả lập, không xác nhận luật hoặc chính sách ngân hàng thật. Chỉ có nội dung packet, chưa có toàn văn.\n\n| Issue/locator | Đối chiếu | Kết luận |\n|---|---|---|\n| Scope — DEMO-v1§2/v2§2 | v1: SME; v2: retail; khách: SME | supported: v1 khớp đối tượng; không có căn cứ mở scope v2 sang SME. |\n| Hiệu lực — v1§2/v2§2 | v1: 2026-01-01; v2: 2026-12-01 | supported: tại as-of, đã tới ngày hiệu lực v1, chưa tới v2. Chưa được cung cấp ngày hết hiệu lực. |\n| Phí — v1§2/v2§2 | 2 points → 3 points | supported: chênh +1 point; tương đối (3−2)/2 = +50%. Đây là phép so sánh số trong packet, không chứng minh phí SME đã đổi. |\n| Authority/version — email draft; v1/v2 | Email không ký đề nghị áp v2 ngay và thay phí SME | pending: chưa có bằng chứng thẩm quyền, phê duyệt hoặc quy tắc thay thế/chuyển tiếp. Tên v2 và ngày hiệu lực không chứng minh approved. Email draft không tự sửa scope hoặc hiệu lực. |\n| Annex — v2§3 → Annex B | Annex B chưa cung cấp | pending: not_provided/unverified; chưa biết điều kiện hoặc tác động tới phí. Không suy nội dung phụ lục. |\n\nNguồn và giới hạn: v1§2, v2§2–§3 và email chỉ được cung cấp dạng tóm tắt (partial); Annex B chưa đọc. Ngày ban hành, trạng thái approved của v1/v2, người ban hành, địa bàn/đơn vị và căn cứ thẩm quyền đều chưa được cung cấp.\n\nDiễn giải có điều kiện: v1§2 là căn cứ phù hợp hơn về scope và timeline cho case SME; chưa đủ chứng cứ xác nhận được phép áp phí thực tế. Kể cả từ 2026-12-01, scope retail của v2 vẫn không tự bao gồm SME.\n\nĐề xuất reviewer: sửa draft thành yêu cầu thẩm định việc áp sớm và mở scope; không viết như chỉ thị đã có hiệu lực. Giữ 2 points và 3 points đúng ngữ cảnh từng bản, không quy đổi thành tiền.\n\nViệc cần xác minh:\n| Đầu mối đề xuất | Bằng chứng cần | Tác động khi thiếu |\n|---|---|---|\n| Chủ chính sách | Bản phê duyệt, thẩm quyền ký, hiệu lực, thay thế/chuyển tiếp và phạm vi SME/retail | Chưa chốt bản được phép áp dụng. |\n| Đơn vị quản lý tài liệu | Toàn văn v1/v2 và Annex B đúng phiên bản | Chưa chốt đầy đủ điều kiện/phí cuối cùng. |\n| Đầu mối nghiệp vụ | Căn cứ phân loại SME và định nghĩa points | Chưa xác nhận cách tính cho case. |\n\nKhông phê duyệt ngoại lệ hay thay hệ thống; chưa chạy test/runtime/render."
+  },
+  "raw_answer_sha256_before_path_redaction": "3418a248cc439d9a0e8745c4e3995d3399ea25ed4ec4e4968b1a3b33f9e562f3",
+  "observed_commands": [
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/review-business-policy/SKILL.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/review-business-policy/assets/output-template.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/review-business-policy/references/workflow-contract.md'",
+      "exit_code": 0
+    },
+    {
+      "command": "/bin/zsh -lc 'cat <user-home>/.agents/skills/review-business-policy/references/usage-guard.md'",
+      "exit_code": 0
+    }
+  ],
+  "startup_item_warnings": [
+    "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in <user-home>/.codex/config.toml."
+  ],
+  "startup_stderr_warning_classes": [
+    "plugin icon path",
+    "state database"
+  ],
+  "model_identifier": null,
+  "limits": "Initial metadata presence is agent-reported; reads and turn.completed observed, no separate catalog instrumentation. No claim of independent real-data verification.",
+  "skill_version_at_capture": "1.0.0"
+}

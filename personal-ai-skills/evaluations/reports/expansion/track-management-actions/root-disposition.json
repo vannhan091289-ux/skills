@@ -1,0 +1,6 @@
+{
+  "decision": "ACCEPT_WITH_DEFERRED_MINOR",
+  "finding": "224 whitespace tokens vs test budget220, including Markdown separators",
+  "reason": "All25semanticcriteria and7helpertests pass; no critical/important source finding. Keep raw and REWORK reviewer status visible. Four-token presentation overrun is deferred, not a reason to alter reusable workflow or its correct calculations.",
+  "cost_if_wrong": "Occasional slight output-length overrun; no false deadline/approval or external action."
+}

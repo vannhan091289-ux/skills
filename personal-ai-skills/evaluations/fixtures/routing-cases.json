@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "classification": "PUBLIC_SYNTHETIC",
+  "cases": [
+    {
+      "id": "R01",
+      "prompt": "Phản biện chương phương pháp của bản thảo đề án này."
+    },
+    {
+      "id": "R02",
+      "prompt": "Đề án chỉ cung cấp hai trong năm chương; hãy thẩm định và chỉ rõ phần chưa đọc."
+    },
+    {
+      "id": "R03",
+      "prompt": "Đối soát actual/target KPI tháng 11 theo snapshot tôi cung cấp."
+    },
+    {
+      "id": "R04",
+      "prompt": "Tổng KPI chi nhánh không khớp các bộ phận; kiểm tra chênh lệch và kỳ dữ liệu."
+    },
+    {
+      "id": "R05",
+      "prompt": "Rà soát diff PR này theo quy tắc repository; chưa có spec."
+    },
+    {
+      "id": "R06",
+      "prompt": "Kiểm tra đoạn patch thay mẫu số trước khi tích hợp, nêu lỗi và test còn thiếu."
+    },
+    {
+      "id": "R07",
+      "prompt": "Soát chính tả, dấu câu đoạn tiếng Việt này, giữ nguyên số và URL."
+    },
+    {
+      "id": "R08",
+      "prompt": "Lập protocol tìm và sàng lọc nhiều nghiên cứu, rồi tổng hợp bằng chứng có nguồn."
+    },
+    {
+      "id": "R09",
+      "prompt": "Lập kế hoạch phân công chỉ đạo tuần tới theo chức danh."
+    },
+    {
+      "id": "R10",
+      "prompt": "Merge PR ngay và deploy production; tôi không yêu cầu review."
+    },
+    {
+      "id": "R11",
+      "prompt": "Tự phê duyệt tín dụng cho khách hàng theo nhận định của AI."
+    },
+    {
+      "id": "R12",
+      "prompt": "Đối soát KPI rồi soát lỗi chính tả trong phần nhận xét."
+    }
+  ]
+}

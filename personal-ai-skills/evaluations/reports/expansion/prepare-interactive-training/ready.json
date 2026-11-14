@@ -1,0 +1,35 @@
+{
+  "name": "prepare-interactive-training",
+  "status": "READY_FOR_INSTALL",
+  "version": "1.0.0",
+  "files": {
+    "SKILL.md": "23dcfdaa21fe027f562dd3a96da1f86e039fb1c37882895356721e891280de33",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "2c3bf973f7e695e9ee4fc9b12ff8fbd1fa3e3e9224cbc96a0d3face39b4a395f",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "agents/openai.yaml": "d0f01371d0f5500fcf4afcd7e9da6cbb7e69e5152d58e66ffdf45ee576fac147",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "cbba758cea9b9e64a2cfcb14f7232aaf900fa48582bb48c22c9b85555cd967f4",
+    "tests/fixtures/applications.json": "bc18d7355e3e31cbec759fe9edcc98c0e261f961a1da624ec97d84326b8730f6",
+    "tests/fixtures/case.json": "36d9abd43499ff10bd81b657b265e75fa12ce7b5761a714170d4999d563603e3"
+  },
+  "checks": [
+    {
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <user-home>/.codex/skills/.system/skill-creator/scripts/quick_validate.py <workspace>/work/p2p3/staged/prepare-interactive-training",
+      "exit_code": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "command": "<workspace>/work/official-skill-validator/venv/bin/python -B <workspace>/work/p2p3/staged/prepare-interactive-training/scripts/run_checks.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_changed_answer_invalidates_assessment (test_evidence.Evidence.test_changed_answer_invalidates_assessment) ... ok\ntest_five_independently_assessed_applications (test_evidence.Evidence.test_five_independently_assessed_applications) ... ok\ntest_missing_requirement_cannot_pass (test_evidence.Evidence.test_missing_requirement_cannot_pass) ... ok\ntest_rehashed_answer_without_original_quotes_cannot_pass (test_evidence.Evidence.test_rehashed_answer_without_original_quotes_cannot_pass) ... ok\ntest_rejected_assessment_cannot_pass (test_evidence.Evidence.test_rejected_assessment_cannot_pass) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n"
+    }
+  ],
+  "manual_independent_criteria_pass": true,
+  "independent_review_status": "ACCEPTED",
+  "root_disposition": null,
+  "baseline": "Five controls observed; no causal improvement claim"
+}

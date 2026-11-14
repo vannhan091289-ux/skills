@@ -1,0 +1,6 @@
+interface:
+  display_name: "Đối soát KPI chi nhánh"
+  short_description: "Đối soát KPI, nguồn dữ liệu và phép tổng hợp"
+  default_prompt: "Dùng $audit-branch-kpi để đối soát KPI theo dữ liệu và công thức tôi cung cấp."
+policy:
+  allow_implicit_invocation: true

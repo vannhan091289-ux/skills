@@ -1,0 +1,26 @@
+{
+  "status": "INSTALLED_VERIFIED",
+  "date": "2026-11-08",
+  "skill": "create-visual-learning-assets",
+  "version": "1.0.0",
+  "target": "$HOME/.agents/skills/create-visual-learning-assets",
+  "files": {
+    "SKILL.md": "a5f262a701b030f1eee9eb484bee48f51c4bb60a59a33f0efc8716491bb388ed",
+    "LICENSE.txt": "ea4eadf88cc217a4cec2d7aa64c1f0a77406d27efa202d0f3c10a598a953e371",
+    "references/usage-guard.md": "1fbf2fd44620e4b30ef93be4b290d65b3a1755904f2fbf4798ad2c5da94fe077",
+    "references/workflow-contract.md": "ce1c59ea21a1d0bcf9edccbb5df59571ebe9bd1e9445519349fe283a5fb75732",
+    "tests/test_svg_evidence.py": "1b7ac8aeffd27f4cb5afb76b7211e9cc89ba5f17c9e38b027503d01f130a97b8",
+    "tests/test_evidence.py": "16845697f885817664abaeef6d99a6c0da6ae3b70ef1802291d5477a8f39ac2f",
+    "agents/openai.yaml": "56b05d1d17fc28c3e1eb6635d14146bd87176624ca2a6d871bf1e3f3c41fd943",
+    "scripts/run_checks.py": "4dae9930a32164d85ddfe71a894604d6dd97328dee8c83597c5b623aec2288f9",
+    "assets/output-template.md": "f98fe525d03b2953c8e6dff7e8cada6f76a64b4aa24c5b4442e5136b902f2083",
+    "tests/fixtures/applications.json": "3820e1b3947a00fca9727683d490e993f20dfdf4a7538a75fb43e08e21aaa8c1",
+    "tests/fixtures/case.json": "dd764af3636b64c83654e12a174fdaeea8cc7b0f9d7ece538eed35c66135ac73"
+  },
+  "source": "Reviewed first-party local candidate; same bytes will be published in canonical feature branch",
+  "method": "Official Codex installer validation/copy helpers; no network",
+  "existing_skills_overwritten": false,
+  "app_config_modified": false,
+  "third_party_code_executed": false,
+  "discovery": "USER folder installed; explicit fresh CLI pilot recorded separately"
+}
